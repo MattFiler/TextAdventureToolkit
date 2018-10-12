@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)..\Builds\$(Configuration) ($(PlatformTarget))\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName).tmp\</IntDir>
+    <IncludePath>$(SolutionDir)..\Libs\ASGE\Include;$(SolutionDir)..\Source;$(IncludePath)</IncludePath>
+    <SourcePath>$(SolutionDir)..\Source;$(SourcePath)</SourcePath>
+    <LibraryPath>$(SolutionDir)..\Libs\ASGE\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Libs\ASGE\Lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Engine_$(PlatformTarget).lib</AdditionalDependencies>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>Engine__$(Configuration)_$(PlatformTarget).lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)..\Resources\*" "$(OutDir)Resources\" /F /R /Y /I /S</Command>
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
