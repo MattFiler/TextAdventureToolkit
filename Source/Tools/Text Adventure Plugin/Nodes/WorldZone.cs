@@ -34,18 +34,18 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class WorldZone : Sequence
+	public class ZoneDefinition : Sequence
     {
-        protected string _zoneName = "";
+        protected WorldZones _zoneName;
         
-        [DesignerString("Zone Name", "The name of the zone to be used when moving.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
-        public string name
+        [DesignerEnum("Zone Name", "The name of the zone to be used when moving.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldZones ZoneName
         {
             get { return _zoneName; }
             set { _zoneName = value; }
         }
 
-        public WorldZone() : base("Zone", "A location within the world that can be accessed by the player.")
+        public ZoneDefinition() : base("Zone", "A location within the world that can be accessed by the player.")
 
         {
         }
@@ -54,7 +54,7 @@ namespace TextAdventure.Nodes
         {
             base.CloneProperties(newnode);
 
-            WorldZone cond = (WorldZone)newnode;
+            ZoneDefinition cond = (ZoneDefinition)newnode;
             cond._zoneName = _zoneName;
         }
     }

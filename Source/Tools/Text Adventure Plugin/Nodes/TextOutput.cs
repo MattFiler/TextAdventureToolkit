@@ -39,7 +39,7 @@ namespace TextAdventure.Nodes
         protected string _responseText = "";
         
         [DesignerString("Response", "The text to display when responding to this input.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
-        public string value
+        public string ResponseText
         {
             get { return _responseText; }
             set { _responseText = value; }

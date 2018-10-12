@@ -34,18 +34,25 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class ItemEvent : Sequence
+	public class UserInputItem : Decorator
     {
-        protected ItemAction _itemAction;
+        protected UserInputs _userInput;
+        protected WorldItems _userInputItem;
 
-        [DesignerEnum("Action", "Add/remove from inventory?", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
-        public ItemAction PerformAction
+        [DesignerEnum("Input Command", "The input command entered by the user.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public UserInputs InputCommand
         {
-            get { return _itemAction; }
-            set { _itemAction = value; }
+            get { return _userInput; }
+            set { _userInput = value; }
+        }
+        [DesignerEnum("Input Subject (ITEM)", "The subject of the user's command (e.g. 'Look At KEY').", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 1, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldItems Item
+        {
+            get { return _userInputItem; }
+            set { _userInputItem = value; }
         }
 
-        public ItemEvent() : base("Inventory Control", "Add/remove items to/from the player's inventory.")
+        public UserInputItem() : base("User Input Item ", "A handler for a user's text input (ITEM).")
 
         {
         }
@@ -54,8 +61,9 @@ namespace TextAdventure.Nodes
         {
             base.CloneProperties(newnode);
 
-            ItemEvent cond = (ItemEvent)newnode;
-            cond._itemAction = _itemAction;
+            UserInputItem cond = (UserInputItem)newnode;
+            cond._userInput = _userInput;
+            cond._userInputItem = _userInputItem;
         }
     }
 }

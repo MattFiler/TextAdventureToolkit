@@ -52,8 +52,8 @@ namespace TextAdventure
             NodeGroup TextAdventureGroup3 = new NodeGroup("Setup Node", NodeIcon.Condition, null);
             _nodeGroups.Add(TextAdventureGroup3);
 
-            TextAdventureGroup.Items.Add(typeof(Nodes.UserInput));
-            TextAdventureGroup.Items.Add(typeof(Nodes.WorldZone));
+            TextAdventureGroup.Items.Add(typeof(Nodes.UserInputLocation));
+            TextAdventureGroup.Items.Add(typeof(Nodes.ZoneDefinition));
             TextAdventureGroup.Items.Add(typeof(Nodes.ZoneState));
 
             TextAdventureGroup2.Items.Add(typeof(Nodes.HasItem));

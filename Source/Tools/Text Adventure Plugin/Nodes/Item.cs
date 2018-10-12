@@ -37,10 +37,10 @@ namespace TextAdventure.Nodes
 {
 	public class Item : Action
     {
-        protected string _itemName = "";
+        protected WorldItems _itemName;
         
-        [DesignerString("Item Name", "The name of the item to perform the action on.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 1, DesignerProperty.DesignerFlags.NoFlags)]
-        public string item
+        [DesignerEnum("Item Name", "The name of the item to perform the action on.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 1, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldItems ItemName
         {
             get { return _itemName; }
             set { _itemName = value; }

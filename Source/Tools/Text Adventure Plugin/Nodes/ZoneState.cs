@@ -36,10 +36,10 @@ namespace TextAdventure.Nodes
 {
     public class ZoneState : Selector
     {
-        protected string _stateName = "";
+        protected WorldStates _stateName;
 
-        [DesignerString("State Name", "The name of the state that will use these nodes.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
-        public string name
+        [DesignerEnum("State Name", "The name of the state that will use these nodes.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldStates StateName
         {
             get { return _stateName; }
             set { _stateName = value; }

@@ -36,10 +36,10 @@ namespace TextAdventure.Nodes
 {
     public class HasItem : ConditionConnectors
     {
-        protected string _itemName;
+        protected WorldItems _itemName;
 
-        [DesignerString("Item Name", "The name of the item being checked in inventory.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
-        public string item
+        [DesignerEnum("Item Name", "The name of the item being checked in inventory.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldItems ItemName
         {
             get { return _itemName; }
             set { _itemName = value; }

@@ -31,7 +31,8 @@ using System.Text;
 
 namespace TextAdventure
 {
-    public enum UserInputs {
+    public enum UserInputs
+    {
         LOOK_AT, //"Look at ...", "Look ..."
         LOOK_AROUND, //"Look around" (no followup)
         GO_TO, //"Go to ...", "Go ..."
@@ -45,5 +46,30 @@ namespace TextAdventure
     {
         ADD_TO_INVENTORY,
         REMOVE_FROM_INVENTORY
+    }
+
+    public enum WorldStates
+    {
+        INITIAL
+    }
+
+    public enum WorldItems
+    {
+        NONE, //No item
+
+        CAR,
+        GLOVEBOX,
+        NOTE,
+        KEY
+    }
+
+    public enum WorldZones
+    {
+        NONE, //No location
+
+        GLOBAL,
+        INSIDE_CAR,
+        OUTSIDE_CAR,
+        YARD
     }
 }

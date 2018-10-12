@@ -36,10 +36,10 @@ namespace TextAdventure.Nodes
 {
 	public class MovePlayer : Action
     {
-        protected string _moveTo = "";
+        protected WorldZones _moveTo;
 
-        [DesignerString("Zone Name", "The name of the zone to move to.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
-        public string zone
+        [DesignerEnum("Zone Name", "The name of the zone to move to.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldZones ZoneName
         {
             get { return _moveTo; }
             set { _moveTo = value; }
