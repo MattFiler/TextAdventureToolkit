@@ -73,7 +73,8 @@
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)..\Resources\*" "$(OutDir)Resources\" /F /R /Y /I /S /D</Command>
+      <Command>xcopy "$(SolutionDir)..\Resources\*" "$(OutDir)Resources\" /F /R /Y /I /S /D
+xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -97,7 +98,8 @@
       <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)..\Resources\*" "$(OutDir)Resources\" /F /R /Y /I /S /D</Command>
+      <Command>xcopy "$(SolutionDir)..\Resources\*" "$(OutDir)Resources\" /F /R /Y /I /S /D
+xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

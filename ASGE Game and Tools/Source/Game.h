@@ -1,6 +1,9 @@
 #pragma once
+#pragma comment(lib, "irrKlang.lib")
+
 #include <string>
 #include <Engine/OGLGame.h>
+#include <irrklang.h>
 
 /**
 *  An OpenGL Game based on ASGE.
@@ -24,4 +27,7 @@ private:
 	//Input callbacks
 	int key_callback_id = -1;
 	int mouse_callback_id = -1;
+
+	//Sound engine
+	irrklang::ISoundEngine* sound_engine;
 };

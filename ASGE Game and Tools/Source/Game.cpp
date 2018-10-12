@@ -14,7 +14,8 @@
 */
 TextAdventureGame::TextAdventureGame()
 {
-	std::srand(time(NULL));
+	std::srand(time(NULL)); 
+	sound_engine = irrklang::createIrrKlangDevice();
 }
 
 /**
@@ -25,6 +26,8 @@ TextAdventureGame::~TextAdventureGame()
 {
 	this->inputs->unregisterCallback(key_callback_id);
 	this->inputs->unregisterCallback(mouse_callback_id);
+
+	sound_engine->drop();
 }
 
 /**
@@ -44,6 +47,8 @@ bool TextAdventureGame::init()
 
 	toggleFPS();
 	renderer->setWindowTitle("Text Adventure Game");
+
+	sound_engine->play2D("Resources\\demo.mp3", false);
 
 	return true;
 }
