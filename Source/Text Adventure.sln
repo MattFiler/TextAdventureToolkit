@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{8DEE9CBE-EB22-4409-936B-4C09C9E7004D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{8DEE9CBE-EB22-4409-936B-4C09C9E7004D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Designer Base", "Brainiac Designer Base\Brainiac Designer Base.csproj", "{DE22E2F7-F314-458E-8D17-223CD099B2F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Base Code", "Tools\Brainiac Base Code\Brainiac Base Code.csproj", "{DE22E2F7-F314-458E-8D17-223CD099B2F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventurePlugin", "Project Hoshimi Design\TextAdventurePlugin.csproj", "{326CC795-9695-4B8E-9EB4-5C7EA28B0344}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Plugin", "Tools\Text Adventure Plugin\Brainiac Plugin.csproj", "{326CC795-9695-4B8E-9EB4-5C7EA28B0344}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +58,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0} = {8DEE9CBE-EB22-4409-936B-4C09C9E7004D}
 		{326CC795-9695-4B8E-9EB4-5C7EA28B0344} = {8DEE9CBE-EB22-4409-936B-4C09C9E7004D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

@@ -43,7 +43,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Plugin\</OutputPath>
+    <OutputPath>..\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -51,7 +51,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\out\plugins\</OutputPath>
+    <OutputPath>..\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -82,9 +82,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Brainiac Designer Base\Brainiac Designer Base.csproj">
+    <ProjectReference Include="..\Brainiac Base Code\Brainiac Base Code.csproj">
       <Project>{DE22E2F7-F314-458E-8D17-223CD099B2F0}</Project>
-      <Name>Brainiac Designer Base</Name>
+      <Name>Brainiac Base Code</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
