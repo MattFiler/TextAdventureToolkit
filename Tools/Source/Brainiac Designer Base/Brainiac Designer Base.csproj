@@ -73,8 +73,6 @@
     <Compile Include="FileManagers\FileManager.cs" />
     <Compile Include="FileManagers\FileManagerXML.cs" />
     <Compile Include="Nodes\Action.cs" />
-    <Compile Include="Nodes\ZoneIntroNode.cs" />
-    <Compile Include="Nodes\ResponseNode.cs" />
     <Compile Include="Nodes\ReferencedBehavior.cs" />
     <Compile Include="Nodes\StyledNode.cs" />
     <Compile Include="Nodes\Behavior.cs" />

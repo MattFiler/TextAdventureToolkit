@@ -45,7 +45,7 @@ namespace Brainiac.Design.Nodes
 
 		public Selector(string label, string description) : base(null, _theBackgroundBrush, _theDraggedBackgroundBrush, label, true, description)
 		{
-			_genericChildren= new ConnectorMultiple(_children, "{0}", "GenericChildren", 2, int.MaxValue);
+			_genericChildren= new ConnectorMultiple(_children, "{0}", "GenericChildren", 2, int.MaxValue); //modified for text adventure
 		}
 
 		public override void CheckForErrors(BehaviorNode rootBehavior, List<ErrorCheck> result)

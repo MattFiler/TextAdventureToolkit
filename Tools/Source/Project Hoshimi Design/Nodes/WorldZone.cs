@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class WorldZone : Selector
+	public class WorldZone : Sequence
     {
         protected string _zoneName = "";
         

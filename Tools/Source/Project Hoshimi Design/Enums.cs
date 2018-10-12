@@ -33,6 +33,7 @@ namespace TextAdventure
 {
     public enum UserInputs {
         LOOK_AT, //"Look at ...", "Look ..."
+        LOOK_AROUND, //"Look around" (no followup)
         GO_TO, //"Go to ...", "Go ..."
         USE, //"Use ..."
         OPEN, //"Open ..."

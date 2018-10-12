@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class ItemEvent : Selector
+	public class ItemEvent : Sequence
     {
         protected ItemAction _itemAction;
 

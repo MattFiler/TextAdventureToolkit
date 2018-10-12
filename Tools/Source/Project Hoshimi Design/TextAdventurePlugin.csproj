@@ -66,6 +66,7 @@
     <Compile Include="Nodes\Item.cs" />
     <Compile Include="Nodes\ItemEvent.cs" />
     <Compile Include="Nodes\HasItem.cs" />
+    <Compile Include="Nodes\ZoneState.cs" />
     <Compile Include="Nodes\TextOutput.cs" />
     <Compile Include="Nodes\LevelContainer.cs" />
     <Compile Include="Nodes\UserInput.cs" />

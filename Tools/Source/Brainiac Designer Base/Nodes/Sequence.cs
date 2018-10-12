@@ -38,10 +38,10 @@ namespace Brainiac.Design.Nodes
 	/// </summary>
 	public class Sequence : StyledNode
 	{
-		private static Brush _theBackgroundBrush= new SolidBrush( Color.FromArgb(79,129,189) );
-		private static Brush _theDraggedBackgroundBrush= new SolidBrush( Color.FromArgb(68,111,163) );
+		private static Brush _theBackgroundBrush= new SolidBrush( Color.FromArgb(139,89,176) ); //modified for text adventure
+        private static Brush _theDraggedBackgroundBrush= new SolidBrush( Color.FromArgb(107,81,127) ); //modified for text adventure
 
-		protected ConnectorMultiple _genericChildren;
+        protected ConnectorMultiple _genericChildren;
 
 		public Sequence(string label, string description) : base(null, _theBackgroundBrush, _theDraggedBackgroundBrush, label, true, description)
 		{

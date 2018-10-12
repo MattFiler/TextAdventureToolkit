@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////////////////////////////////
 // Copyright (c) 2009, Daniel Kollmann
 // All rights reserved.
 //
@@ -25,35 +25,37 @@
 // WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-using System;
+//using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Drawing;
-using Brainiac.Design.Properties;
+using Brainiac.Design.Nodes;
+using Brainiac.Design.Attributes;
+using TextAdventure.Properties;
 
-namespace Brainiac.Design.Nodes
+namespace TextAdventure.Nodes
 {
-	/// <summary>
-	/// ADDED FOR TEXT ADVENTURE
-	/// </summary>
-	public class ResponseNode : StyledNode
-	{
-		private static Brush _theBackgroundBrush= new SolidBrush( Color.FromArgb(30,144,255) );
-		private static Brush _theDraggedBackgroundBrush= new SolidBrush( Color.FromArgb(0,255,255) );
+    public class ZoneState : Selector
+    {
+        protected string _stateName = "";
 
-		protected ConnectorSingle _genericChildren;
+        [DesignerString("State Name", "The name of the state that will use these nodes.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags)]
+        public string name
+        {
+            get { return _stateName; }
+            set { _stateName = value; }
+        }
 
-		public ResponseNode(string label, string description) : base(null, _theBackgroundBrush, _theDraggedBackgroundBrush, label, true, description)
-		{
-			_genericChildren= new ConnectorSingle(_children, string.Empty, "GenericChildren");
-		}
+        public ZoneState()
+            : base("Zone State", "The state container for a zone, E.G. late game we may switch to state 2.")
+        {
+        }
 
-		public override void CheckForErrors(BehaviorNode rootBehavior, List<ErrorCheck> result)
-		{
-			if(_genericChildren.ChildCount <1)
-				result.Add( new Node.ErrorCheck(this, ErrorCheckLevel.Error, Resources.DecoratorHasNoChildError) );
+        protected override void CloneProperties(Node newnode)
+        {
+            base.CloneProperties(newnode);
 
-			base.CheckForErrors(rootBehavior, result);
-		}
-	}
+            ZoneState evnt = (ZoneState)newnode;
+            evnt._stateName = _stateName;
+        }
+    }
 }

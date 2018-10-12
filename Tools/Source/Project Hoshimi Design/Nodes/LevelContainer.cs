@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-    public class LevelContainer : Selector
+    public class LevelContainer : Sequence
     {
         public LevelContainer()
             : base("Level", "A group of nodes representing this level.")

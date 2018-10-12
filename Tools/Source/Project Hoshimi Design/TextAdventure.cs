@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 namespace TextAdventure
 {
 	/// <summary>
-	/// The plugin for Project Hoshimi which is loaded when you start the editor.
+	/// Text Adventure plugin for visual scripting of the text adventure game.
 	/// </summary>
 	public class TextAdventure : Plugin
 	{
@@ -54,6 +54,7 @@ namespace TextAdventure
 
             TextAdventureGroup.Items.Add(typeof(Nodes.UserInput));
             TextAdventureGroup.Items.Add(typeof(Nodes.WorldZone));
+            TextAdventureGroup.Items.Add(typeof(Nodes.ZoneState));
 
             TextAdventureGroup2.Items.Add(typeof(Nodes.HasItem));
             TextAdventureGroup2.Items.Add(typeof(Nodes.ItemEvent));
