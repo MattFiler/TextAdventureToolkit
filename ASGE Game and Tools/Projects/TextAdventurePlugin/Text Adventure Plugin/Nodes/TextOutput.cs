@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-    public class TextOutput : Decorator
+    public class TextOutput : Action
     {
         protected string _responseText = "";
         
@@ -46,7 +46,7 @@ namespace TextAdventure.Nodes
         }
 
 
-        public TextOutput() : base("Response", "Display text in response to a user input.")
+        public TextOutput() : base("Response ", "Display text in response to a user input.")
         {
 		}
 

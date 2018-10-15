@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _moveTo = value; }
         }
 
-        public MovePlayer() : base("Move To", "Move a player to another zone.")
+        public MovePlayer() : base("Move To ", "Move a player to another zone.")
 
         {
         }

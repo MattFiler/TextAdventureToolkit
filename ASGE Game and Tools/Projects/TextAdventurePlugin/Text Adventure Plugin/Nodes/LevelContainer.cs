@@ -37,7 +37,7 @@ namespace TextAdventure.Nodes
     public class LevelContainer : Sequence
     {
         public LevelContainer()
-            : base("Level", "A group of nodes representing this level.")
+            : base("Level ", "A group of nodes representing this level.")
         {
         }
 

@@ -5,14 +5,19 @@
 #include "../Libs/RapidXML/rapidxml.hpp"
 #include "../Libs/RapidXML/rapidxml_utils.hpp"
 
+using namespace rapidxml;
+using namespace std;
+
 class ReadXML {
 public:
-	//Handle all public interactions with the XML here.
+	void init();
 
 private:
 	void loadXML();
 	void loadLevels();
-	void loadZones();
+	void loadZones(xml_node<> *levelNode);
+	void loadStates(xml_node<> *zoneNode);
+	void loadStateChildren(xml_node<> *stateNode);
 
-	//xml_document<> doc;
+	xml_document<> doc;
 };

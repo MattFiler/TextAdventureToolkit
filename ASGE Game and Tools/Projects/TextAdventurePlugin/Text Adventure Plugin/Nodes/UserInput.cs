@@ -34,9 +34,10 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class UserInputLocation : Decorator
+	public class UserInput : Sequence
     {
         protected UserInputs _userInput;
+        protected WorldItems _userInputItem;
         protected WorldZones _userInputLocation;
 
         [DesignerEnum("Input Command", "The input command entered by the user.", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 0, DesignerProperty.DesignerFlags.NoFlags, null)]
@@ -45,6 +46,12 @@ namespace TextAdventure.Nodes
             get { return _userInput; }
             set { _userInput = value; }
         }
+        [DesignerEnum("Input Subject (ITEM)", "The subject of the user's command (e.g. 'Look At KEY').", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 1, DesignerProperty.DesignerFlags.NoFlags, null)]
+        public WorldItems Item
+        {
+            get { return _userInputItem; }
+            set { _userInputItem = value; }
+        }
         [DesignerEnum("Input Subject (LOCATION)", "The subject of the user's command (e.g. 'Go To GARAGE').", "CategoryBasic", DesignerProperty.DisplayMode.Parameter, 2, DesignerProperty.DesignerFlags.NoFlags, null)]
         public WorldZones Location
         {
@@ -52,7 +59,7 @@ namespace TextAdventure.Nodes
             set { _userInputLocation = value; }
         }
 
-        public UserInputLocation() : base("User Input Location ", "A handler for a user's text input (LOCATION).")
+        public UserInput() : base("User Input ", "A handler for a user's text input.")
 
         {
         }
@@ -61,8 +68,9 @@ namespace TextAdventure.Nodes
         {
             base.CloneProperties(newnode);
 
-            UserInputLocation cond = (UserInputLocation)newnode;
+            UserInput cond = (UserInput)newnode;
             cond._userInput = _userInput;
+            cond._userInputItem = _userInputItem;
             cond._userInputLocation = _userInputLocation;
         }
     }

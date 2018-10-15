@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _itemName = value; }
         }
 
-        public HasItem() : base("Item Is Equipped", "Checks that an item is equipped in the player's inventory.")
+        public HasItem() : base("Item Is Equipped ", "Checks that an item is equipped in the player's inventory.")
         {
         }
 

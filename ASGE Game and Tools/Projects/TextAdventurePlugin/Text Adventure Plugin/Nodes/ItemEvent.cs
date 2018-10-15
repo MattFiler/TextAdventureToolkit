@@ -34,7 +34,7 @@ using TextAdventure.Properties;
 
 namespace TextAdventure.Nodes
 {
-	public class ItemEvent : Sequence
+	public class ItemEvent : Selector
     {
         protected ItemAction _itemAction;
 
@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _itemAction = value; }
         }
 
-        public ItemEvent() : base("Inventory Control", "Add/remove items to/from the player's inventory.")
+        public ItemEvent() : base("Inventory Control ", "Add/remove items to/from the player's inventory.")
 
         {
         }

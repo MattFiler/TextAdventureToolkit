@@ -36,7 +36,7 @@ namespace TextAdventure.Nodes
 {
 	public class ZoneIntro : Decorator
     {
-        public ZoneIntro() : base("Zone Intro", "The intro to the current zone.")
+        public ZoneIntro() : base("Zone Intro ", "The intro to the current zone.")
 
         {
         }

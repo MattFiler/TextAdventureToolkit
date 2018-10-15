@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _zoneName = value; }
         }
 
-        public ZoneDefinition() : base("Zone", "A location within the world that can be accessed by the player.")
+        public ZoneDefinition() : base("Zone ", "A location within the world that can be accessed by the player.")
 
         {
         }

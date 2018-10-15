@@ -5,6 +5,8 @@
 #include <Engine/OGLGame.h>
 #include <irrklang.h>
 
+#include "ReadXML.h"
+
 /**
 *  An OpenGL Game based on ASGE.
 */
@@ -30,4 +32,6 @@ private:
 
 	//Sound engine
 	irrklang::ISoundEngine* sound_engine;
+
+	ReadXML TextAdventure_XML;
 };

@@ -46,7 +46,7 @@ namespace TextAdventure.Nodes
         }
 
         public ZoneState()
-            : base("Zone State", "The state container for a zone, E.G. late game we may switch to state 2.")
+            : base("Zone State ", "The state container for a zone, E.G. late game we may switch to state 2.")
         {
         }
 

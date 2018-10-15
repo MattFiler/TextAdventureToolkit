@@ -46,7 +46,7 @@ namespace TextAdventure.Nodes
             set { _itemName = value; }
         }
 
-        public Item() : base("Item", "The item to be affected by the previous statement.")
+        public Item() : base("Item ", "The item to be affected by the previous statement.")
 
         {
         }
