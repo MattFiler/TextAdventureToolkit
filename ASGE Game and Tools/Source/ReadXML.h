@@ -14,5 +14,5 @@ private:
 	void loadLevels();
 	void loadZones();
 
-	xml_document<> doc;
+	//xml_document<> doc;
 };
