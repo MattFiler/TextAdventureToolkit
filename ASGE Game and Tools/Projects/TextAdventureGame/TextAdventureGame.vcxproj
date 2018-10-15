@@ -14,7 +14,7 @@
     <ProjectGuid>{7F5C3AA2-D205-44FE-B63C-F411DEE5C8F7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TextAdventureGame</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
     <ProjectName>TextAdventureGame</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -105,10 +105,14 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
   <ItemGroup>
     <ClCompile Include="..\..\Source\main.cpp" />
     <ClCompile Include="..\..\Source\Game.cpp" />
+    <ClCompile Include="..\..\Source\ReadXML.cpp" />
+    <ClCompile Include="..\..\Source\Rect.cpp" />
     <ClCompile Include="..\..\Source\SpriteComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Game.h" />
+    <ClInclude Include="..\..\Source\ReadXML.h" />
+    <ClInclude Include="..\..\Source\Rect.h" />
     <ClInclude Include="..\..\Source\SpriteComponent.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
