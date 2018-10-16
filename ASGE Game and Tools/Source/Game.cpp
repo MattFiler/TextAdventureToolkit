@@ -47,11 +47,17 @@ bool TextAdventureGame::init()
 
 	toggleFPS();
 	renderer->setWindowTitle("Text Adventure Game");
+	renderer->setWindowedMode(ASGE::Renderer::WindowMode::WINDOWED);
+	renderer->setClearColour(ASGE::COLOURS::WHITE);
+
+	inputs->use_threads = false;
+	key_callback_id = inputs->addCallbackFnc(ASGE::E_KEY, &TextAdventureGame::keyHandler, this);
+	mouse_callback_id = inputs->addCallbackFnc(ASGE::E_MOUSE_CLICK, &TextAdventureGame::clickHandler, this);
 
 	sound_engine->play2D("Resources\\demo.mp3", false);
 
 	//TextAdventure_XML.init();
-	TextAdventure_JSON.init();
+	TextAdventure_JSON.loadTextAdventure();
 
 	return true;
 }
@@ -82,6 +88,18 @@ void TextAdventureGame::setupResolution()
 void TextAdventureGame::keyHandler(const ASGE::SharedEventData data)
 {
 	auto key = static_cast<const ASGE::KeyEvent*>(data.get());
+	if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_BACKSPACE) {
+		inputBoxText = inputBoxText.substr(0, inputBoxText.size() - 1);
+	} 
+	else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
+		if (TextAdventure_JSON.isActionPermitted(TextAdventure_JSON.interpretAction(inputBoxText), 0, 1, 0)) {
+
+		}
+		inputBoxText = "";
+	}
+	else if (key->action == ASGE::KEYS::KEY_RELEASED) {
+		inputBoxText += (char)key->key;
+	}
 }
 
 /**
@@ -121,5 +139,5 @@ void TextAdventureGame::update(const ASGE::GameTime& us)
 */
 void TextAdventureGame::render(const ASGE::GameTime& us)
 {
-	
+	renderer->renderText(inputBoxText, 50, game_height - 50, 2, ASGE::COLOURS::BLACK);
 }

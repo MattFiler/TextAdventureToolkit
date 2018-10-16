@@ -9,8 +9,18 @@ using namespace std;
 
 class ReadJSON {
 public:
-	void init();
+	void loadTextAdventure();
+	
+	int levelsInThisGame();
+	int zonesInThisLevel(int level_id);
+	int statesInThisZone(int level_id, int zone_id);
+
+	string interpretAction(string input);
+
+	bool isActionPermitted(string action, int level_id, int zone_id, int state_id);
 
 private:
-	void loadJSON();
+	void testing();
+
+	json TextAdventure;
 };

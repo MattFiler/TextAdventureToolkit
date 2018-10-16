@@ -1,4 +1,62 @@
 {
-	"test": 1,
-	"another_test": "string response"
+	"0": {
+		"0": {
+			"zone_name": "GLOBAL",
+			"0": {
+				"zone_state": "INITIAL",
+				
+				"LOOK_AT": {
+					"subject": "NOTE",
+					"requires": "NOTE",
+					"system_reply": "The note is from your Dad and reads: Hi Son, home you enjoy your break. You'll need to fire up the generator around back to get power and lights on. Also, found something in the attic for you - it's in your room... enjoy!"
+				},
+				"READ": {
+					"referenced": "LOOK_AT"
+				}
+			}
+		},
+		"1": {
+			"zone_name": "INSIDE_CAR",
+			"0": {
+				"zone_state": "INITIAL",
+				"zone_intro": "You pull up to the driveway of the family holiday home and park the car. It's dark, but it's as idyllic as you remember from all that time ago. You remember being told to look in the glovebox before going in. It's good to be back.",
+				
+				"LOOK_AROUND": {
+					"system_reply": "It's a nice clean car. Not much to see, but there is a glove box."
+				},
+				"LOOK_AT": {
+					"subject": "GLOVEBOX",
+					"system_reply": "The glove box is closed but appears to be unlocked."
+				},
+				"GO_TO": {
+					"subject": "GLOVEBOX",
+					"system_reply": "Inside is a key, and a handwritten note from Dad. You take both.",
+					"add_to_inventory": ["KEY","NOTE"]
+				},
+				"USE": {
+					"referenced": "GO_TO"
+				},
+				"GET_OUT": {
+					"system_reply": "You get out the car and stretch your legs.",
+					"move_to": "OUTSIDE_CAR"
+				}	
+			}
+		},
+		"2": {
+			"zone_name": "OUTSIDE_CAR",
+			"0": {
+				"zone_state": "INITIAL",
+				"zone_intro": "The house is grand, sat perfectly amongst the trees. In front of you is the front door, and the yard stretches around the back of the house.",
+				
+				"LOOK_AROUND": {
+					"system_reply": "The trees stretch up to the night sky. There is the house and the yard."
+				},
+				"GO_TO": {
+					"subject": "YARD",
+					"system_reply": "You walk around to the yard.",
+					"move_to": "YARD"
+				}
+			}
+		}
+	}
 }

@@ -36,4 +36,6 @@ private:
 
 	ReadXML TextAdventure_XML;
 	ReadJSON TextAdventure_JSON;
+
+	string inputBoxText = "";
 };
