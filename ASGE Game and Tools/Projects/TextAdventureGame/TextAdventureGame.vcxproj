@@ -105,12 +105,14 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
   <ItemGroup>
     <ClCompile Include="..\..\Source\main.cpp" />
     <ClCompile Include="..\..\Source\Game.cpp" />
+    <ClCompile Include="..\..\Source\ReadJSON.cpp" />
     <ClCompile Include="..\..\Source\ReadXML.cpp" />
     <ClCompile Include="..\..\Source\Rect.cpp" />
     <ClCompile Include="..\..\Source\SpriteComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\Game.h" />
+    <ClInclude Include="..\..\Source\ReadJSON.h" />
     <ClInclude Include="..\..\Source\ReadXML.h" />
     <ClInclude Include="..\..\Source\Rect.h" />
     <ClInclude Include="..\..\Source\SpriteComponent.h" />

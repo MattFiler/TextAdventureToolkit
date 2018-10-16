@@ -6,6 +6,7 @@
 #include <irrklang.h>
 
 #include "ReadXML.h"
+#include "ReadJSON.h"
 
 /**
 *  An OpenGL Game based on ASGE.
@@ -34,4 +35,5 @@ private:
 	irrklang::ISoundEngine* sound_engine;
 
 	ReadXML TextAdventure_XML;
+	ReadJSON TextAdventure_JSON;
 };

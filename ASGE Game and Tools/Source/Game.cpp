@@ -50,7 +50,8 @@ bool TextAdventureGame::init()
 
 	sound_engine->play2D("Resources\\demo.mp3", false);
 
-	TextAdventure_XML.init();
+	//TextAdventure_XML.init();
+	TextAdventure_JSON.init();
 
 	return true;
 }

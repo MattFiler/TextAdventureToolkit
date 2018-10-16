@@ -14,9 +14,8 @@ public:
 
 private:
 	void loadXML();
-	void loadLevels();
-	void loadZones(xml_node<> *levelNode);
-	void loadStates(xml_node<> *zoneNode);
+	void traverseNodes();
+
 	void loadStateChildren(xml_node<> *stateNode);
 
 	xml_document<> doc;

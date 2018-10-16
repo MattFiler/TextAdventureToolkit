@@ -17,33 +17,22 @@ void ReadXML::loadXML() {
 	buffer << file.rdbuf();
 	file.close();
 	string content(buffer.str());
-	string CONTENT = &content[0];
 	doc.parse<parse_full>(&content[0]);
 
-	loadLevels();
+	traverseNodes();
 }
 
 /* Load levels */
-void ReadXML::loadLevels() {
+void ReadXML::traverseNodes() {
 	xml_node<> *node = doc.first_node("Behavior")->first_node("Node")->first_node("Connector");
 	for (xml_node<> *levelNode = node->first_node(); levelNode; levelNode = levelNode->next_sibling()) {
-		loadZones(levelNode);
-	}
-}
-
-/* Load zones */
-void ReadXML::loadZones(xml_node<> *levelNode) {
-	levelNode = levelNode->first_node("Connector");
-	for (xml_node<> *zoneNode = levelNode->first_node(); zoneNode; zoneNode = zoneNode->next_sibling()) {
-		loadStates(zoneNode);
-	}
-}
-
-/* Load states */
-void ReadXML::loadStates(xml_node<> *zoneNode) {
-	zoneNode = zoneNode->first_node("Connector");
-	for (xml_node<> *stateNode = zoneNode->first_node(); stateNode; stateNode = stateNode->next_sibling()) {
-		loadStateChildren(stateNode);
+		levelNode = levelNode->first_node("Connector");
+		for (xml_node<> *zoneNode = levelNode->first_node(); zoneNode; zoneNode = zoneNode->next_sibling()) {
+			zoneNode = zoneNode->first_node("Connector");
+			for (xml_node<> *stateNode = zoneNode->first_node(); stateNode; stateNode = stateNode->next_sibling()) {
+				loadStateChildren(stateNode);
+			}
+		}
 	}
 }
 
