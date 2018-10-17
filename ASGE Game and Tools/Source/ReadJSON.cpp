@@ -2,7 +2,7 @@
 
 /* Read in the text adventure from a JSON file */
 void ReadJSON::loadTextAdventure() {
-	ifstream ReadXML("F:\\TextAdventure\\ASGE Game and Tools\\Builds\\Debug (x86)\\Resources\\demo.json");
+	ifstream ReadXML("C:\\Users\\mattf\\OneDrive\\Github Repos\\TextAdventure\\ASGE Game and Tools\\Builds\\Debug (x86)\\Resources\\demo.json");
 	ReadXML >> TextAdventure;
 }
 
@@ -46,7 +46,13 @@ string ReadJSON::interpretAction(string input) {
 
 /* Verify if an action is permitted in this location */
 bool ReadJSON::isActionPermitted(string action, int level_id, int zone_id, int state_id) {
-	return TextAdventure[to_string(level_id)][to_string(zone_id)][to_string(state_id)].is_array();
+	return !TextAdventure[to_string(level_id)][to_string(zone_id)][to_string(state_id)][action].is_null();
+}
+
+/* Handle response of action */
+string ReadJSON::handleActionResponse(string action, int level_id, int zone_id, int state_id) {
+	//VERY BASIC FOR NOW AND WILL ERROR ON SOME, BUT JUST TO TEST...
+	return TextAdventure[to_string(level_id)][to_string(zone_id)][to_string(state_id)][action]["system_reply"];
 }
 
 /////////////////////////////////////////////////////////////////////////

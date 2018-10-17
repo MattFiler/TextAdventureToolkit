@@ -92,8 +92,9 @@ void TextAdventureGame::keyHandler(const ASGE::SharedEventData data)
 		inputBoxText = inputBoxText.substr(0, inputBoxText.size() - 1);
 	} 
 	else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
-		if (TextAdventure_JSON.isActionPermitted(TextAdventure_JSON.interpretAction(inputBoxText), 0, 1, 0)) {
-
+		auto inputAction = TextAdventure_JSON.interpretAction(inputBoxText);
+		if (TextAdventure_JSON.isActionPermitted(inputAction, 0, 1, 0)) {
+			outputText = TextAdventure_JSON.handleActionResponse(inputAction, 0, 1, 0);
 		}
 		inputBoxText = "";
 	}
@@ -139,5 +140,6 @@ void TextAdventureGame::update(const ASGE::GameTime& us)
 */
 void TextAdventureGame::render(const ASGE::GameTime& us)
 {
+	renderer->renderText(outputText, 50, 50, 1, ASGE::COLOURS::GREY);
 	renderer->renderText(inputBoxText, 50, game_height - 50, 2, ASGE::COLOURS::BLACK);
 }

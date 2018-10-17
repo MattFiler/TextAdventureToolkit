@@ -38,4 +38,5 @@ private:
 	ReadJSON TextAdventure_JSON;
 
 	string inputBoxText = "";
+	string outputText = "";
 };

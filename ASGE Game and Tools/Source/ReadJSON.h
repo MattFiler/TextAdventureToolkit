@@ -18,6 +18,7 @@ public:
 	string interpretAction(string input);
 
 	bool isActionPermitted(string action, int level_id, int zone_id, int state_id);
+	string handleActionResponse(string action, int level_id, int zone_id, int state_id);
 
 private:
 	void testing();
