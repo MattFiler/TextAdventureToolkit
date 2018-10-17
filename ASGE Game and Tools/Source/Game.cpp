@@ -57,7 +57,7 @@ bool TextAdventureGame::init()
 	sound_engine->play2D("Resources\\demo.mp3", false);
 
 	//TextAdventure_XML.init();
-	TextAdventure_JSON.loadTextAdventure();
+	outputText = TextAdventure_JSON.loadTextAdventure();
 
 	return true;
 }
@@ -92,14 +92,11 @@ void TextAdventureGame::keyHandler(const ASGE::SharedEventData data)
 		inputBoxText = inputBoxText.substr(0, inputBoxText.size() - 1);
 	} 
 	else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
-		auto inputAction = TextAdventure_JSON.interpretAction(inputBoxText);
-		if (TextAdventure_JSON.isActionPermitted(inputAction, 0, 1, 0)) {
-			outputText = TextAdventure_JSON.handleActionResponse(inputAction, 0, 1, 0);
-		}
+		outputText = TextAdventure_JSON.handleUserInput(inputBoxText);
 		inputBoxText = "";
 	}
 	else if (key->action == ASGE::KEYS::KEY_RELEASED) {
-		inputBoxText += (char)key->key;
+		inputBoxText += toupper((char)key->key);
 	}
 }
 

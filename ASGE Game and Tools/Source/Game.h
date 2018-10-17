@@ -8,6 +8,8 @@
 #include "ReadXML.h"
 #include "ReadJSON.h"
 
+#include "GameProgress.h";
+
 /**
 *  An OpenGL Game based on ASGE.
 */
@@ -39,4 +41,6 @@ private:
 
 	string inputBoxText = "";
 	string outputText = "";
+
+	GameProgress TextAdventure_Progress;
 };

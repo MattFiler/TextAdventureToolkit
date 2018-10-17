@@ -1,21 +1,6 @@
 {
 	"0": {
 		"0": {
-			"zone_name": "GLOBAL",
-			"0": {
-				"zone_state": "INITIAL",
-				
-				"LOOK_AT": {
-					"subject": "NOTE",
-					"requires": "NOTE",
-					"system_reply": "The note is from your Dad and reads: Hi Son, home you enjoy your break. You'll need to fire up the generator around back to get power and lights on. Also, found something in the attic for you - it's in your room... enjoy!"
-				},
-				"READ": {
-					"referenced": "LOOK_AT"
-				}
-			}
-		},
-		"1": {
 			"zone_name": "INSIDE_CAR",
 			"0": {
 				"zone_state": "INITIAL",
@@ -39,10 +24,13 @@
 				"GET_OUT": {
 					"system_reply": "You get out the car and stretch your legs.",
 					"move_to": "OUTSIDE_CAR"
-				}	
+				},
+				"EXIT": {
+					"referenced": "GET_OUT"
+				}
 			}
 		},
-		"2": {
+		"1": {
 			"zone_name": "OUTSIDE_CAR",
 			"0": {
 				"zone_state": "INITIAL",
