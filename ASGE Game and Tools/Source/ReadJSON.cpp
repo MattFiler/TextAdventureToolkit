@@ -11,7 +11,7 @@ string ReadJSON::loadTextAdventure() {
 	ifstream ReadXML("C:\\Users\\mattf\\OneDrive\\Github Repos\\TextAdventure\\ASGE Game and Tools\\Builds\\Debug (x86)\\Resources\\demo.json");
 	ReadXML >> TextAdventure;
 
-	return gameIntroText();
+	return zoneIntro();
 }
 
 /* Return the number of levels */
@@ -33,7 +33,9 @@ string ReadJSON::handleUserInput(string input) {
 	string subject = interpretSubject(input);
 
 	if (isActionPermitted(action) && isSubjectValid(action, subject)) {
-		return TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)][action]["system_reply"];
+		string response = TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)][action]["system_reply"];
+		performAction(action, subject);
+		return response;
 	}
 	else
 	{
@@ -48,7 +50,7 @@ PRIVATE
 */
 
 /* Show the game intro text */
-string ReadJSON::gameIntroText() {
+string ReadJSON::zoneIntro() {
 	return TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)]["zone_intro"];
 }
 
@@ -99,6 +101,21 @@ string ReadJSON::checkForReferencedAction(string action) {
 	}
 }
 
+/* Verify if an action is permitted in this location */
+bool ReadJSON::isActionPermitted(string action) {
+	return !TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)][action].is_null();
+}
+
+/* Perform action */
+void ReadJSON::performAction(string action, string subject) {
+	if (action == "GET_OUT" || action == "EXIT") {
+		TextAdventure_Progress.current_zone++;
+	}
+	else if (action == "GO_TO") {
+		TextAdventure_Progress.current_zone = 0; //will want to grab zone id here from name (move_to)
+	}
+}
+
 /* Interpret the user's input subject */
 string ReadJSON::interpretSubject(string input) {
 	string action = interpretAction(input);
@@ -142,21 +159,22 @@ string ReadJSON::interpretSubject(string input) {
 	}
 }
 
-/* Verify if an action is permitted in this location */
-bool ReadJSON::isActionPermitted(string action) {
-	return !TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)][action].is_null();
-}
-
 /* Verify if an subject is permitted on this action */
 bool ReadJSON::isSubjectValid(string action, string subject) {
 	auto requiredSubject = TextAdventure[to_string(TextAdventure_Progress.current_level)][to_string(TextAdventure_Progress.current_zone)][to_string(TextAdventure_Progress.current_state)][action]["subject"];
 
-	if (requiredSubject == subject || requiredSubject.is_null()) {
-		return true;
+	if (requiredSubject.is_string()) {
+		if (requiredSubject == subject) {
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	else
 	{
-		return false;
+		return true;
 	}
 }
 

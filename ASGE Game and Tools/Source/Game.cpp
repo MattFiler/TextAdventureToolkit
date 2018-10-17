@@ -54,7 +54,7 @@ bool TextAdventureGame::init()
 	key_callback_id = inputs->addCallbackFnc(ASGE::E_KEY, &TextAdventureGame::keyHandler, this);
 	mouse_callback_id = inputs->addCallbackFnc(ASGE::E_MOUSE_CLICK, &TextAdventureGame::clickHandler, this);
 
-	sound_engine->play2D("Resources\\demo.mp3", false);
+	//sound_engine->play2D("Resources\\demo.mp3", false);
 
 	//TextAdventure_XML.init();
 	outputText = TextAdventure_JSON.loadTextAdventure();
@@ -139,4 +139,6 @@ void TextAdventureGame::render(const ASGE::GameTime& us)
 {
 	renderer->renderText(outputText, 50, 50, 1, ASGE::COLOURS::GREY);
 	renderer->renderText(inputBoxText, 50, game_height - 50, 2, ASGE::COLOURS::BLACK);
+
+	renderer->renderText(to_string(TextAdventure_Progress.current_zone), game_width - 50, 50, 1, ASGE::COLOURS::RED);
 }

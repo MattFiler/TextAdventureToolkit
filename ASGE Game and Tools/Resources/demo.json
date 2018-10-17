@@ -21,7 +21,11 @@
 				"USE": {
 					"referenced": "GO_TO"
 				},
+				"OPEN": {
+					"referenced": "GO_TO"
+				},
 				"GET_OUT": {
+					"required_inventory": ["KEY","NOTE"],
 					"system_reply": "You get out the car and stretch your legs.",
 					"move_to": "OUTSIDE_CAR"
 				},

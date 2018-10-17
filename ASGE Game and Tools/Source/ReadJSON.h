@@ -20,11 +20,13 @@ public:
 	string handleUserInput(string input);
 
 private:
-	string gameIntroText();
+	string zoneIntro();
 
 	string interpretAction(string input);
 	string interpretSubject(string input);
 	string checkForReferencedAction(string action);
+
+	void performAction(string action, string subject);
 
 	bool isActionPermitted(string action);
 	bool isSubjectValid(string action, string subject);
