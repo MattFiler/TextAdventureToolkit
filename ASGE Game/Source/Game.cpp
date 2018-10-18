@@ -97,15 +97,19 @@ void TextAdventureGame::setupResolution()
 void TextAdventureGame::keyHandler(const ASGE::SharedEventData data)
 {
 	auto key = static_cast<const ASGE::KeyEvent*>(data.get());
-	if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_BACKSPACE) {
-		screenText.userInput = screenText.userInput.substr(0, screenText.userInput.size() - 1);
-	} 
-	else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
-		GameLogic.handleUserInput(screenText.userInput);
-		screenText.userInput = "";
-	}
-	else if (key->action == ASGE::KEYS::KEY_RELEASED) {
-		screenText.userInput += toupper((char)key->key);
+
+	//Handle user input
+	if (!progress.textIsAnimating) {
+		if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_BACKSPACE) {
+			screenText.userInput = screenText.userInput.substr(0, screenText.userInput.size() - 1);
+		}
+		else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
+			GameLogic.handleUserInput(screenText.userInput);
+			screenText.userInput = "";
+		}
+		else if (key->action == ASGE::KEYS::KEY_RELEASED) {
+			screenText.userInput += toupper((char)key->key);
+		}
 	}
 }
 
@@ -134,7 +138,23 @@ void TextAdventureGame::clickHandler(const ASGE::SharedEventData data)
 */
 void TextAdventureGame::update(const ASGE::GameTime& us)
 {
-	
+	float dt_sec = us.delta_time.count() / 1000.0;
+
+	//Handle text animations & blocking of user input
+	bool locationIntroAnim = animationInstance1.animateText(dt_sec, screenText.locationIntro, screenText.locationIntroOnScreen);
+	bool responseTextAnim = animationInstance2.animateText(dt_sec, screenText.inputResponse, screenText.inputResponseOnScreen);
+
+	if (locationIntroAnim || responseTextAnim) {
+		screenText.userInput = GameLogic.getInputDisabledText();
+		progress.textIsAnimating = true;
+	}
+	else
+	{
+		if (screenText.userInput == GameLogic.getInputDisabledText()) {
+			screenText.userInput = "";
+		}
+		progress.textIsAnimating = false;
+	}
 }
 
 /**
@@ -151,8 +171,8 @@ void TextAdventureGame::render(const ASGE::GameTime& us)
 	renderer->renderText(screenText.gameTitle, 50, 60, 0.5, ASGE::COLOURS::BLACK);
 	renderer->renderText(screenText.gameDeveloper, game_width - 200, 60, 0.5, ASGE::COLOURS::BLACK);
 
-	renderer->renderText(screenText.locationIntro, 50, 150, 0.5, ASGE::COLOURS::WHITE);
-	renderer->renderText(screenText.inputResponse, 50, 550, 0.5, ASGE::COLOURS::WHITE);
+	renderer->renderText(screenText.locationIntroOnScreen, 50, 150, 0.5, ASGE::COLOURS::WHITE);
+	renderer->renderText(screenText.inputResponseOnScreen, 50, 550, 0.5, ASGE::COLOURS::WHITE);
 
 	renderer->renderText(screenText.userInput, 50, game_height - 40, 0.8, ASGE::COLOURS::BLACK);
 

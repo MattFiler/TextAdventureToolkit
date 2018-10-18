@@ -103,6 +103,7 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Animations.cpp" />
     <ClCompile Include="..\..\Source\GameProgress.cpp" />
     <ClCompile Include="..\..\Source\GameScreenText.cpp" />
     <ClCompile Include="..\..\Source\main.cpp" />
@@ -112,6 +113,7 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
     <ClCompile Include="..\..\Source\SpriteComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Animations.h" />
     <ClInclude Include="..\..\Source\Game.h" />
     <ClInclude Include="..\..\Source\GameConstants.h" />
     <ClInclude Include="..\..\Source\GameProgress.h" />

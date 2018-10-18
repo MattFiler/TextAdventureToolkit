@@ -7,8 +7,9 @@
 
 #include "SpriteComponent.h"
 #include "GameLogic.h"
-#include "GameProgress.h";
+#include "GameProgress.h"
 #include "GameScreenText.h"
+#include "Animations.h"
 
 /**
 *  An OpenGL Game based on ASGE.
@@ -39,6 +40,9 @@ private:
 	TextAdventureLogic GameLogic;
 	GameProgress progress;
 	GameScreenText screenText;
+
+	Animations animationInstance1;
+	Animations animationInstance2;
 
 	string inputBoxText = "";
 	string outputText = "";

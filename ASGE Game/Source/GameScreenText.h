@@ -9,7 +9,9 @@ struct GameScreenText
 	static string gameDeveloper;
 
 	static string locationIntro;
+	static string locationIntroOnScreen;
 	static string inputResponse;
+	static string inputResponseOnScreen;
 
 	static string userInput;
 };

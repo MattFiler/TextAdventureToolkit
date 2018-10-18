@@ -22,6 +22,7 @@ public:
 
 	string getGameTitle();
 	string getGameDeveloper();
+	string getInputDisabledText();
 
 	void handleUserInput(string input);
 

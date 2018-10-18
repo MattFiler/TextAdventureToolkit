@@ -37,6 +37,10 @@ string TextAdventureLogic::getGameTitle() {
 string TextAdventureLogic::getGameDeveloper() {
 	return logic["game_core"]["developer"];
 }
+/* Get the game's disabled input text */
+string TextAdventureLogic::getInputDisabledText() {
+	return logic["game_core"]["input_disabled"];
+}
 
 /* Handle response of action */
 void TextAdventureLogic::handleUserInput(string input) {
