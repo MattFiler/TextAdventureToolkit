@@ -45,7 +45,7 @@ bool TextAdventureGame::init()
 		return false;
 	}
 
-	toggleFPS();
+	//toggleFPS();
 	renderer->setWindowTitle("Text Adventure Game");
 	renderer->setWindowedMode(ASGE::Renderer::WindowMode::WINDOWED);
 	renderer->setClearColour(ASGE::COLOURS::WHITE);
@@ -56,8 +56,17 @@ bool TextAdventureGame::init()
 
 	//sound_engine->play2D("Resources\\demo.mp3", false);
 
-	//TextAdventure_XML.init();
-	outputText = TextAdventure_JSON.loadTextAdventure();
+	renderer->setFont(renderer->loadFont("F:\\font.ttf", 55));
+
+	//Instanciate inventory
+	for (int i = 0; i < (int)GameConstants::MAX_INVENTORY_SPACE; i++) {
+		progress.inventory[i] = "";
+	}
+
+	GameLogic.loadTextAdventure();
+
+	monitor_foreground.loadSprite(renderer.get(), "F:\\monitor_foreground.png");
+	monitor_background.loadSprite(renderer.get(), "F:\\monitor_background.png");
 
 	return true;
 }
@@ -71,8 +80,8 @@ bool TextAdventureGame::init()
 */
 void TextAdventureGame::setupResolution()
 {
-	game_width = 1920;
-	game_height = 1080;
+	game_width = (int)GameConstants::WINDOW_WIDTH;
+	game_height = (int)GameConstants::WINDOW_HEIGHT;
 }
 
 /**
@@ -89,14 +98,14 @@ void TextAdventureGame::keyHandler(const ASGE::SharedEventData data)
 {
 	auto key = static_cast<const ASGE::KeyEvent*>(data.get());
 	if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_BACKSPACE) {
-		inputBoxText = inputBoxText.substr(0, inputBoxText.size() - 1);
+		screenText.userInput = screenText.userInput.substr(0, screenText.userInput.size() - 1);
 	} 
 	else if (key->action == ASGE::KEYS::KEY_RELEASED && key->key == ASGE::KEYS::KEY_ENTER) {
-		outputText = TextAdventure_JSON.handleUserInput(inputBoxText);
-		inputBoxText = "";
+		GameLogic.handleUserInput(screenText.userInput);
+		screenText.userInput = "";
 	}
 	else if (key->action == ASGE::KEYS::KEY_RELEASED) {
-		inputBoxText += toupper((char)key->key);
+		screenText.userInput += toupper((char)key->key);
 	}
 }
 
@@ -137,8 +146,18 @@ void TextAdventureGame::update(const ASGE::GameTime& us)
 */
 void TextAdventureGame::render(const ASGE::GameTime& us)
 {
-	renderer->renderText(outputText, 50, 50, 1, ASGE::COLOURS::GREY);
-	renderer->renderText(inputBoxText, 50, game_height - 50, 2, ASGE::COLOURS::BLACK);
+	renderer->renderSprite(*monitor_background.getSprite());
 
-	renderer->renderText(to_string(TextAdventure_Progress.current_zone), game_width - 50, 50, 1, ASGE::COLOURS::RED);
+	renderer->renderText(screenText.gameTitle, 50, 60, 0.5, ASGE::COLOURS::BLACK);
+	renderer->renderText(screenText.gameDeveloper, game_width - 200, 60, 0.5, ASGE::COLOURS::BLACK);
+
+	renderer->renderText(screenText.locationIntro, 50, 150, 0.5, ASGE::COLOURS::WHITE);
+	renderer->renderText(screenText.inputResponse, 50, 550, 0.5, ASGE::COLOURS::WHITE);
+
+	renderer->renderText(screenText.userInput, 50, game_height - 40, 0.8, ASGE::COLOURS::BLACK);
+
+	renderer->renderSprite(*monitor_foreground.getSprite());
+
+	//debug only
+	renderer->renderText(to_string(progress.zone), game_width - 50, 50, 1, ASGE::COLOURS::RED);
 }

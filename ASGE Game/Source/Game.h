@@ -5,10 +5,10 @@
 #include <Engine/OGLGame.h>
 #include <irrklang.h>
 
-#include "ReadXML.h"
-#include "ReadJSON.h"
-
+#include "SpriteComponent.h"
+#include "GameLogic.h"
 #include "GameProgress.h";
+#include "GameScreenText.h"
 
 /**
 *  An OpenGL Game based on ASGE.
@@ -36,11 +36,13 @@ private:
 	//Sound engine
 	irrklang::ISoundEngine* sound_engine;
 
-	ReadXML TextAdventure_XML;
-	ReadJSON TextAdventure_JSON;
+	TextAdventureLogic GameLogic;
+	GameProgress progress;
+	GameScreenText screenText;
 
 	string inputBoxText = "";
 	string outputText = "";
 
-	GameProgress TextAdventure_Progress;
+	SpriteComponent monitor_foreground;
+	SpriteComponent monitor_background;
 };

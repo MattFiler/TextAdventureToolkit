@@ -10,16 +10,16 @@
     <ClCompile Include="..\..\Source\SpriteComponent.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ReadXML.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Rect.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\ReadJSON.cpp">
+    <ClCompile Include="..\..\Source\GameProgress.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\GameProgress.cpp">
+    <ClCompile Include="..\..\Source\GameScreenText.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameLogic.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,16 +39,22 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="..\..\Source\ReadXML.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\Rect.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\ReadJSON.h">
+    <ClInclude Include="..\..\Source\GameProgress.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\GameProgress.h">
+    <ClInclude Include="..\..\Source\GameConstants.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="\\nstu-nas01.uwe.ac.uk\users3%24\m2-filer\Personal\GITHUB\TextAdventure\ASGE Game and Tools\Source\GameActions.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameScreenText.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameLogic.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

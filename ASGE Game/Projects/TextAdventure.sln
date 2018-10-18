@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Base Code", "TextA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Plugin", "TextAdventurePlugin\Text Adventure Plugin\Brainiac Plugin.csproj", "{326CC795-9695-4B8E-9EB4-5C7EA28B0344}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brainiac Plugin", "Brainiac Plugin", "{352B716D-07A3-4016-9095-2C96E3D27E36}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brainiac Plugin (DEPRECIATED!)", "Brainiac Plugin (DEPRECIATED!)", "{352B716D-07A3-4016-9095-2C96E3D27E36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
