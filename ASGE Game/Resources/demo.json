@@ -61,7 +61,7 @@
 			"zone_name": "YARD",
 			"0": {
 				"zone_state": "INITIAL",
-				"zone_intro": "You walk through to the yard.\n\nYou spent a lot of time here with your fgamily on holiday trips.\n\nGood memories."
+				"zone_intro": "You walk through to the yard.\n\nYou spent a lot of time here with your family on\nholiday trips.\n\nGood memories."
 			}
 		}
 	}

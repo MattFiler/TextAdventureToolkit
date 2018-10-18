@@ -56,7 +56,7 @@ bool TextAdventureGame::init()
 
 	//sound_engine->play2D("Resources\\demo.mp3", false);
 
-	renderer->setFont(renderer->loadFont("F:\\font.ttf", 55));
+	renderer->setFont(renderer->loadFont("Resources\\font.ttf", 55));
 
 	//Instanciate inventory
 	for (int i = 0; i < (int)GameConstants::MAX_INVENTORY_SPACE; i++) {
@@ -65,8 +65,8 @@ bool TextAdventureGame::init()
 
 	GameLogic.loadTextAdventure();
 
-	monitor_foreground.loadSprite(renderer.get(), "F:\\monitor_foreground.png");
-	monitor_background.loadSprite(renderer.get(), "F:\\monitor_background.png");
+	monitor_foreground.loadSprite(renderer.get(), "Resources\\monitor_foreground.png");
+	monitor_background.loadSprite(renderer.get(), "Resources\\monitor_background.png");
 
 	return true;
 }

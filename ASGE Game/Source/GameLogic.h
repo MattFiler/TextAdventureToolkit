@@ -45,6 +45,8 @@ private:
 	void handleInventory(string action);
 	bool requiredItemsAreInInventory(string action);
 
+	void moveToZone(string name);
+
 	json logic;
 	GameProgress progress;
 	GameActions gameAction;

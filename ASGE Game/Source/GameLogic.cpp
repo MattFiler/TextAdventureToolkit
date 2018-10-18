@@ -8,7 +8,7 @@ PUBLIC
 
 /* Read in the text adventure from a JSON file */
 void TextAdventureLogic::loadTextAdventure() {
-	ifstream ReadXML("F:\\demo.json");
+	ifstream ReadXML("Resources\\demo.json");
 	ReadXML >> logic;
 
 	screenText.gameTitle = getGameTitle();
@@ -118,16 +118,14 @@ bool TextAdventureLogic::isActionPermitted(string action) {
 	return !logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action].is_null();
 }
 
-/* Perform action */
+/* Perform action when we are permitted to do so */
 void TextAdventureLogic::performAction(string action, string subject) {
+	auto actionLogic = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action];
+
 	handleInventory(action);
-	if (action == "GET_OUT" || action == "EXIT") {
-		progress.zone++;
-		screenText.locationIntro = getZoneIntro();
-	}
-	else if (action == "GO_TO") {
-		progress.zone = 0; //will want to grab zone id here from name (move_to)
-		screenText.locationIntro = getZoneIntro();
+
+	if (actionLogic["move_to"].is_string()) {
+		moveToZone(actionLogic["move_to"]);
 	}
 }
 
@@ -206,12 +204,23 @@ bool TextAdventureLogic::requiredItemsAreInInventory(string action) {
 	auto inventoryRequired = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["required_inventory"];
 	bool hasRequiredInventory = false;
 	if (inventoryRequired.is_array()) {
-		for (int x = 0; x < inventoryRequired.size(); x++) {
-			hasRequiredInventory = isItemInInventory(inventoryRequired[x]);
+		for (int i = 0; i < inventoryRequired.size(); i++) {
+			hasRequiredInventory = isItemInInventory(inventoryRequired[i]);
 			if (!hasRequiredInventory) {
 				return false;
 			}
 		}
 	}
 	return true;
+}
+
+/* Find zone by name and move to it */
+void TextAdventureLogic::moveToZone(string name) {
+	for (int i = 0; i < zonesInThisLevel(progress.level); i++) {
+		if (logic[to_string(progress.level)][to_string(i)]["zone_name"] == name) {
+			progress.zone = i;
+			screenText.locationIntro = getZoneIntro();
+			break;
+		}
+	}
 }
