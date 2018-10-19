@@ -8,8 +8,8 @@ PUBLIC
 
 /* Read in the text adventure from a JSON file */
 void TextAdventureLogic::loadTextAdventure() {
-	ifstream ReadXML("Resources\\demo.json");
-	ReadXML >> logic;
+	ifstream ReadJSON("Resources\\demo.json");
+	ReadJSON >> logic;
 
 	screenText.gameTitle = getGameTitle();
 	screenText.gameDeveloper = getGameDeveloper();

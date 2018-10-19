@@ -179,5 +179,5 @@ void TextAdventureGame::render(const ASGE::GameTime& us)
 	renderer->renderSprite(*monitor_foreground.getSprite());
 
 	//debug only
-	renderer->renderText(to_string(progress.zone), game_width - 50, 50, 1, ASGE::COLOURS::RED);
+	//renderer->renderText(to_string(progress.zone), game_width - 50, 50, 1, ASGE::COLOURS::RED);
 }
