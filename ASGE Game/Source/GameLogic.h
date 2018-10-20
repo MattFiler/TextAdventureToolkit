@@ -12,7 +12,8 @@
 using json = nlohmann::json;
 using namespace std;
 
-class TextAdventureLogic {
+class TextAdventureLogic
+{
 public:
 	void loadTextAdventure();
 	
@@ -47,11 +48,13 @@ private:
 
 	void moveToZone(string name);
 
+	//Instances
 	json logic;
 	GameProgress progress;
 	GameActions gameAction;
 	GameScreenText screenText;
 
+	//Check for action referencing
 	bool thisActionWasReferenced = false;
 	string actionReferencedFrom = "";
 };

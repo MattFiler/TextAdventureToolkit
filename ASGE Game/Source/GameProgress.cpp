@@ -6,4 +6,4 @@ int GameProgress::state = 0;
 
 string GameProgress::inventory[(int)GameConstants::MAX_INVENTORY_SPACE];
 
-bool GameProgress::textIsAnimating = true;
+GameState GameProgress::gameState = GameState::LOADING;

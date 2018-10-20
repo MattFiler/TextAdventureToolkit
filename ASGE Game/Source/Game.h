@@ -10,6 +10,7 @@
 #include "GameProgress.h"
 #include "GameScreenText.h"
 #include "Animations.h"
+#include "GameStates.h"
 
 /**
 *  An OpenGL Game based on ASGE.
@@ -24,7 +25,6 @@ public:
 
 private:
 	void keyHandler(const ASGE::SharedEventData data);
-	void clickHandler(const ASGE::SharedEventData data);
 	void setupResolution();
 
 	virtual void update(const ASGE::GameTime &) override;
@@ -37,16 +37,22 @@ private:
 	//Sound engine
 	irrklang::ISoundEngine* sound_engine;
 
+	//Misc Instances
 	TextAdventureLogic GameLogic;
 	GameProgress progress;
 	GameScreenText screenText;
 
-	Animations animationInstance1;
-	Animations animationInstance2;
+	//Animation Instances
+	Animations loadScreenAnim;
+	Animations zoneIntroAnim;
+	Animations outputTextAnim;
 
-	string inputBoxText = "";
-	string outputText = "";
+	//Sprites - Loading
+	SpriteComponent loading_monitor_background_red;
+	SpriteComponent loading_monitor_background_blue;
+	SpriteComponent loading_monitor_background_black;
 
-	SpriteComponent monitor_foreground;
-	SpriteComponent monitor_background;
+	//Sprites - Main
+	SpriteComponent main_monitor_foreground;
+	SpriteComponent main_monitor_background;
 };

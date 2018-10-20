@@ -2,7 +2,7 @@
     "game_core": {
         "title": "The House Abandon",
         "developer": "Matt Filer",
-        "invalid_input": "I'm sorry, I don't understand",
+        "invalid_input": "I'm sorry, I don't understand.",
         "items_are_required": "You don't have the necessary items!",
 		"input_disabled": "<< WAIT >>"
     },

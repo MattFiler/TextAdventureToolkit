@@ -2,6 +2,7 @@
 
 #include <string>
 #include "GameConstants.h"
+#include "GameStates.h"
 using namespace std;
 
 struct GameProgress
@@ -15,5 +16,5 @@ struct GameProgress
 	static string inventory[(int)GameConstants::MAX_INVENTORY_SPACE];
 
 	//Game System Progress Tracking
-	static bool textIsAnimating;
+	static GameState gameState;
 };

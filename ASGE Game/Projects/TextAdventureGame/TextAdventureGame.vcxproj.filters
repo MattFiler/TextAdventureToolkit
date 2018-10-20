@@ -51,9 +51,6 @@
     <ClInclude Include="..\..\Source\GameConstants.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="\\nstu-nas01.uwe.ac.uk\users3%24\m2-filer\Personal\GITHUB\TextAdventure\ASGE Game and Tools\Source\GameActions.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Source\GameScreenText.h">
       <Filter>Headers</Filter>
     </ClInclude>
@@ -61,6 +58,12 @@
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Animations.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameStates.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameActions.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

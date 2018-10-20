@@ -6,6 +6,7 @@ SpriteComponent::~SpriteComponent()
 	freeSprite();
 }
 
+/* Load sprite to the component */
 bool SpriteComponent::loadSprite(
 	ASGE::Renderer* renderer, const std::string& texture_file_name)
 {
@@ -20,6 +21,7 @@ bool SpriteComponent::loadSprite(
 	return false;
 }
 
+/* Free sprite from memory */
 void SpriteComponent::freeSprite()
 {
 	if (sprite)
@@ -29,13 +31,47 @@ void SpriteComponent::freeSprite()
 	}
 }
 
-
+/* Get the sprite in this component */
 ASGE::Sprite* SpriteComponent::getSprite()
 {
 	return sprite;
 }
 
+/* Set the sprite's opacity */
+void SpriteComponent::setSpriteOpacity(float opacity)
+{
+	sprite->opacity(opacity);
+}
 
+/* Set the sprite's position (X) */
+void SpriteComponent::setSpritePositionX(float x, bool subtract, bool add)
+{
+	if (subtract)
+	{
+		x = getSpritePositionX() - x;
+	}
+	else if (add)
+	{
+		x += getSpritePositionX();
+	}
+	sprite->xPos(x);
+}
+
+/* Set the sprite's position (Y) */
+void SpriteComponent::setSpritePositionY(float y, bool subtract, bool add)
+{
+	if (subtract)
+	{
+		y = getSpritePositionY() - y;
+	}
+	else if (add)
+	{
+		y += getSpritePositionY();
+	}
+	sprite->yPos(y);
+}
+
+/* Get the bounding box of this sprite */
 rect SpriteComponent::getBoundingBox() const
 {
 	rect bounding_box;
@@ -46,4 +82,16 @@ rect SpriteComponent::getBoundingBox() const
 	bounding_box.scale = sprite->scale();
 
 	return bounding_box;
+}
+
+/* Get the sprite's position (X) */
+float SpriteComponent::getSpritePositionX()
+{
+	return sprite->xPos();
+}
+
+/* Get the sprite's position (Y) */
+float SpriteComponent::getSpritePositionY()
+{
+	return sprite->yPos();
 }

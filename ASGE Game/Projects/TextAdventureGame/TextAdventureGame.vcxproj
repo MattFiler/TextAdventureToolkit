@@ -115,14 +115,15 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
   <ItemGroup>
     <ClInclude Include="..\..\Source\Animations.h" />
     <ClInclude Include="..\..\Source\Game.h" />
+    <ClInclude Include="..\..\Source\GameActions.h" />
     <ClInclude Include="..\..\Source\GameConstants.h" />
     <ClInclude Include="..\..\Source\GameProgress.h" />
     <ClInclude Include="..\..\Source\GameScreenText.h" />
     <ClInclude Include="..\..\Source\GameLogic.h" />
+    <ClInclude Include="..\..\Source\GameStates.h" />
     <ClInclude Include="..\..\Source\Rect.h" />
     <ClInclude Include="..\..\Source\SpriteComponent.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="\\nstu-nas01.uwe.ac.uk\users3%24\m2-filer\Personal\GITHUB\TextAdventure\ASGE Game and Tools\Source\GameActions.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="TextAdventureGame.rc" />

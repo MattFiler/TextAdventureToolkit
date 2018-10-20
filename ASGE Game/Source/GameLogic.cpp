@@ -7,7 +7,8 @@ PUBLIC
 */
 
 /* Read in the text adventure from a JSON file */
-void TextAdventureLogic::loadTextAdventure() {
+void TextAdventureLogic::loadTextAdventure() 
+{
 	ifstream ReadJSON("Resources\\demo.json");
 	ReadJSON >> logic;
 
@@ -17,38 +18,47 @@ void TextAdventureLogic::loadTextAdventure() {
 }
 
 /* Return the number of levels */
-int TextAdventureLogic::levelsInThisGame() {
+int TextAdventureLogic::levelsInThisGame() 
+{
 	return logic.size()-1; //-1 to account for game_core
 }
 /* Return the number of zones per level */
-int TextAdventureLogic::zonesInThisLevel(int level_id) {
+int TextAdventureLogic::zonesInThisLevel(int level_id)
+{
 	return logic[to_string(level_id)].size();
 }
 /* Return the number of states per zone */
-int TextAdventureLogic::statesInThisZone(int level_id, int zone_id) {
+int TextAdventureLogic::statesInThisZone(int level_id, int zone_id) 
+{
 	return logic[to_string(level_id)][to_string(zone_id)].size() - 1;
 }
 
 /* Get the game's title */
-string TextAdventureLogic::getGameTitle() {
+string TextAdventureLogic::getGameTitle()
+{
 	return logic["game_core"]["title"];
 }
 /* Get the game's developer */
-string TextAdventureLogic::getGameDeveloper() {
+string TextAdventureLogic::getGameDeveloper() 
+{
 	return logic["game_core"]["developer"];
 }
 /* Get the game's disabled input text */
-string TextAdventureLogic::getInputDisabledText() {
+string TextAdventureLogic::getInputDisabledText()
+{
 	return logic["game_core"]["input_disabled"];
 }
 
 /* Handle response of action */
-void TextAdventureLogic::handleUserInput(string input) {
+void TextAdventureLogic::handleUserInput(string input) 
+{
 	string action = interpretAction(input);
 	string subject = interpretSubject(input);
 
-	if (isActionPermitted(action) && isSubjectValid(action, subject)) {
-		if (requiredItemsAreInInventory(action)) {
+	if (isActionPermitted(action) && isSubjectValid(action, subject))
+	{
+		if (requiredItemsAreInInventory(action))
+		{
 			string response = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["system_reply"];
 			performAction(action, subject);
 			screenText.inputResponse = response;
@@ -71,27 +81,34 @@ PRIVATE
 */
 
 /* Show the game intro text */
-string TextAdventureLogic::getZoneIntro() {
+string TextAdventureLogic::getZoneIntro() 
+{
 	return logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)]["zone_intro"];
 }
 
 /* Interpret the user's input action */
-string TextAdventureLogic::interpretAction(string input) {
+string TextAdventureLogic::interpretAction(string input)
+{
 	string action = "";
-	for (int i = 0; i < (int)GameConstants::NUMBER_OF_COMMANDS; i++) {
-		if (input.substr(0, gameAction.input[i].length()) == gameAction.input[i]) {
+	for (int i = 0; i < (int)GameConstants::NUMBER_OF_COMMANDS; i++)
+	{
+		if (input.substr(0, gameAction.input[i].length()) == gameAction.input[i])
+		{
 			action = checkForReferencedAction(gameAction.command[i]);
 		}
 	}
-	if (action == "") {
+	if (action == "")
+	{
 		action == "BAD_COMMAND";
 	}
 	return action;
 }
 
 /* Check for a referenced action */
-string TextAdventureLogic::checkForReferencedAction(string action) {
-	if (!logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["referenced"].is_null()) {
+string TextAdventureLogic::checkForReferencedAction(string action)
+{
+	if (!logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["referenced"].is_null())
+	{
 		thisActionWasReferenced = true;
 		actionReferencedFrom = action;
 		return logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["referenced"];
@@ -104,46 +121,58 @@ string TextAdventureLogic::checkForReferencedAction(string action) {
 }
 
 /* Get the text to respond to an invalid input with */
-string TextAdventureLogic::getInvalidInputResponse() {
+string TextAdventureLogic::getInvalidInputResponse() 
+{
 	return logic["game_core"]["invalid_input"];
 }
 
 /* Get the text to respond to an invalid input with */
-string TextAdventureLogic::getInvalidInventoryResponse() {
+string TextAdventureLogic::getInvalidInventoryResponse()
+{
 	return logic["game_core"]["items_are_required"];
 }
 
 /* Verify if an action is permitted in this location */
-bool TextAdventureLogic::isActionPermitted(string action) {
+bool TextAdventureLogic::isActionPermitted(string action)
+{
 	return !logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action].is_null();
 }
 
 /* Perform action when we are permitted to do so */
-void TextAdventureLogic::performAction(string action, string subject) {
+void TextAdventureLogic::performAction(string action, string subject)
+{
 	auto actionLogic = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action];
 
 	handleInventory(action);
 
-	if (actionLogic["move_to"].is_string()) {
+	if (actionLogic["move_to"].is_string())
+	{
 		moveToZone(actionLogic["move_to"]);
 	}
 }
 
 /* Interpret the user's input subject */
-string TextAdventureLogic::interpretSubject(string input) {
+string TextAdventureLogic::interpretSubject(string input)
+{
 	string action = interpretAction(input);
-	if (thisActionWasReferenced) {
+	if (thisActionWasReferenced) 
+	{
 		action = actionReferencedFrom;
 	}
-	if (isActionPermitted(action)) {
-		try {
-			for (int i = 0; i < (int)GameConstants::NUMBER_OF_COMMANDS; i++) {
-				if (action == gameAction.command[i]) {
+	if (isActionPermitted(action)) 
+	{
+		try
+		{
+			for (int i = 0; i < (int)GameConstants::NUMBER_OF_COMMANDS; i++)
+			{
+				if (action == gameAction.command[i]) 
+				{
 					return input.substr(gameAction.input[i].length() + 1);
 				}
 			}
 		}
-		catch (out_of_range& exception) {
+		catch (out_of_range& exception)
+		{
 			return ""; //No valid subject provided. This might still be ok.
 		}
 	}
@@ -154,11 +183,14 @@ string TextAdventureLogic::interpretSubject(string input) {
 }
 
 /* Verify if an subject is permitted on this action */
-bool TextAdventureLogic::isSubjectValid(string action, string subject) {
+bool TextAdventureLogic::isSubjectValid(string action, string subject)
+{
 	auto requiredSubject = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["subject"];
 
-	if (requiredSubject.is_string()) {
-		if (requiredSubject == subject) {
+	if (requiredSubject.is_string())
+	{
+		if (requiredSubject == subject)
+		{
 			return true;
 		}
 		else
@@ -173,9 +205,12 @@ bool TextAdventureLogic::isSubjectValid(string action, string subject) {
 }
 
 /* Check if an item is in the inventory */
-bool TextAdventureLogic::isItemInInventory(string item) {
-	for (int i = 0; i < (int)GameConstants::MAX_INVENTORY_SPACE; i++) {
-		if (item == progress.inventory[i]) {
+bool TextAdventureLogic::isItemInInventory(string item)
+{
+	for (int i = 0; i < (int)GameConstants::MAX_INVENTORY_SPACE; i++)
+	{
+		if (item == progress.inventory[i])
+		{
 			return true;
 		}
 	}
@@ -183,13 +218,20 @@ bool TextAdventureLogic::isItemInInventory(string item) {
 }
 
 /* Add items to inventory when requested */
-void TextAdventureLogic::handleInventory(string action) {
+void TextAdventureLogic::handleInventory(string action)
+{
 	auto inventoryAdd = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["add_to_inventory"];
-	if (inventoryAdd.is_array()) {
-		for (int i = 0; i < inventoryAdd.size(); i++) {
-			if (!isItemInInventory(inventoryAdd[i])) {
-				for (int x = 0; x < (int)GameConstants::MAX_INVENTORY_SPACE; x++) {
-					if (progress.inventory[x] == "") {
+
+	if (inventoryAdd.is_array())
+	{
+		for (int i = 0; i < inventoryAdd.size(); i++)
+		{
+			if (!isItemInInventory(inventoryAdd[i]))
+			{
+				for (int x = 0; x < (int)GameConstants::MAX_INVENTORY_SPACE; x++)
+				{
+					if (progress.inventory[x] == "")
+					{
 						progress.inventory[x] = inventoryAdd[i];
 						break;
 					}
@@ -200,13 +242,18 @@ void TextAdventureLogic::handleInventory(string action) {
 }
 
 /* Check required items for action are in the inventory */
-bool TextAdventureLogic::requiredItemsAreInInventory(string action) {
+bool TextAdventureLogic::requiredItemsAreInInventory(string action)
+{
 	auto inventoryRequired = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][action]["required_inventory"];
 	bool hasRequiredInventory = false;
-	if (inventoryRequired.is_array()) {
-		for (int i = 0; i < inventoryRequired.size(); i++) {
+
+	if (inventoryRequired.is_array()) 
+	{
+		for (int i = 0; i < inventoryRequired.size(); i++)
+		{
 			hasRequiredInventory = isItemInInventory(inventoryRequired[i]);
-			if (!hasRequiredInventory) {
+			if (!hasRequiredInventory)
+			{
 				return false;
 			}
 		}
@@ -215,9 +262,12 @@ bool TextAdventureLogic::requiredItemsAreInInventory(string action) {
 }
 
 /* Find zone by name and move to it */
-void TextAdventureLogic::moveToZone(string name) {
-	for (int i = 0; i < zonesInThisLevel(progress.level); i++) {
-		if (logic[to_string(progress.level)][to_string(i)]["zone_name"] == name) {
+void TextAdventureLogic::moveToZone(string name)
+{
+	for (int i = 0; i < zonesInThisLevel(progress.level); i++)
+	{
+		if (logic[to_string(progress.level)][to_string(i)]["zone_name"] == name) 
+		{
 			progress.zone = i;
 			screenText.locationIntro = getZoneIntro();
 			break;
