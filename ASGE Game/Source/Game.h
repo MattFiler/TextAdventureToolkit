@@ -30,6 +30,8 @@ private:
 	virtual void update(const ASGE::GameTime &) override;
 	virtual void render(const ASGE::GameTime &) override;
 
+	void keyboardSFX();
+
 	//Input callbacks
 	int key_callback_id = -1;
 	int mouse_callback_id = -1;
@@ -55,4 +57,6 @@ private:
 	//Sprites - Main
 	SpriteComponent main_monitor_foreground;
 	SpriteComponent main_monitor_background;
+
+	bool isPlayingTheme = false;
 };

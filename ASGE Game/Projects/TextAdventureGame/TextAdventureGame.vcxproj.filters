@@ -63,7 +63,7 @@
     <ClInclude Include="..\..\Source\GameStates.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\GameActions.h">
+    <ClInclude Include="..\..\Source\GameDataType.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

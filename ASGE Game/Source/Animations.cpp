@@ -6,6 +6,14 @@ PUBLIC
 ------
 */
 
+Animations::Animations() {
+	sound_engine = irrklang::createIrrKlangDevice();
+}
+
+Animations::~Animations() {
+	sound_engine->drop();
+}
+
 /* Animate text with a typing effect */
 bool Animations::animateText(const ASGE::GameTime &time, string originalText, string &outputText)
 {
@@ -18,6 +26,7 @@ bool Animations::animateText(const ASGE::GameTime &time, string originalText, st
 		if (previousGoalText == originalText) 
 		{
 			newTextLength = outputText.length() + 1;
+			sound_engine->play2D("Resources\\blip_2.mp3", false);
 		}
 		outputText = originalText.substr(0, newTextLength);
 		timePreviouslyAnimated = currentGameTime;

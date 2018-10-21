@@ -6,8 +6,8 @@
 
 #include "GameProgress.h"
 #include "GameConstants.h"
-#include "GameActions.h"
 #include "GameScreenText.h"
+#include "GameDataType.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -28,33 +28,41 @@ public:
 	void handleUserInput(string input);
 
 private:
+	void parseInput(string input);
+
 	string getZoneIntro();
 
 	string interpretAction(string input);
-	string interpretSubject(string input);
-	string checkForReferencedAction(string action);
+	string interpretSubject(string input, string tempAction="");
+	string checkForReferencedAction(string action, string tempSubject="");
 
 	string getInvalidInputResponse();
-	string getInvalidInventoryResponse();
+	string getErrorResponse();
+	int getNumberOfActionTypes();
+	string getActionText(int index);
 
-	void performAction(string action, string subject);
+	void performCurrentAction();
 
-	bool isActionPermitted(string action);
-	bool isSubjectValid(string action, string subject);
-	bool isItemInInventory(string item);
+	bool isCurrentActionValid();
+	bool isCurrentSubjectValid();
+	bool isItemInGameData(string item);
 
-	void handleInventory(string action);
-	bool requiredItemsAreInInventory(string action);
+	void handleGameData();
+	gameDataType gameDataExistsForCurrentAction(gameDataType type);
 
 	void moveToZone(string name);
 
 	//Instances
 	json logic;
 	GameProgress progress;
-	GameActions gameAction;
 	GameScreenText screenText;
 
 	//Check for action referencing
 	bool thisActionWasReferenced = false;
 	string actionReferencedFrom = "";
+	string referencedSubject = "";
+
+	//Parsed Input
+	string currentAction = "";
+	string currentSubject = "";
 };

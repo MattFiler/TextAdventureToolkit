@@ -115,8 +115,8 @@ xcopy "$(SolutionDir)..\Prerequisites\*" "$(OutDir)\" /F /R /Y /I /S /D</Command
   <ItemGroup>
     <ClInclude Include="..\..\Source\Animations.h" />
     <ClInclude Include="..\..\Source\Game.h" />
-    <ClInclude Include="..\..\Source\GameActions.h" />
     <ClInclude Include="..\..\Source\GameConstants.h" />
+    <ClInclude Include="..\..\Source\GameDataType.h" />
     <ClInclude Include="..\..\Source\GameProgress.h" />
     <ClInclude Include="..\..\Source\GameScreenText.h" />
     <ClInclude Include="..\..\Source\GameLogic.h" />

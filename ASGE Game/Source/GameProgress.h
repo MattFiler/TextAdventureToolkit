@@ -13,7 +13,7 @@ struct GameProgress
 	static int state;
 
 	//Player Progress Tracking
-	static string inventory[(int)GameConstants::MAX_INVENTORY_SPACE];
+	static string gameData[(int)GameConstants::MAX_GAMEDATA_SPACE];
 
 	//Game System Progress Tracking
 	static GameState gameState;
