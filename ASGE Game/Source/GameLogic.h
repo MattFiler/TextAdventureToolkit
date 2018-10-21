@@ -50,7 +50,13 @@ private:
 	void handleGameData();
 	gameDataType gameDataExistsForCurrentAction(gameDataType type);
 
+	void moveToState(string name);
 	void moveToZone(string name);
+	void moveToLevel(string name);
+
+	int findStateByName(string name);
+	int findZoneByName(string name);
+	int findLevelByName(string name);
 
 	//Instances
 	json logic;

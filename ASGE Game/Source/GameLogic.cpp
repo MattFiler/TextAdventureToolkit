@@ -20,12 +20,12 @@ void TextAdventureLogic::loadTextAdventure()
 /* Return the number of levels */
 int TextAdventureLogic::levelsInThisGame() 
 {
-	return logic.size()-1; //-1 to account for game_core
+	return logic.size() - 1; //-1 to account for game_core
 }
 /* Return the number of zones per level */
 int TextAdventureLogic::zonesInThisLevel(int level_id)
 {
-	return logic[to_string(level_id)].size();
+	return logic[to_string(level_id)].size() - 1; //-1 to account for level_name
 }
 /* Return the number of states per zone */
 int TextAdventureLogic::statesInThisZone(int level_id, int zone_id) 
@@ -218,9 +218,17 @@ void TextAdventureLogic::performCurrentAction()
 {
 	auto actionLogic = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][currentAction][currentSubject];
 
-	if (actionLogic["move_to"].is_string())
+	if (actionLogic["new_state"].is_string())
 	{
-		moveToZone(actionLogic["move_to"]);
+		moveToState(actionLogic["new_state"]);
+	}
+	if (actionLogic["new_zone"].is_string())
+	{
+		moveToZone(actionLogic["new_zone"]);
+	}
+	if (actionLogic["new_level"].is_string())
+	{
+		moveToLevel(actionLogic["new_level"]);
 	}
 }
 
@@ -317,15 +325,58 @@ gameDataType TextAdventureLogic::gameDataExistsForCurrentAction(gameDataType typ
 }
 
 /* Find zone by name and move to it */
+void TextAdventureLogic::moveToState(string name)
+{
+	progress.state = findStateByName(name);
+	screenText.locationIntro = getZoneIntro();
+}
+
+/* Find zone by name and move to it */
 void TextAdventureLogic::moveToZone(string name)
 {
+	progress.zone = findZoneByName(name);
+	progress.state = 0;
+	screenText.locationIntro = getZoneIntro();
+}
+
+/* Find zone by name and move to it */
+void TextAdventureLogic::moveToLevel(string name)
+{
+	progress.level = findLevelByName(name);
+	progress.zone = 0;
+	progress.state = 0;
+	screenText.locationIntro = getZoneIntro();
+}
+
+/* Find state ID by name in current zone */
+int TextAdventureLogic::findStateByName(string name) {
+	for (int i = 0; i < statesInThisZone(progress.level, progress.zone); i++)
+	{
+		if (logic[to_string(progress.level)][to_string(progress.zone)][to_string(i)]["state_name"] == name)
+		{
+			return i;
+		}
+	}
+}
+
+/* Find zone ID by name in current level */
+int TextAdventureLogic::findZoneByName(string name) {
 	for (int i = 0; i < zonesInThisLevel(progress.level); i++)
 	{
-		if (logic[to_string(progress.level)][to_string(i)]["zone_name"] == name) 
+		if (logic[to_string(progress.level)][to_string(i)]["zone_name"] == name)
 		{
-			progress.zone = i;
-			screenText.locationIntro = getZoneIntro();
-			break;
+			return i;
+		}
+	}
+}
+
+/* Find level ID by name */
+int TextAdventureLogic::findLevelByName(string name) {
+	for (int i = 0; i < levelsInThisGame(); i++)
+	{
+		if (logic[to_string(i)]["level_name"] == name)
+		{
+			return i;
 		}
 	}
 }
