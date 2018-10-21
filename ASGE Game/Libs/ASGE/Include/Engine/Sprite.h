@@ -228,6 +228,12 @@ namespace ASGE {
 		* This is useful when the texture is a sprite sheet. 
 		* @return The rectangle used for the UV source. */
 		float* srcRect() noexcept;
+		
+		/*
+		* Addition by MattFiler 21/10/18
+		* Set the sprite rectangle manually.
+		*/
+		void setSrcRect(int x, int y, int w, int h) { src_rect[0] = x; src_rect[1] = y; src_rect[2] = w; src_rect[3] = h; }
 
 		/**
 		* Gets a read-only source rectangle used for rendering.

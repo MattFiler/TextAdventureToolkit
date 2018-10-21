@@ -37,6 +37,11 @@ ASGE::Sprite* SpriteComponent::getSprite()
 	return sprite;
 }
 
+/* Get texture of the sprite */
+const ASGE::Texture2D* SpriteComponent::getTexture() {
+	return sprite->getTexture();
+}
+
 /* Set the sprite's opacity */
 void SpriteComponent::setSpriteOpacity(float opacity)
 {
@@ -71,6 +76,13 @@ void SpriteComponent::setSpritePositionY(float y, bool subtract, bool add)
 	sprite->yPos(y);
 }
 
+/* Set sprite colour */
+void SpriteComponent::setSpriteColour(float r, float g, float b) {
+	float rgb[3] = { r,g,b };
+	ASGE::Colour colour = ASGE::Colour::Colour(rgb);
+	sprite->colour(colour);
+}
+
 /* Get the bounding box of this sprite */
 rect SpriteComponent::getBoundingBox() const
 {
@@ -94,4 +106,12 @@ float SpriteComponent::getSpritePositionX()
 float SpriteComponent::getSpritePositionY()
 {
 	return sprite->yPos();
+}
+
+/* Crop the render rectangle */
+void SpriteComponent::cropSprite(int x, int y) {
+	//Bit of a work in progress
+	sprite->setSrcRect(x, y, sprite->width(), sprite->height());
+
+	//getTexture()->setFormat(ASGE::Texture2D::Format::RGBA);
 }
