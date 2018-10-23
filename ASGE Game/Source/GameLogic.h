@@ -47,7 +47,7 @@ private:
 	bool isCurrentSubjectValid();
 	bool isItemInGameData(string item);
 
-	void handleGameData();
+	void handleGameData(bool shouldAdd=true);
 	gameDataType gameDataExistsForCurrentAction(gameDataType type);
 
 	void moveToState(string name);

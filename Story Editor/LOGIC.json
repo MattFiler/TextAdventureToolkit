@@ -1,0 +1,42 @@
+{
+    "game_core": {
+        "title": "The House Abandon",
+        "developer": "Matt Filer",
+        "invalid_input": "I'm sorry, I don't understand.",
+        "fatal_error": "A FATAL ERROR OCCURRED!\n\nPLEASE CHECK YOUR SCRIPTING.",
+		"input_disabled": "<< WAIT >>",
+		"prefixes": ["LOOK AROUND", "LOOK AT", "GO TO", "GO", "GET OUT", "EXIT", "USE", "OPEN", "READ"]
+    },
+	"0": {
+		"level_name": "LEVEL ONE",
+		"0": {
+			"zone_name": "INSIDE CAR",
+			"0": {
+				"state_name": "INITIAL",
+				"zone_intro": "You pull up to the driveway of the family holiday home\nand park the car.\n\nIt's dark, but it's as idyllic as you remember from all\nthat time ago.\n\nYou remember being told to look in the glovebox before\ngoing in.\n\nIt's good to be back.",
+				
+				"GO TO": {
+					"GLOVEBOX": {
+						"required_gamedata": ["EVENT_", "ITEM_"],
+						"optional_gamedata": ["EVENT_", "ITEM_"],
+						
+						"add_gamedata": ["ITEM_","EVENT_"],
+						"remove_gamedata": ["ITEM_","EVENT_"],
+						
+						"system_reply_ok": "...",
+						"system_reply_issue": "...",
+						
+						"new_level": "LEVEL",
+						"new_zone": "ZONE",
+						"new_state": "STATE"
+					}
+				},
+				"USE": {
+					"GLOVEBOX": {
+						"referenced": ["GO TO", "GLOVEBOX"]
+					}
+				}
+			}
+		}
+	}
+}

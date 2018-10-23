@@ -263,22 +263,41 @@ string TextAdventureLogic::interpretSubject(string input, string tempAction)
 }
 
 /* Add items to game memory when requested */
-void TextAdventureLogic::handleGameData()
+void TextAdventureLogic::handleGameData(bool shouldAdd)
 {
-	auto gameDataToAdd = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][currentAction][currentSubject]["add_gamedata"];
-
-	if (gameDataToAdd.is_array())
+	string jsonString = "add_gamedata";
+	if (!shouldAdd) 
 	{
-		for (int i = 0; i < gameDataToAdd.size(); i++)
+		jsonString = "remove_gamedata";
+	}
+	auto gameData = logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][currentAction][currentSubject][jsonString];
+
+	if (gameData.is_array())
+	{
+		for (int i = 0; i < gameData.size(); i++)
 		{
-			if (!isItemInGameData(gameDataToAdd[i]))
+			if (!isItemInGameData(gameData[i]))
 			{
 				for (int x = 0; x < (int)GameConstants::MAX_GAMEDATA_SPACE; x++)
 				{
 					if (progress.gameData[x] == "")
 					{
-						progress.gameData[x] = gameDataToAdd[i];
+						progress.gameData[x] = gameData[i];
 						break;
+					}
+				}
+			}
+			else
+			{
+				if (!shouldAdd) 
+				{
+					for (int x = 0; x < (int)GameConstants::MAX_GAMEDATA_SPACE; x++)
+					{
+						if (progress.gameData[x] == gameData[i])
+						{
+							progress.gameData[x] = "";
+							break;
+						}
 					}
 				}
 			}
