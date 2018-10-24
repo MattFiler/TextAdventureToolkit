@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Base Code", "TextAdventurePlugin\Brainiac Base Code\Brainiac Base Code.csproj", "{DE22E2F7-F314-458E-8D17-223CD099B2F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brainiac Plugin", "TextAdventurePlugin\Text Adventure Plugin\Brainiac Plugin.csproj", "{326CC795-9695-4B8E-9EB4-5C7EA28B0344}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Brainiac Plugin", "Brainiac Plugin", "{352B716D-07A3-4016-9095-2C96E3D27E36}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Converter", "Converter", "{87518648-1755-4B6E-A787-DE4B79DB43CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryGenerator", "StoryGenerator\StoryGenerator.csproj", "{63825721-75BF-4DF0-884D-1E7727571C08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0}.Release|x86.Build.0 = Release|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Debug|x86.Build.0 = Debug|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Release|Any CPU.Build.0 = Release|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Release|x86.ActiveCfg = Release|Any CPU
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344}.Release|x86.Build.0 = Release|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Debug|x86.Build.0 = Debug|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Release|x86.ActiveCfg = Release|Any CPU
+		{63825721-75BF-4DF0-884D-1E7727571C08}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DE22E2F7-F314-458E-8D17-223CD099B2F0} = {352B716D-07A3-4016-9095-2C96E3D27E36}
+		{326CC795-9695-4B8E-9EB4-5C7EA28B0344} = {352B716D-07A3-4016-9095-2C96E3D27E36}
+		{63825721-75BF-4DF0-884D-1E7727571C08} = {87518648-1755-4B6E-A787-DE4B79DB43CD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D49DEA14-C53B-416A-A996-E17EF7114AD0}
+	EndGlobalSection
+EndGlobal
