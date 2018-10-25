@@ -11,7 +11,6 @@
                 <Connector Identifier="GenericChildren">
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
-                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You pull up to the driveway of the family holiday home\nand park the car.\n\nIt's dark, but it's as idyllic as you remember from all\nthat time ago.\n\nYou remember being told to look in the glovebox before\ngoing in.\n\nIt's good to be back." />
                       <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
@@ -101,7 +100,6 @@
                 <Connector Identifier="GenericChildren">
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
-                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="The house is grand, sat perfectly amongst the trees.\n\nIn front of you is the front door, and the yard stretches\naround the back of the house." />
                       <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
@@ -196,8 +194,8 @@
                 <Connector Identifier="GenericChildren">
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
-                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You walk through to the yard.\n\nYou spent a lot of time here with your family on\nholiday trips.\n\nGood memories." />
                       <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Comment Background="Violet:4" Text="Test Comment" />
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
                             <Connector Identifier="GenericChildren">
@@ -220,7 +218,6 @@
                 <Connector Identifier="GenericChildren">
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
-                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You enter the house to the hallway.\n\nIt's dark and you can't see anything.\n\nYou feel a light switch next to the door however." />
                       <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">

@@ -38,7 +38,8 @@ ASGE::Sprite* SpriteComponent::getSprite()
 }
 
 /* Get texture of the sprite */
-const ASGE::Texture2D* SpriteComponent::getTexture() {
+const ASGE::Texture2D* SpriteComponent::getTexture() 
+{
 	return sprite->getTexture();
 }
 
@@ -109,9 +110,10 @@ float SpriteComponent::getSpritePositionY()
 }
 
 /* Crop the render rectangle */
-void SpriteComponent::cropSprite(int x, int y) {
+void SpriteComponent::cropSprite(int x, int y)
+{
 	//Bit of a work in progress
 	sprite->setSrcRect(x, y, sprite->width(), sprite->height());
-
-	//getTexture()->setFormat(ASGE::Texture2D::Format::RGBA);
+	sprite->width(x);
+	sprite->height(y);
 }

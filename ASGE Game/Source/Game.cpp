@@ -69,8 +69,6 @@ bool TextAdventureGame::init()
 
 	//Load sprites - main
 	main_monitor_foreground.loadSprite(renderer.get(), "Resources\\UI\\MAIN\\main_monitor_foreground.png");
-	//main_monitor_foreground.setSpriteColour(0, 0, 0);
-	//main_monitor_foreground.cropSprite(500, 500);
 	main_monitor_background.loadSprite(renderer.get(), "Resources\\UI\\MAIN\\main_monitor_background.png");
 
 	//Load game into logic

@@ -1,0 +1,108 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Libs/ASGE/include/Engine/Colours.h
+
+../Libs/ASGE/include/Engine/Game.h
+atomic
+-
+memory
+-
+GameTime.h
+../Libs/ASGE/include/Engine/GameTime.h
+Input.h
+../Libs/ASGE/include/Engine/Input.h
+Renderer.h
+../Libs/ASGE/include/Engine/Renderer.h
+
+../Libs/ASGE/include/Engine/GameTime.h
+chrono
+-
+chrono
+-
+
+../Libs/ASGE/include/Engine/Gamepad.h
+
+../Libs/ASGE/include/Engine/Input.h
+functional
+-
+vector
+-
+memory
+-
+map
+-
+Gamepad.h
+../Libs/ASGE/include/Engine/Gamepad.h
+InputEvents.h
+../Libs/ASGE/include/Engine/InputEvents.h
+Mouse.h
+../Libs/ASGE/include/Engine/Mouse.h
+
+../Libs/ASGE/include/Engine/InputEvents.h
+memory
+-
+Keys.h
+../Libs/ASGE/include/Engine/Keys.h
+
+../Libs/ASGE/include/Engine/Keys.h
+
+../Libs/ASGE/include/Engine/Mouse.h
+
+../Libs/ASGE/include/Engine/NonCopyable.h
+
+../Libs/ASGE/include/Engine/OGLGame.h
+Engine/Game.h
+-
+
+../Libs/ASGE/include/Engine/Renderer.h
+memory
+-
+string
+-
+Engine/Colours.h
+../Libs/ASGE/include/Engine/Engine/Colours.h
+Engine/Texture.h
+../Libs/ASGE/include/Engine/Engine/Texture.h
+
+../Libs/ASGE/include/Engine/Sprite.h
+memory
+-
+string
+-
+Engine/Colours.h
+-
+
+../Libs/ASGE/include/Engine/Texture.h
+NonCopyable.h
+../Libs/ASGE/include/Engine/NonCopyable.h
+
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.cpp
+Animations.h
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
+
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
+Engine/OGLGame.h
+-
+string
+-
+GameConstants.h
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+SpriteComponent.h
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
+
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+Engine/Sprite.h
+-
+Rect.h
+H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
+

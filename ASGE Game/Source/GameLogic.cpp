@@ -9,7 +9,8 @@ PUBLIC
 /* Read in the text adventure from a JSON file */
 void TextAdventureLogic::loadTextAdventure() 
 {
-	ifstream ReadJSON("Resources\\story.json");
+	//ifstream ReadJSON("Resources\\story.json");
+	ifstream ReadJSON("F:\\story.json");
 	ReadJSON >> logic;
 
 	screenText.gameTitle = getGameTitle();

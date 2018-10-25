@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior>
+  <Node Class="Brainiac.Design.Nodes.Behavior">
+    <Connector Identifier="GenericChildren">
+      <Node Class="TextAdventure.Nodes.Game" GameDeveloper="Matt Filer" GameTitle="The House Abandon">
+        <Connector Identifier="GenericChildren">
+          <Node Class="TextAdventure.Nodes.GameInputResponses" DisabledInput="&lt;&lt; WAIT &gt;&gt;" InvalidInput="I'm sorry, I don't understand." />
+          <Node Class="TextAdventure.Nodes.GameLevel" Name="LEVEL ONE">
+            <Connector Identifier="GenericChildren">
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="INSIDE CAR">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You pull up to the driveway of the family holiday home\nand park the car.\n\nIt's dark, but it's as idyllic as you remember from all\nthat time ago.\n\nYou remember being told to look in the glovebox before\ngoing in.\n\nIt's good to be back." />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="It's a nice clean car.\n\nNot much to see, but there is a glove box." />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AT">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="GLOVEBOX">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="EVENT_GLOVEBOX_OPEN" GameDataCondition="OPTIONAL:0">
+                                <Connector Identifier="ConditionTrue">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="The glove box is open, and you have taken its contents." />
+                                </Connector>
+                                <Connector Identifier="ConditionFalse">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="The glove box is closed but appears to be unlocked." />
+                                </Connector>
+                              </Node>
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO TO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="GLOVEBOX">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="EVENT_GLOVEBOX_OPEN" GameDataCondition="OPTIONAL:0">
+                                <Connector Identifier="ConditionTrue">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="The inside of the glovebox is empty.\n\nYou have taken its contents." />
+                                </Connector>
+                                <Connector Identifier="ConditionFalse">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="Inside is a key, and a handwritten note from Dad.\n\nYou take both." />
+                                </Connector>
+                              </Node>
+                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="ITEM_KEY" />
+                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="ITEM_NOTE" />
+                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="EVENT_GLOVEBOX_OPEN" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="USE">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="GLOVEBOX">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="GLOVEBOX" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="OPEN">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="GLOVEBOX">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="GLOVEBOX" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GET OUT">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="CAR">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You open the car door and step out..." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTSIDE CAR" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="EXIT">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="CAR">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GET OUT" InputSubject="CAR" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="OUTSIDE CAR">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="The house is grand, sat perfectly amongst the trees.\n\nIn front of you is the front door, and the yard stretches\naround the back of the house." />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="The trees stretch up to the night sky.\n\nThere is the house and the yard." />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="OPEN">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="DOOR">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="EVENT_KEY_USED" GameDataCondition="REQUIRED:1">
+                                <Connector Identifier="ConditionTrue">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="You step inside the front door..." />
+                                </Connector>
+                                <Connector Identifier="ConditionFalse">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="The door appears to be locked.\n\nYou will need to use a key." />
+                                </Connector>
+                              </Node>
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="HOUSE LOBBY" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="USE">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="KEY">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="ITEM_KEY" GameDataCondition="REQUIRED:1">
+                                <Connector Identifier="ConditionTrue">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="You insert the key and turn.\n\nThe door lock clicks open." />
+                                </Connector>
+                                <Connector Identifier="ConditionFalse">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="You do not have a key." />
+                                </Connector>
+                              </Node>
+                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="EVENT_KEY_USED" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO TO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="CAR">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You return to the car." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="INSIDE CAR" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="HOUSE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="EVENT_KEY_USED" GameDataCondition="OPTIONAL:0">
+                                <Connector Identifier="ConditionTrue">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="You approach the house.\n\nInfront of you is an unlocked door." />
+                                </Connector>
+                                <Connector Identifier="ConditionFalse">
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="You approach the house.\n\nThe door is closed and you cannot enter." />
+                                </Connector>
+                              </Node>
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="YARD">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You walk around to the yard." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="YARD" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You return to the car..." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="INSIDE CAR" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="INSIDE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="HOUSE" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="YARD">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You walk through to the yard.\n\nYou spent a lot of time here with your family on\nholiday trips.\n\nGood memories." />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Comment Background="Violet:4" Text="Test Comment" />
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You return to the car..." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTSIDE CAR" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="OUTSIDE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO" InputSubject="BACK" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="HOUSE LOBBY">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You enter the house to the hallway.\n\nIt's dark and you can't see anything.\n\nYou feel a light switch next to the door however." />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="You return to the car..." />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTSIDE CAR" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>
