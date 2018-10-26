@@ -7,9 +7,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj"
   "CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj"
   "CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj"
-  "bin/TextAdventureGame.pdb"
-  "bin/TextAdventureGame.exe"
-  "bin/TextAdventureGame.exe.manifest"
+  "../Builds/TextAdventureGame.pdb"
+  "../Builds/TextAdventureGame.exe"
+  "../Builds/TextAdventureGame.exe.manifest"
   "libTextAdventureGame.dll.a"
 )
 

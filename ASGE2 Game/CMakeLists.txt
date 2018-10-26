@@ -15,8 +15,8 @@ if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug" AND WIN32)
 endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Builds")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Builds")
 
 ## set to true to use dlls instead of static libs ##
 set(BUILD_SHARED_LIBS OFF)
@@ -51,7 +51,8 @@ add_executable(
 ## library includes
 target_include_directories(
         ${PROJECT_NAME}
-        PRIVATE        "${CMAKE_SOURCE_DIR}/Libs/ASGE/include")
+        PRIVATE        "${CMAKE_SOURCE_DIR}/Libs/ASGE/include"
+        PRIVATE        "${CMAKE_SOURCE_DIR}/Libs/irrKlang/include")
 
 ## compile language settings
 target_compile_features(

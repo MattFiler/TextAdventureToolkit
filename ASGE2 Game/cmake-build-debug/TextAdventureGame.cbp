@@ -28,13 +28,14 @@
 				</MakeCommands>
 			</Target>
 			<Target title="TextAdventureGame">
-				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/bin/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/bin"/>
+				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
+					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/irrKlang/include"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -50,13 +51,14 @@
 				</MakeCommands>
 			</Target>
 			<Target title="TextAdventureGame/fast">
-				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/bin/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/bin"/>
+				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
+					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/irrKlang/include"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>

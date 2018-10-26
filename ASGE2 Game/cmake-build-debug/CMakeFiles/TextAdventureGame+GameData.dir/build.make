@@ -54,7 +54,7 @@ include CMakeFiles/TextAdventureGame+GameData.dir/progress.make
 
 CMakeFiles/TextAdventureGame+GameData:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "creating data archive"
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug\bin" && "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\Tools\7zip\win\7za" a "H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/bin/game.dat" "H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Resources/*"
+	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\Builds" && "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\Tools\7zip\win\7za" a "H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds/game.dat" "H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Resources/*"
 
 TextAdventureGame+GameData: CMakeFiles/TextAdventureGame+GameData
 TextAdventureGame+GameData: CMakeFiles/TextAdventureGame+GameData.dir/build.make
