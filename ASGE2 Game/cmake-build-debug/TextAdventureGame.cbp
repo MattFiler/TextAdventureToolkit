@@ -8,156 +8,156 @@
 		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\Libs\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TextAdventureGame">
-				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds"/>
+				<Option output="F:/Github Repos/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/Builds"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
-					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/irrKlang/include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
+					<Add directory="F:/Github Repos/TextAdventure/ASGE2 Game/Libs/irrKlang-64bit-1.6.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TextAdventureGame/fast">
-				<Option output="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Builds"/>
+				<Option output="F:/Github Repos/TextAdventure/ASGE2 Game/Builds/TextAdventureGame.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/Builds"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
-					<Add directory="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/irrKlang/include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/include"/>
+					<Add directory="F:/Github Repos/TextAdventure/ASGE2 Game/Libs/irrKlang-64bit-1.6.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TextAdventureGame+GameData">
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame+GameData"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 TextAdventureGame+GameData"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug"/>
+				<Option working_dir="F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;H:/Personal/GITHUB/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/ActionList.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/ActionList.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/main.cpp">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/main.cpp">
 			<Option target="TextAdventureGame"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/CMakeLists.txt">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/CMake/itch.io.cmake">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/CMake/itch.io.cmake">
 			<Option virtualFolder="CMake Files\CMake\"/>
 		</Unit>
-		<Unit filename="H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/CMakeLists.txt">
+		<Unit filename="F:/Github Repos/TextAdventure/ASGE2 Game/Libs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\Libs\"/>
 		</Unit>
 	</Project>

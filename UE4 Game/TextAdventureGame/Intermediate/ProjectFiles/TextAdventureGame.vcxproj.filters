@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\TextAdventureGame.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{1C3C0611-BF80-4077-B9BD-21D9C9531250}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\TextAdventureGame.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\TextAdventureGameEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{76487EB8-53C2-4CDF-9040-93AB8DB1BB95}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\TextAdventureGame">
+			<UniqueIdentifier>{2E228CC9-D82E-42F0-923F-1E50266464C9}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\TextAdventureGame\TextAdventureGame.Build.cs">
+			<Filter>Source\TextAdventureGame</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\TextAdventureGame\TextAdventureGame.cpp">
+			<Filter>Source\TextAdventureGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\TextAdventureGame\TextAdventureGame.h">
+			<Filter>Source\TextAdventureGame</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\TextAdventureGame\TextAdventureGameGameModeBase.cpp">
+			<Filter>Source\TextAdventureGame</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\TextAdventureGame\TextAdventureGameGameModeBase.h">
+			<Filter>Source\TextAdventureGame</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>

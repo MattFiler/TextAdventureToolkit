@@ -1,0 +1,67 @@
+/MANIFEST:NO
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:5000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGame.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGameGameModeBase.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGame.init.gen.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGameGameModeBase.gen.cpp.obj"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\PCLaunch.rc.res"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Core.lib"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoreUObject.lib"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-Engine.lib"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-InputCore.lib"
+/OUT:"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Binaries\Win64\UE4Editor-TextAdventureGame.dll"
+/IMPLIB:"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TextAdventureGame.suppressed.lib"
+/PDB:"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Binaries\Win64\UE4Editor-TextAdventureGame.pdb"
+/ignore:4078

@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 project(TextAdventureGame)
 
+# irrKlang paths
+set(IRRKLANG_HOME "${CMAKE_SOURCE_DIR}/Libs/irrKlang-64bit-1.6.0")
+set(IRRKLANG_INCLUDE_DIR "${IRRKLANG_HOME}/include")
+set(IRRKLANG_LIBRARIES "${IRRKLANG_HOME}/lib/Winx64-visualStudio/irrKlang.lib")
+
 if(UNIX AND APPLE)
     set(PLATFORM "osx" )
 elseif(UNIX)
@@ -52,7 +57,7 @@ add_executable(
 target_include_directories(
         ${PROJECT_NAME}
         PRIVATE        "${CMAKE_SOURCE_DIR}/Libs/ASGE/include"
-        PRIVATE        "${CMAKE_SOURCE_DIR}/Libs/irrKlang/include")
+        PRIVATE        "${IRRKLANG_INCLUDE_DIR}")
 
 ## compile language settings
 target_compile_features(
@@ -88,6 +93,8 @@ endif()
 if (WIN32 AND NOT BUILD_SHARED_LIBS AND NOT MSVC)
     target_link_libraries(${PROJECT_NAME} -static)
 endif()
+
+target_link_libraries(${PROJECT_NAME} ${IRRKLANG_LIBRARIES})
 
 ## utility scripts
 include(CMake/itch.io.cmake)

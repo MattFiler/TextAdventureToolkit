@@ -90,7 +90,7 @@ Engine/Colours.h
 NonCopyable.h
 ../Libs/ASGE/include/Engine/NonCopyable.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
+F:/Github Repos/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
 algorithm
 -
 cassert
@@ -368,17 +368,17 @@ vector
 utility
 -
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h
 Engine/OGLGame.h
 -
 string
 -
 GameConstants.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
 SpriteComponent.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.cpp
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.cpp
 string
 -
 Engine/Keys.h
@@ -390,9 +390,9 @@ Engine/InputEvents.h
 Engine/Sprite.h
 -
 Game.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.h
 string
 -
 Engine/OGLGame.h
@@ -400,25 +400,25 @@ Engine/OGLGame.h
 Engine/FileIO.h
 -
 SpriteComponent.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 GameLogic.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h
 GameProgress.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
 GameScreenText.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
 Animations.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h
 GameStates.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h
 ../Libs/nlohmann/json.hpp
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
+F:/Github Repos/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
 fstream
 -
 string
@@ -428,39 +428,33 @@ sstream
 Engine/FileIO.h
 -
 GameProgress.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
 GameConstants.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
 GameScreenText.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
 GameDataType.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
 string
 -
 GameConstants.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
 GameStates.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
 string
 -
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
 
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 Engine/Sprite.h
 -
 Rect.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
-
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/main.cpp
-iostream
--
-Source/Game.h
-H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h
+F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
 

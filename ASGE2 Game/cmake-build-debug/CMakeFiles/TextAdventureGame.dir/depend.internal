@@ -15,11 +15,11 @@ CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj
  ../Libs/ASGE/include/Engine/Renderer.h
  ../Libs/ASGE/include/Engine/Sprite.h
  ../Libs/ASGE/include/Engine/Texture.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj
  ../Libs/ASGE/include/Engine/Colours.h
  ../Libs/ASGE/include/Engine/FileIO.h
@@ -35,48 +35,48 @@ CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj
  ../Libs/ASGE/include/Engine/Renderer.h
  ../Libs/ASGE/include/Engine/Sprite.h
  ../Libs/ASGE/include/Engine/Texture.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj
  ../Libs/ASGE/include/Engine/FileIO.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj
  ../Libs/ASGE/include/Engine/Colours.h
  ../Libs/ASGE/include/Engine/NonCopyable.h
  ../Libs/ASGE/include/Engine/Renderer.h
  ../Libs/ASGE/include/Engine/Sprite.h
  ../Libs/ASGE/include/Engine/Texture.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj
  ../Libs/ASGE/include/Engine/Colours.h
  ../Libs/ASGE/include/Engine/FileIO.h
@@ -92,15 +92,15 @@ CMakeFiles/TextAdventureGame.dir/main.cpp.obj
  ../Libs/ASGE/include/Engine/Renderer.h
  ../Libs/ASGE/include/Engine/Sprite.h
  ../Libs/ASGE/include/Engine/Texture.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Animations.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Game.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameConstants.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameDataType.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameLogic.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameProgress.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameScreenText.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/GameStates.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/Rect.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
- H:/Personal/GITHUB/TextAdventure/ASGE2 Game/main.cpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Libs/nlohmann/json.hpp
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameConstants.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameDataType.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameStates.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.h
+ F:/Github Repos/TextAdventure/ASGE2 Game/main.cpp

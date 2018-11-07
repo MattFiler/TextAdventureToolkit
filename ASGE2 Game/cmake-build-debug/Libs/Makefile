@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "H:\Personal\GITHUB\TextAdventure\ASGE2 Game"
+CMAKE_SOURCE_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug"
+CMAKE_BINARY_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debu
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug\Libs\CMakeFiles\progress.marks"
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\Libs\CMakeFiles\progress.marks"
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/clean
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,17 +96,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/preinstall
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/preinstall
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(MAKE) -f CMakeFiles\Makefile2 Libs/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -128,6 +128,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d "H:\Personal\GITHUB\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

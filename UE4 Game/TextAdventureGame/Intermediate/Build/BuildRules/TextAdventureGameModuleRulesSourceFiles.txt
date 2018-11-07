@@ -1,0 +1,3 @@
+F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Source\TextAdventureGame\TextAdventureGame.Build.cs
+F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Source\TextAdventureGame.Target.cs
+F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Source\TextAdventureGameEditor.Target.cs

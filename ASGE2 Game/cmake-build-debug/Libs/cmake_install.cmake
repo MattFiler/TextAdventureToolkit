@@ -1,4 +1,4 @@
-# Install script for directory: H:/Personal/GITHUB/TextAdventure/ASGE2 Game/Libs
+# Install script for directory: F:/Github Repos/TextAdventure/ASGE2 Game/Libs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

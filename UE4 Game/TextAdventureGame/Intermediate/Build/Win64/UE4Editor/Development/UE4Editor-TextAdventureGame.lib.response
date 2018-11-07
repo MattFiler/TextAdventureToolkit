@@ -1,0 +1,16 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TextAdventureGame.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGame.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGameGameModeBase.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGame.init.gen.cpp.obj"
+"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\TextAdventureGameGameModeBase.gen.cpp.obj"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\TextAdventureGame\PCLaunch.rc.res"
+"D:\Program Files\Epic Games\UE_4.19\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"F:\Github Repos\TextAdventure\UE4 Game\TextAdventureGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TextAdventureGame.lib"
