@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _text = value; }
         }
 
-        public Response() : base("Response", "The response to show to the user depending on their input action.")
+        public Response() : base("Text Output Response ", "The response to show to the user depending on their input action.")
 
         {
         }

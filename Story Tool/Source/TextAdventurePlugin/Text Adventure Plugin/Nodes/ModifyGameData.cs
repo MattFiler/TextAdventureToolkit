@@ -52,7 +52,7 @@ namespace TextAdventure.Nodes
             set { _name = value; }
         }
 
-        public ModifyGameData() : base("Game Data Action", "Add or remove game data from the player for future logical conditions.")
+        public ModifyGameData() : base("Game Data Action ", "Add or remove game data from the player for future logical conditions.")
 
         {
         }

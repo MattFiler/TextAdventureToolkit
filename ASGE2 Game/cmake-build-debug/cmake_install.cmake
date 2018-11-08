@@ -1,4 +1,4 @@
-# Install script for directory: F:/Github Repos/TextAdventure/ASGE2 Game
+# Install script for directory: D:/TextAdventure/ASGE2 Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/cmake_install.cmake")
+  include("D:/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/TextAdventure/ASGE2 Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

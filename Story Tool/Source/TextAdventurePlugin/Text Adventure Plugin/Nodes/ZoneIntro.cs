@@ -46,7 +46,7 @@ namespace TextAdventure.Nodes
             set { _intro = value; }
         }
 
-        public ZoneIntro() : base("Zone Intro", "The introduction text to show when first entering this zone at the current state.")
+        public ZoneIntro() : base("Zone Introduction Text ", "The introduction text to show when first entering this zone at the current state.")
 
         {
         }

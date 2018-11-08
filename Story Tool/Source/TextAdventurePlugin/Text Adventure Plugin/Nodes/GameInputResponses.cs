@@ -53,7 +53,7 @@ namespace TextAdventure.Nodes
             set { _disabledInput = value; }
         }
 
-        public GameInputResponses() : base("Game Responses", "Global system responses and text outputs for the text adventure game.")
+        public GameInputResponses() : base("Generic Responses ", "Global system responses and text outputs for the text adventure game.")
 
         {
         }

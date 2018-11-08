@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _name = value; }
         }
 
-        public ZoneState() : base("State", "A state is applied per zone allowing multiple input groups per zone.")
+        public ZoneState() : base("Zone Play State ", "A state is applied per zone allowing multiple input groups per zone.")
 
         {
         }

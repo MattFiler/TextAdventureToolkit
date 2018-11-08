@@ -52,7 +52,7 @@ namespace TextAdventure.Nodes
             set { _gamedata = value; }
         }
 
-        public GameDataExists() : base("Game Data Exists", "Checks the player's game data to see if the specified data is set. Can also block all actions on this input response if REQUIRED.")
+        public GameDataExists() : base("Does Game Data Exist ", "Checks the player's game data to see if the specified data is set. Can also block all actions on this input response if REQUIRED.")
         {
         }
 

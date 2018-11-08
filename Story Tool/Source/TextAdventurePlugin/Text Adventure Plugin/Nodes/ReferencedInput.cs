@@ -52,7 +52,7 @@ namespace TextAdventure.Nodes
             set { _subject = value; }
         }
 
-        public ReferencedInput() : base("Reference", "Formatted the same as the Input Response node, however this acts as a reference to cut down duplicated action scripts.")
+        public ReferencedInput() : base("Referenced Action ", "Formatted the same as the Input Response node, however this acts as a reference to cut down duplicated action scripts.")
 
         {
         }

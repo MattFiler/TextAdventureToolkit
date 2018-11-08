@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/Animations.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/Game.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameLogic.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameProgress.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/Rect.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj"
-  "F:/Github Repos/TextAdventure/ASGE2 Game/main.cpp" "F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/main.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/Animations.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/Game.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/GameLogic.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/GameProgress.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/GameScreenText.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/Rect.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/Source/SpriteComponent.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj"
+  "D:/TextAdventure/ASGE2 Game/main.cpp" "D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

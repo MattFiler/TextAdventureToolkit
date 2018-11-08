@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _subject = value; }
         }
 
-        public InputSubject() : base("Input Subject", "A representation of the user's input SUBJECT (E.G. 'GARAGE').")
+        public InputSubject() : base("User Input 'Subject' ", "A representation of the user's input SUBJECT (E.G. 'GARAGE').")
 
         {
         }

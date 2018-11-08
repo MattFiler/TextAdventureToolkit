@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _action = value; }
         }
 
-        public InputAction() : base("Input Action", "A representation of the user's input ACTION (E.G. 'GO TO').")
+        public InputAction() : base("User Input 'Action' ", "A representation of the user's input ACTION (E.G. 'GO TO').")
 
         {
         }

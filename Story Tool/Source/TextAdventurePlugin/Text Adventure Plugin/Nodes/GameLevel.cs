@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _name = value; }
         }
 
-        public GameLevel() : base("Level", "A level in the text adventure game.")
+        public GameLevel() : base("Game Level ", "A level in the text adventure game.")
 
         {
         }

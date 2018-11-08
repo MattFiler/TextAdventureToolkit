@@ -14,10 +14,10 @@ namespace StoryGenerator
     {
         static void Main(string[] args)
         {
-            if (File.Exists("brainiac_output/main.xml"))
+            if (File.Exists("output/main.xml"))
             {
                 //Load XML from brainiac and setup our variables
-                var doc = XDocument.Load("brainiac_output/main.xml");
+                var doc = XDocument.Load("output/main.xml");
                 XElement gameCoreXML = doc.Element("Behavior").Element("Node").Element("Connector").Element("Node");
                 string finalOutput = "{";
                 List<string> prefixes = new List<string>();
@@ -214,17 +214,17 @@ namespace StoryGenerator
                     gameCoreXML.Element("Connector").Element("Node").Attribute("DisabledInput").Value + "\", \"prefixes\": [\"" + prefixesString + "\"]}}";
 
                 //Write out to file for use in game
-                Directory.CreateDirectory("story_output");
-                File.WriteAllText("story_output/story.json", finalOutput);
+                Directory.CreateDirectory("../data/");
+                File.WriteAllText("../data/story.json", finalOutput);
 
                 //Success
-                Console.Write("Successfully wrote story file to STORY_OUTPUT/STORY.JSON.\nCopy this into your game files to play!");
-                Console.ReadLine();
+                Console.Write("Successfully compiled story!");
+                //Console.ReadLine();
             }
             else
             {
                 //Input file doesn't exist
-                Console.Write("Couldn't find your story flowchart file!\nMake sure to save your Brainiac output as 'main.xml' in a folder called 'brainiac_output' here.");
+                Console.Write("Couldn't find your story flowchart file!\nMake sure you followed the naming conventions.");
                 Console.ReadLine();
             }
         }

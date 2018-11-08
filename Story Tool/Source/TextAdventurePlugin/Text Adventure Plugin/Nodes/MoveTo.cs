@@ -52,7 +52,7 @@ namespace TextAdventure.Nodes
             set { _name = value; }
         }
 
-        public MoveTo() : base("Move To", "Move the player to a new state, zone or level within the game.")
+        public MoveTo() : base("Move To ", "Move the player to a new state, zone or level within the game.")
 
         {
         }

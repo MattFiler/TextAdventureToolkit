@@ -45,7 +45,7 @@ namespace TextAdventure.Nodes
             set { _name = value; }
         }
 
-        public LevelZone() : base("Zone", "A zone is used to represent an area within a level.")
+        public LevelZone() : base("Play Zone ", "A zone is used to represent an area within a level.")
 
         {
         }

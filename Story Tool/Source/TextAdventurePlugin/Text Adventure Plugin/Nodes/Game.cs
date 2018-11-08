@@ -52,7 +52,7 @@ namespace TextAdventure.Nodes
             set { _developer = value; }
         }
 
-        public Game() : base("Game", "The initialisation of the text adventure game.")
+        public Game() : base("Game ", "The initialisation of the text adventure game.")
 
         {
         }
