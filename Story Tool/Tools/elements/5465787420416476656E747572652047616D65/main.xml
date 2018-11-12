@@ -11,12 +11,12 @@
                 <Connector Identifier="GenericChildren">
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
-                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You load the demo text adventure and everything is\nquiet.\n\nNo story...\n\nNo text...\n\nNo adventure.\n\nAdd some levels and zones to create your game!" />
-                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="DEMO_INTRO" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUNDS">
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
                             <Connector Identifier="GenericChildren">
-                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="It's an empty space. The demo has nothing in it!" />
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="DEMO_RESPONSE" />
                             </Connector>
                           </Node>
                         </Connector>

@@ -17,8 +17,9 @@ namespace StoryEditor
     public partial class TextAdventureMaker : Form
     {
         //Load workspaces xml
-        private string workspaceFilename = "elements/debug_workspaces.xml";
-        private XDocument doc = XDocument.Load("elements/debug_workspaces.xml");
+        private string workspaceFilename = "elements/workspaces.xml";
+        private XDocument doc = XDocument.Load("elements/workspaces.xml");
+        private string[] supportedLanguages = { "english", "spanish", "french", "german" };
 
         public TextAdventureMaker()
         {
@@ -111,6 +112,15 @@ namespace StoryEditor
                 demoBookmark.Element("Connector").Element("Node").Attribute("InvalidInput").Value = newGameInvalidInput;
                 demo.Save("elements/" + folderName + "/main.xml");
 
+                //Add localisation files
+                XDocument languageData = XDocument.Parse("<language></language>");
+                languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_INTRO\" text=\"You load the demo text adventure and everything is quiet.&#xD;&#xA;&#xD;&#xA;No story...&#xD;&#xA;&#xD;&#xA;No text...&#xD;&#xA;&#xD;&#xA;No adventure.&#xD;&#xA;&#xD;&#xA;Add some levels and zones to create your game!\"></string>"));
+                languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_RESPONSE\" text=\"It's an empty space. The demo has nothing in it!\"></string>"));
+                for (int i = 0; i < supportedLanguages.Count(); i++)
+                {
+                    languageData.Save("elements/" + folderName + "/" + supportedLanguages[i] + ".xml");
+                }
+
                 //Reload
                 reloadWorkspaceList();
             }
@@ -133,6 +143,13 @@ namespace StoryEditor
         private void TextAdventureMaker_Load(object sender, EventArgs e)
         {
             reloadWorkspaceList();
+
+            //Update language list
+            for (int i = 0; i < supportedLanguages.Count(); i++)
+            {
+                CompileLanguage.Items.Add(supportedLanguages[i]);
+            }
+            CompileLanguage.SelectedIndex = 0;
         }
 
         /* Save and reload workspace list */
@@ -196,6 +213,10 @@ namespace StoryEditor
             string finalOutput = "{";
             List<string> prefixes = new List<string>();
 
+            //Load language XML
+            XDocument languageDoc = XDocument.Load("elements/" + getCurrentWorkspace().Attribute("folder").Value + "/" + CompileLanguage.SelectedItem + ".xml");
+            XElement languageData = languageDoc.Element("language");
+
             //Start traversing XML...
             int levelCount = 0;
             foreach (var levelNode in gameCoreXML.Element("Connector").Elements())
@@ -219,7 +240,7 @@ namespace StoryEditor
                                     {
                                         if (inputActionNode.FirstAttribute.Value == "TextAdventure.Nodes.ZoneIntro") //Zone intro text for state
                                         {
-                                            finalOutput += "\"zone_intro\":\"" + inputActionNode.Attribute("IntroText").Value + "\", ";
+                                            finalOutput += "\"zone_intro\":\"" + localisedString(inputActionNode.Attribute("IntroText").Value, languageData) + "\", ";
                                         }
                                         if (inputActionNode.FirstAttribute.Value == "TextAdventure.Nodes.InputAction") //Input action in current zone
                                         {
@@ -267,14 +288,14 @@ namespace StoryEditor
                                                                     {
                                                                         if (dataConditionResult.Element("Node").LastAttribute.Name == "SystemResponse")
                                                                         {
-                                                                            finalOutput += "\"system_reply_ok\": \"" + dataConditionResult.Element("Node").LastAttribute.Value + "\", ";
+                                                                            finalOutput += "\"system_reply_ok\": \"" + localisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
                                                                         }
                                                                     }
                                                                     else if (dataConditionResult.Attribute("Identifier").Value == "ConditionFalse")
                                                                     {
                                                                         if (dataConditionResult.Element("Node").LastAttribute.Name == "SystemResponse")
                                                                         {
-                                                                            finalOutput += "\"system_reply_issue\": \"" + dataConditionResult.Element("Node").LastAttribute.Value + "\", ";
+                                                                            finalOutput += "\"system_reply_issue\": \"" + localisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
                                                                         }
                                                                     }
                                                                 }
@@ -294,7 +315,7 @@ namespace StoryEditor
                                                             if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.Response")
                                                             {
                                                                 //Basic response not in a context of condition
-                                                                finalOutput += "\"system_reply_ok\": \"" + inputScriptNode.Attribute("SystemResponse").Value + "\", ";
+                                                                finalOutput += "\"system_reply_ok\": \"" + localisedString(inputScriptNode.Attribute("SystemResponse").Value, languageData) + "\", ";
                                                             }
                                                             if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.MoveTo")
                                                             {
@@ -393,6 +414,19 @@ namespace StoryEditor
 
             //Success
             MessageBox.Show("Successfully compiled selected game!\nPlay it to try out the logic.", "Operation completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        /* Get the localised string */
+        private string localisedString(string ID, XElement languageData)
+        {
+            foreach (var languageString in languageData.Elements())
+            {
+                if (languageString.Attribute("id").Value == ID)
+                {
+                    return languageString.Attribute("text").Value.Replace("\r", "").Replace("\n", "\\n");
+                }
+            }
+            return "LOCALISATION ERROR OCCURRED!\\nPLEASE CHECK YOUR SCRIPTING.";
         }
 
         /* Copy final product to output directory */

@@ -30,13 +30,13 @@
         {
             this.LanguageSelect = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.StringIdentifierList = new System.Windows.Forms.ListBox();
             this.StringList = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.AddString = new System.Windows.Forms.Button();
-            this.RemoveString = new System.Windows.Forms.Button();
             this.EditString = new System.Windows.Forms.Button();
-            this.StringIdentifierList = new System.Windows.Forms.ListBox();
+            this.RemoveString = new System.Windows.Forms.Button();
+            this.AddString = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,6 +62,15 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Game Strings";
+            // 
+            // StringIdentifierList
+            // 
+            this.StringIdentifierList.FormattingEnabled = true;
+            this.StringIdentifierList.Location = new System.Drawing.Point(6, 19);
+            this.StringIdentifierList.Name = "StringIdentifierList";
+            this.StringIdentifierList.Size = new System.Drawing.Size(163, 238);
+            this.StringIdentifierList.TabIndex = 5;
+            this.StringIdentifierList.SelectedIndexChanged += new System.EventHandler(this.StringIdentifierList_SelectedIndexChanged);
             // 
             // StringList
             // 
@@ -94,15 +103,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Manage Strings";
             // 
-            // AddString
+            // EditString
             // 
-            this.AddString.Location = new System.Drawing.Point(6, 19);
-            this.AddString.Name = "AddString";
-            this.AddString.Size = new System.Drawing.Size(177, 21);
-            this.AddString.TabIndex = 0;
-            this.AddString.Text = "Add New String";
-            this.AddString.UseVisualStyleBackColor = true;
-            this.AddString.Click += new System.EventHandler(this.AddString_Click);
+            this.EditString.Location = new System.Drawing.Point(189, 19);
+            this.EditString.Name = "EditString";
+            this.EditString.Size = new System.Drawing.Size(177, 21);
+            this.EditString.TabIndex = 2;
+            this.EditString.Text = "Edit Selected String";
+            this.EditString.UseVisualStyleBackColor = true;
+            this.EditString.Click += new System.EventHandler(this.EditString_Click);
             // 
             // RemoveString
             // 
@@ -114,35 +123,27 @@
             this.RemoveString.UseVisualStyleBackColor = true;
             this.RemoveString.Click += new System.EventHandler(this.RemoveString_Click);
             // 
-            // EditString
+            // AddString
             // 
-            this.EditString.Location = new System.Drawing.Point(189, 19);
-            this.EditString.Name = "EditString";
-            this.EditString.Size = new System.Drawing.Size(177, 21);
-            this.EditString.TabIndex = 2;
-            this.EditString.Text = "Edit Selected String";
-            this.EditString.UseVisualStyleBackColor = true;
-            this.EditString.Click += new System.EventHandler(this.EditString_Click);
-            // 
-            // StringIdentifierList
-            // 
-            this.StringIdentifierList.FormattingEnabled = true;
-            this.StringIdentifierList.Location = new System.Drawing.Point(6, 19);
-            this.StringIdentifierList.Name = "StringIdentifierList";
-            this.StringIdentifierList.Size = new System.Drawing.Size(163, 238);
-            this.StringIdentifierList.TabIndex = 5;
-            this.StringIdentifierList.SelectedIndexChanged += new System.EventHandler(this.StringIdentifierList_SelectedIndexChanged);
+            this.AddString.Location = new System.Drawing.Point(6, 19);
+            this.AddString.Name = "AddString";
+            this.AddString.Size = new System.Drawing.Size(177, 21);
+            this.AddString.TabIndex = 0;
+            this.AddString.Text = "Add New String";
+            this.AddString.UseVisualStyleBackColor = true;
+            this.AddString.Click += new System.EventHandler(this.AddString_Click);
             // 
             // LocalisationEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 338);
+            this.ClientSize = new System.Drawing.Size(784, 340);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LocalisationEditor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Text Adventure Localisation Editor";
             this.Load += new System.EventHandler(this.LocalisationEditor_Load);
             this.groupBox1.ResumeLayout(false);

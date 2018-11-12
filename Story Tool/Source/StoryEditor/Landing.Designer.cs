@@ -37,11 +37,14 @@
             this.SaveGameToShare = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.OpenLocalisationEditor = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.CompileLanguage = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // OpenEditor
@@ -56,7 +59,7 @@
             // 
             // OpenGenerator
             // 
-            this.OpenGenerator.Location = new System.Drawing.Point(6, 91);
+            this.OpenGenerator.Location = new System.Drawing.Point(6, 46);
             this.OpenGenerator.Name = "OpenGenerator";
             this.OpenGenerator.Size = new System.Drawing.Size(193, 30);
             this.OpenGenerator.TabIndex = 3;
@@ -129,24 +132,12 @@
             // 
             this.groupBox2.Controls.Add(this.OpenLocalisationEditor);
             this.groupBox2.Controls.Add(this.OpenEditor);
-            this.groupBox2.Controls.Add(this.OpenGenerator);
             this.groupBox2.Location = new System.Drawing.Point(12, 85);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(205, 128);
+            this.groupBox2.Size = new System.Drawing.Size(205, 92);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Edit Selected Game";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.OpenTextAdventure);
-            this.groupBox3.Controls.Add(this.SaveGameToShare);
-            this.groupBox3.Location = new System.Drawing.Point(12, 219);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(205, 92);
-            this.groupBox3.TabIndex = 13;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Export Selected Game";
             // 
             // OpenLocalisationEditor
             // 
@@ -158,11 +149,43 @@
             this.OpenLocalisationEditor.UseVisualStyleBackColor = true;
             this.OpenLocalisationEditor.Click += new System.EventHandler(this.OpenLocalisationEditor_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.OpenTextAdventure);
+            this.groupBox3.Controls.Add(this.SaveGameToShare);
+            this.groupBox3.Location = new System.Drawing.Point(11, 271);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(205, 92);
+            this.groupBox3.TabIndex = 13;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Export Selected Game";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.CompileLanguage);
+            this.groupBox4.Controls.Add(this.OpenGenerator);
+            this.groupBox4.Location = new System.Drawing.Point(12, 183);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(205, 82);
+            this.groupBox4.TabIndex = 14;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Compile Selected Game";
+            // 
+            // CompileLanguage
+            // 
+            this.CompileLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CompileLanguage.FormattingEnabled = true;
+            this.CompileLanguage.Location = new System.Drawing.Point(6, 19);
+            this.CompileLanguage.Name = "CompileLanguage";
+            this.CompileLanguage.Size = new System.Drawing.Size(193, 21);
+            this.CompileLanguage.TabIndex = 4;
+            // 
             // TextAdventureMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 321);
+            this.ClientSize = new System.Drawing.Size(228, 374);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -174,6 +197,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,6 +215,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button OpenLocalisationEditor;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox CompileLanguage;
     }
 }
 

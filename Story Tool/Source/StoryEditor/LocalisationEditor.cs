@@ -33,18 +33,19 @@ namespace StoryEditor
             for (int i=0; i<supportedLanguages.Count(); i++)
             {
                 string languageFile = gameFolder + "/" + supportedLanguages[i] + ".xml";
-                if (!File.Exists(languageFile))
-                {
-                    //Create default file if doesn't exist
-                    XElement.Parse("<language></language>").Save(languageFile);
-                }
                 LanguageSelect.Items.Add(supportedLanguages[i]);
             }
             LanguageSelect.SelectedIndex = 0;
         }
 
-        /* Load all strings for newly selected language */
+        /* New language selected */
         private void LanguageSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            refreshLanguage();
+        }
+
+        /* Load all strings again for current language */
+        private void refreshLanguage()
         {
             //Clear lists
             StringIdentifierList.Items.Clear();
@@ -62,61 +63,74 @@ namespace StoryEditor
         /* Add a new string */
         private void AddString_Click(object sender, EventArgs e)
         {
-            var newStringID = Interaction.InputBox("String unique identifier", "Add a new localised string...", "GAME_STRING_01");
-            var newStringText = Interaction.InputBox("String text content", "Add a new localised string...", "An example of a string in English. Change this to suit your language and purpose.");
-
-            if (newStringID == "" || newStringText == "")
+            var newStringID = Interaction.InputBox("Unique string identifier to reference this string by. This cannot be edited after creation!", "Adding a new localised string...", "GAME_STRING_01");
+            if (newStringID != "")
             {
-                MessageBox.Show("Please fill out both inputs.\nData cannot be blank.", "An error occured.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Open editor window
+                LocalisationNewString editor = new LocalisationNewString(gameFolder, newStringID);
+                editor.Show();
+                editor.FormClosed += new FormClosedEventHandler(stringEditorClosed);
             }
-            else
-            {
-                //Update list
-                StringIdentifierList.Items.Add(newStringID);
-                StringList.Items.Add(newStringText);
+        }
 
-                //Update file
-                languageDoc.Element("language").Add(XElement.Parse("<string id=\"" + newStringID + "\" text=\"" + newStringText + "\"></string>"));
-                languageDoc.Save(gameFolder + "/" + LanguageSelect.SelectedItem + ".xml");
-            }
+        /* Update list when editor is closed */
+        void stringEditorClosed(object sender, FormClosedEventArgs e)
+        {
+            refreshLanguage();
+            StringIdentifierList.Enabled = true;
+            StringList.Enabled = true;
         }
 
         /* Edit selected string */
         private void EditString_Click(object sender, EventArgs e)
         {
-            StringIdentifierList.Enabled = false;
-            StringList.Enabled = false;
+            if (StringIdentifierList.SelectedIndex != -1)
+            {
+                //Disable inputs and open editor
+                StringIdentifierList.Enabled = false;
+                StringList.Enabled = false;
 
-            //Take new edited inputs
-            var newStringID = Interaction.InputBox("String unique identifier", "Add a new localised string...", StringIdentifierList.SelectedItem.ToString());
-            var newStringText = Interaction.InputBox("String text content", "Add a new localised string...", StringList.SelectedItem.ToString());
-
-            //Update file and list
-            XElement currentItem = getSelectedXmlItem();
-            currentItem.Attribute("id").Value = newStringID;
-            currentItem.Attribute("text").Value = newStringText;
-            languageDoc.Save(gameFolder + "/" + LanguageSelect.SelectedItem + ".xml");
-            StringIdentifierList.Items[StringIdentifierList.SelectedIndex] = newStringID;
-            StringList.Items[StringList.SelectedIndex] = newStringText;
-
-            StringIdentifierList.Enabled = true;
-            StringList.Enabled = true;
+                LocalisationNewString editor = new LocalisationNewString(gameFolder, StringIdentifierList.SelectedItem.ToString(), LanguageSelect.SelectedIndex);
+                editor.Show();
+                editor.FormClosed += new FormClosedEventHandler(stringEditorClosed);
+            }
+            else
+            {
+                MessageBox.Show("Nothing selected!\nPlease select a string from the list to edit.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         /* Remove selected string */
         private void RemoveString_Click(object sender, EventArgs e)
         {
-            var confirmation = MessageBox.Show("You are about to delete '" + StringIdentifierList.SelectedItem + "'.\nAre you sure this is correct?", "Please confirm this action.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (confirmation == DialogResult.Yes)
+            if (StringIdentifierList.SelectedIndex != -1)
             {
-                //Update file
-                getSelectedXmlItem().Remove();
-                languageDoc.Save(gameFolder + "/" + LanguageSelect.SelectedItem + ".xml");
+                var confirmation = MessageBox.Show("You are about to delete '" + StringIdentifierList.SelectedItem + "'.\nAre you sure this is correct?", "Please confirm this action.", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirmation == DialogResult.Yes)
+                {
+                    //Remove from files
+                    for (int i = 0; i < supportedLanguages.Count(); i++)
+                    {
+                        XDocument languageDocument = XDocument.Load(gameFolder + "/" + supportedLanguages[i] + ".xml");
+                        foreach (var languageString in languageDocument.Element("language").Elements())
+                        {
+                            if (languageString.Attribute("id").Value == StringIdentifierList.SelectedItem.ToString())
+                            {
+                                languageString.Remove();
+                            }
+                        }
+                        languageDocument.Save(gameFolder + "/" + supportedLanguages[i] + ".xml");
+                    }
 
-                //Update list
-                int indexToDelete = StringList.SelectedIndex;
-                StringIdentifierList.Items.RemoveAt(indexToDelete);
-                StringList.Items.RemoveAt(indexToDelete);
+                    //Update list
+                    int indexToDelete = StringList.SelectedIndex;
+                    StringIdentifierList.Items.RemoveAt(indexToDelete);
+                    StringList.Items.RemoveAt(indexToDelete);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nothing selected!\nPlease select a string from the list to remove.", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -135,12 +149,17 @@ namespace StoryEditor
         {
             foreach (var languageString in languageDoc.Element("language").Elements())
             {
-                if (languageString.Attribute("id").Value == StringIdentifierList.SelectedItem)
+                if (languageString.Attribute("id").Value == StringIdentifierList.SelectedItem.ToString())
                 {
                     return languageString;
                 }
             }
-            return XElement.Parse("<string></string>"); //shouldn't get here.
+            return null; 
+        }
+
+        private void OpenEditor_Click(object sender, EventArgs e)
+        {
+            /* DEPRECIATED */
         }
     }
 }
