@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Behavior>
+  <Node Class="Brainiac.Design.Nodes.Behavior">
+    <Connector Identifier="GenericChildren">
+      <Node Class="TextAdventure.Nodes.Game" GameDeveloper="Placeholder" GameTitle="Placeholder">
+        <Connector Identifier="GenericChildren">
+          <Node Class="TextAdventure.Nodes.GameInputResponses" DisabledInput="Placeholder" InvalidInput="Placeholder" />
+          <Node Class="TextAdventure.Nodes.GameLevel" Name="DEMO LEVEL">
+            <Connector Identifier="GenericChildren">
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="DEMO START">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="You load the demo text adventure and everything is\nquiet.\n\nNo story...\n\nNo text...\n\nNo adventure.\n\nAdd some levels and zones to create your game!" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="It's an empty space. The demo has nothing in it!" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+					</Connector>
+				  </Node>
+				</Connector>
+              </Node>
+            </Connector>
+          </Node>
+        </Connector>
+      </Node>
+    </Connector>
+  </Node>
+</Behavior>
