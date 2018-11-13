@@ -443,7 +443,7 @@ namespace StoryEditor
                 {
                     File.Delete("share/data/story.json");
                     File.Delete("share/game.dat");
-                    File.Delete("share/data/TextAdventureGame.exe");
+                    File.Delete("share/TextAdventureGame.exe");
                 }
 
                 //Copy in data

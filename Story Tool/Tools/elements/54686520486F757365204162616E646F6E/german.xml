@@ -1,2 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<language />
+<language>
+  <string id="INSIDE_CAR_INTRO" text="Sie fahren bis zur Einfahrt des Familienferienhauses &#xD;&#xA;und parken das Auto. &#xD;&#xA;&#xD;&#xA;Es ist dunkel, aber es ist so idyllisch, wie Sie sich &#xD;&#xA;an die Zeit erinnern. Du erinnerst dich, wie man dir &#xD;&#xA;gesagt hat, in das Handschuhfach zu schauen, bevor du &#xD;&#xA;hineinkommst. &#xD;&#xA;&#xD;&#xA;Es ist gut, wieder hier zu sein."></string>
+  <string id="LOOK_AROUND_CAR" text="Es ist ein schones, sauberes Auto.&#xD;&#xA;&#xD;&#xA;Nicht viel zu sehen, aber es gibt eine Handschuhbox."></string>
+  <string id="GLOVEBOX_OPEN" text="Das Handschuhfach ist geoffnet und Sie haben den Inhalt&#xD;&#xA;ubernommen."></string>
+  <string id="GLOVEBOX_CLOSED" text="Das Handschuhfach ist geschlossen, scheint jedoch nicht &#xD;&#xA;gesperrt zu sein."></string>
+  <string id="GLOVEBOX_INSIDE_EMPTY" text="Das Innere des Handschuhkastens ist leer.&#xD;&#xA;&#xD;&#xA;Sie haben den Inhalt genommen."></string>
+  <string id="GLOVEBOX_INSIDE_FULL" text="Darin steckt ein Schlussel und eine handschriftliche &#xD;&#xA;Notiz von Papa.&#xD;&#xA;&#xD;&#xA;Du nimmst beides."></string>
+  <string id="EXIT_CAR" text="Sie offnen die Autotur und treten aus ..."></string>
+  <string id="OUTSIDE_CAR_INTRO" text="Das Haus ist prachtig, perfekt zwischen den Baumen &#xD;&#xA;gelegen.&#xD;&#xA;&#xD;&#xA;Vor Ihnen ist die Eingangstur, und der Hof erstreckt &#xD;&#xA;sich um die Ruckseite des Hauses."></string>
+  <string id="LOOK_AROUND_OUT_CAR" text="Die Baume erstrecken sich bis zum Nachthimmel.&#xD;&#xA;&#xD;&#xA;Es gibt das Haus und den Hof."></string>
+  <string id="GO_INSIDE_HOUSE" text="Sie treten in die Eingangstur ..."></string>
+  <string id="GO_INSIDE_HOUSE_LOCKED" text="Die Tur scheint abgeschlossen zu sein.&#xD;&#xA;&#xD;&#xA;Sie mussen einen Schlussel verwenden."></string>
+  <string id="UNLOCK_HOUSE" text="Sie stecken den Schlussel ein und drehen um.&#xD;&#xA;&#xD;&#xA;Das Turschloss offnet sich."></string>
+  <string id="NO_KEY" text="Sie haben keinen Schlussel."></string>
+  <string id="RETURN_TO_CAR" text="Du gehst zum Auto zuruck."></string>
+  <string id="APPROACH_HOUSE" text="Sie nahern sich dem Haus.&#xD;&#xA;&#xD;&#xA;Vor Ihnen ist eine unverschlossene Tur."></string>
+  <string id="APPROACH_HOUSE_LOCKED" text="Sie nahern sich dem Haus.&#xD;&#xA;&#xD;&#xA;Die Tur ist geschlossen und Sie konnen nicht eintreten."></string>
+  <string id="WALK_TO_YARD" text="Du gehst auf den Hof."></string>
+  <string id="YARD_INTRO" text="Du gehst durch den Hof.&#xD;&#xA;&#xD;&#xA;Sie haben hier mit Ihrer Familie viel Zeit auf &#xD;&#xA;Urlaubsreisen verbracht.&#xD;&#xA;&#xD;&#xA;Gute Erinnerungen."></string>
+  <string id="HOUSE_HALL_INTRO" text="Sie betreten das Haus in den Flur.&#xD;&#xA;&#xD;&#xA;Es ist dunkel und du kannst nichts sehen.&#xD;&#xA;&#xD;&#xA;Sie spuren jedoch einen Lichtschalter neben der Tur."></string>
+</language>
