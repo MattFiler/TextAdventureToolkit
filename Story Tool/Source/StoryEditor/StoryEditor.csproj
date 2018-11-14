@@ -7,7 +7,7 @@
     <ProjectGuid>{55123B50-C246-4AC3-A46E-457B358EB4E8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AdventureTool</RootNamespace>
-    <AssemblyName>AdventureTool</AssemblyName>
+    <AssemblyName>Text Adventure Creator</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

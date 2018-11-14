@@ -63,9 +63,12 @@ namespace StoryEditor
         /* Open Game */
         private void OpenTextAdventure_Click(object sender, EventArgs e)
         {
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "TextAdventureGame.exe"))
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "elements/TextAdventureGame.exe"))
             {
-                Process myProcess = Process.Start(AppDomain.CurrentDomain.BaseDirectory+"TextAdventureGame.exe");
+                ProcessStartInfo process = new ProcessStartInfo();
+                process.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory + "elements";
+                process.FileName = "TextAdventureGame.exe";
+                Process myProcess = Process.Start(process);
             }
             else
             {
@@ -96,33 +99,39 @@ namespace StoryEditor
             else
             {
                 string folderName = makeDirectoryName(newGameTitle);
-
-                //Update workspaces list
-                XElement newWorkspace = XElement.Parse("<workspace name=\"" + newGameTitle + "\" folder=\"" + folderName + "\" export=\"" + folderName + "\"></workspace>");
-                newWorkspace.Add(XElement.Parse("<plugin>TextAdventure.dll</plugin>"));
-                doc.Element("workspaces").Add(newWorkspace);
-
-                //Create working directory and insert the starting template
-                Directory.CreateDirectory("elements/" + folderName);
-                XDocument demo = XDocument.Load("elements/demo.xml");
-                XElement demoBookmark = demo.Element("Behavior").Element("Node").Element("Connector").Element("Node");
-                demoBookmark.Attribute("GameTitle").Value = newGameTitle;
-                demoBookmark.Attribute("GameDeveloper").Value = newGameDeveloper;
-                demoBookmark.Element("Connector").Element("Node").Attribute("DisabledInput").Value = newGameWaitText;
-                demoBookmark.Element("Connector").Element("Node").Attribute("InvalidInput").Value = newGameInvalidInput;
-                demo.Save("elements/" + folderName + "/main.xml");
-
-                //Add localisation files
-                XDocument languageData = XDocument.Parse("<language></language>");
-                languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_INTRO\" text=\"You load the demo text adventure and everything is quiet.&#xD;&#xA;&#xD;&#xA;No story...&#xD;&#xA;&#xD;&#xA;No text...&#xD;&#xA;&#xD;&#xA;No adventure.&#xD;&#xA;&#xD;&#xA;Add some levels and zones to create your game!\"></string>"));
-                languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_RESPONSE\" text=\"It's an empty space. The demo has nothing in it!\"></string>"));
-                for (int i = 0; i < supportedLanguages.Count(); i++)
+                if (Directory.Exists("elements/" + folderName))
                 {
-                    languageData.Save("elements/" + folderName + "/" + supportedLanguages[i] + ".xml");
+                    MessageBox.Show("A game with this name already exists!\nPlease try again.", "Game name taken.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    //Update workspaces list
+                    XElement newWorkspace = XElement.Parse("<workspace name=\"" + newGameTitle + "\" folder=\"" + folderName + "\" export=\"" + folderName + "\"></workspace>");
+                    newWorkspace.Add(XElement.Parse("<plugin>TextAdventure.dll</plugin>"));
+                    doc.Element("workspaces").Add(newWorkspace);
 
-                //Reload
-                reloadWorkspaceList();
+                    //Create working directory and insert the starting template
+                    Directory.CreateDirectory("elements/" + folderName);
+                    XDocument demo = XDocument.Load("elements/demo.xml");
+                    XElement demoBookmark = demo.Element("Behavior").Element("Node").Element("Connector").Element("Node");
+                    demoBookmark.Attribute("GameTitle").Value = newGameTitle;
+                    demoBookmark.Attribute("GameDeveloper").Value = newGameDeveloper;
+                    demoBookmark.Element("Connector").Element("Node").Attribute("DisabledInput").Value = newGameWaitText;
+                    demoBookmark.Element("Connector").Element("Node").Attribute("InvalidInput").Value = newGameInvalidInput;
+                    demo.Save("elements/" + folderName + "/main.xml");
+
+                    //Add localisation files
+                    XDocument languageData = XDocument.Parse("<language></language>");
+                    languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_INTRO\" text=\"You load the demo text adventure and everything is quiet.&#xD;&#xA;&#xD;&#xA;No story...&#xD;&#xA;&#xD;&#xA;No text...&#xD;&#xA;&#xD;&#xA;No adventure.&#xD;&#xA;&#xD;&#xA;Add some levels and zones to create your game!\"></string>"));
+                    languageData.Element("language").Add(XElement.Parse("<string id=\"DEMO_RESPONSE\" text=\"It's an empty space. The demo has nothing in it!\"></string>"));
+                    for (int i = 0; i < supportedLanguages.Count(); i++)
+                    {
+                        languageData.Save("elements/" + folderName + "/" + supportedLanguages[i] + ".xml");
+                    }
+
+                    //Reload
+                    reloadWorkspaceList();
+                }
             }
         }
 
@@ -196,7 +205,7 @@ namespace StoryEditor
             foreach (var workspace in doc.Element("workspaces").Elements())
             {
                 var workspaceName = workspace.Attribute("name").Value;
-                if (workspaceName == ExistingGames.SelectedItem)
+                if (workspaceName == ExistingGames.SelectedItem.ToString())
                 {
                     return workspace;
                 }
@@ -409,8 +418,8 @@ namespace StoryEditor
                 gameCoreXML.Element("Connector").Element("Node").Attribute("DisabledInput").Value + "\", \"prefixes\": [\"" + prefixesString + "\"]}}";
 
             //Write out to file for use in game
-            Directory.CreateDirectory("data/");
-            File.WriteAllText("data/story.json", finalOutput);
+            Directory.CreateDirectory("elements/data/");
+            File.WriteAllText("elements/data/story.json", finalOutput);
 
             //Success
             MessageBox.Show("Successfully compiled selected game!\nPlay it to try out the logic.", "Operation completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -432,7 +441,7 @@ namespace StoryEditor
         /* Copy final product to output directory */
         private void SaveGameToShare_Click(object sender, EventArgs e)
         {
-            if (File.Exists("data/story.json"))
+            if (File.Exists("elements/data/story.json"))
             {
                 //Create directories
                 Directory.CreateDirectory("share");
@@ -447,9 +456,9 @@ namespace StoryEditor
                 }
 
                 //Copy in data
-                File.Copy("data/story.json", "share/data/story.json");
-                File.Copy("game.dat", "share/game.dat");
-                File.Copy("TextAdventureGame.exe", "share/TextAdventureGame.exe");
+                File.Copy("elements/data/story.json", "share/data/story.json");
+                File.Copy("elements/game.dat", "share/game.dat");
+                File.Copy("elements/TextAdventureGame.exe", "share/TextAdventureGame.exe");
 
                 //Open directory
                 Process.Start("share");
