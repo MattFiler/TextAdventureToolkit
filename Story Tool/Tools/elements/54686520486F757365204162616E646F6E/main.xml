@@ -30,7 +30,7 @@
                                   <Node Class="TextAdventure.Nodes.Response" SystemResponse="GLOVEBOX_OPEN" />
                                 </Connector>
                                 <Connector Identifier="ConditionFalse">
-                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="GLOVEBOX_OPEN" />
+                                  <Node Class="TextAdventure.Nodes.Response" SystemResponse="GLOVEBOX_CLOSED" />
                                 </Connector>
                               </Node>
                             </Connector>
