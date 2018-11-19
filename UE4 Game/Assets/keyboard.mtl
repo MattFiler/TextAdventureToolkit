@@ -1,0 +1,28 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl keyboard_body
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.990000 0.990000 0.990000
+Ks 0.180000 0.180000 0.180000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textures\diffuse_Falloff.jpg
+map_Bump textures\\noise_Noise.jpg
+map_Ka textures\\diffuse_Falloff.jpg
+
+newmtl keyboard_keys
+Ns 37.254902
+Ka 0.000000 0.000000 0.000000
+Kd 0.990000 0.990000 0.990000
+Ks 0.180000 0.180000 0.180000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textures\diffuse_Falloff.jpg
+map_Bump textures\\noise_Noise.jpg
+map_Ka textures\\diffuse_Falloff.jpg
