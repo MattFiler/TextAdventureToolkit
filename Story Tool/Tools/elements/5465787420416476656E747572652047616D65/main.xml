@@ -2,7 +2,7 @@
 <Behavior>
   <Node Class="Brainiac.Design.Nodes.Behavior">
     <Connector Identifier="GenericChildren">
-      <Node Class="TextAdventure.Nodes.Game" GameDeveloper="Matt Filer" GameTitle="Text Adventure Game">
+      <Node Class="TextAdventure.Nodes.Game" GameDeveloper="John Smith" GameTitle="Text Adventure Game">
         <Connector Identifier="GenericChildren">
           <Node Class="TextAdventure.Nodes.GameInputResponses" DisabledInput="&lt;&lt; WAIT &gt;&gt;" InvalidInput="I'm sorry, I don't understand." />
           <Node Class="TextAdventure.Nodes.GameLevel" Name="DEMO LEVEL">

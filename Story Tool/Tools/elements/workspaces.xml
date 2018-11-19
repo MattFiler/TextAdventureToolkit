@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<workspaces selected="The House Abandon">
+<workspaces selected="Text Adventure Game">
   <workspace name="The House Abandon" folder="54686520486F757365204162616E646F6E" export="54686520486F757365204162616E646F6E">
     <plugin>TextAdventure.dll</plugin>
   </workspace>
