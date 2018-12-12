@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,11 @@ namespace StoryEditor
             gameFolder = folderName;
             StringID.Text = stringID;
             requestedLanguage = defaultLanguage;
+
+            //Configure font for preview panel
+            PrivateFontCollection previewFont = new PrivateFontCollection();
+            previewFont.AddFontFile("elements/font.ttf");
+            LocalisedString.Font = new Font(previewFont.Families[0], 15);
         }
 
         /* Populate language data on load */

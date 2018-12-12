@@ -42,6 +42,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.CompileLanguage = new System.Windows.Forms.ComboBox();
+            this.ExportVersionSelector = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,9 +71,9 @@
             // 
             // OpenTextAdventure
             // 
-            this.OpenTextAdventure.Location = new System.Drawing.Point(6, 19);
+            this.OpenTextAdventure.Location = new System.Drawing.Point(6, 46);
             this.OpenTextAdventure.Name = "OpenTextAdventure";
-            this.OpenTextAdventure.Size = new System.Drawing.Size(193, 30);
+            this.OpenTextAdventure.Size = new System.Drawing.Size(194, 30);
             this.OpenTextAdventure.TabIndex = 4;
             this.OpenTextAdventure.Text = "Play";
             this.OpenTextAdventure.UseVisualStyleBackColor = true;
@@ -109,11 +110,11 @@
             // 
             // SaveGameToShare
             // 
-            this.SaveGameToShare.Location = new System.Drawing.Point(6, 55);
+            this.SaveGameToShare.Location = new System.Drawing.Point(6, 82);
             this.SaveGameToShare.Name = "SaveGameToShare";
-            this.SaveGameToShare.Size = new System.Drawing.Size(193, 30);
+            this.SaveGameToShare.Size = new System.Drawing.Size(194, 30);
             this.SaveGameToShare.TabIndex = 10;
-            this.SaveGameToShare.Text = "Save";
+            this.SaveGameToShare.Text = "Export";
             this.SaveGameToShare.UseVisualStyleBackColor = true;
             this.SaveGameToShare.Click += new System.EventHandler(this.SaveGameToShare_Click);
             // 
@@ -152,14 +153,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.ExportVersionSelector);
             this.groupBox3.Controls.Add(this.OpenTextAdventure);
             this.groupBox3.Controls.Add(this.SaveGameToShare);
             this.groupBox3.Location = new System.Drawing.Point(11, 271);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(205, 92);
+            this.groupBox3.Size = new System.Drawing.Size(206, 118);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Export Selected Game";
+            this.groupBox3.Text = "Play/Export Selected Game";
             // 
             // groupBox4
             // 
@@ -181,11 +183,24 @@
             this.CompileLanguage.Size = new System.Drawing.Size(193, 21);
             this.CompileLanguage.TabIndex = 4;
             // 
+            // ExportVersionSelector
+            // 
+            this.ExportVersionSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ExportVersionSelector.FormattingEnabled = true;
+            this.ExportVersionSelector.Items.AddRange(new object[] {
+            "2D - ASGE",
+            "2D - Unity",
+            "3D - UE4"});
+            this.ExportVersionSelector.Location = new System.Drawing.Point(7, 18);
+            this.ExportVersionSelector.Name = "ExportVersionSelector";
+            this.ExportVersionSelector.Size = new System.Drawing.Size(193, 21);
+            this.ExportVersionSelector.TabIndex = 5;
+            // 
             // TextAdventureMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(228, 374);
+            this.ClientSize = new System.Drawing.Size(228, 397);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -219,6 +234,7 @@
         private System.Windows.Forms.Button OpenLocalisationEditor;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox CompileLanguage;
+        private System.Windows.Forms.ComboBox ExportVersionSelector;
     }
 }
 

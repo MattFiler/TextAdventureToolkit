@@ -56,6 +56,8 @@ private:
 	void moveToZone(string name);
 	void moveToLevel(string name);
 
+	void gameOver(string winState);
+
 	int findStateByName(string name);
 	int findZoneByName(string name);
 	int findLevelByName(string name);

@@ -232,6 +232,10 @@ void TextAdventureLogic::performCurrentAction()
 	{
 		moveToLevel(actionLogic["new_level"]);
 	}
+	if (actionLogic["game_over"].is_string())
+	{
+		gameOver(actionLogic["game_over"]);
+	}
 }
 
 /* Interpret the user's input subject */
@@ -367,6 +371,19 @@ void TextAdventureLogic::moveToLevel(string name)
 	progress.zone = 0;
 	progress.state = 0;
 	screenText.locationIntro = getZoneIntro();
+}
+
+/* Game over (won/lost?) */
+void TextAdventureLogic::gameOver(string winState)
+{
+	if (winState == "WIN")
+	{
+		progress.gameState = GameState::DID_WIN;
+	}
+	else if (winState == "LOSE")
+	{
+		progress.gameState = GameState::DID_LOSE;
+	}
 }
 
 /* Find state ID by name in current zone */

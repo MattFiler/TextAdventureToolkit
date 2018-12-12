@@ -4,5 +4,7 @@ enum class GameState : int
 {
 	LOADING,
 	PLAYING,
-	ANIMATING
+	ANIMATING,
+	DID_WIN,
+	DID_LOSE
 };

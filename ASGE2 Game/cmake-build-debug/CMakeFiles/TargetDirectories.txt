@@ -1,6 +1,6 @@
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame+GameData.dir
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/CMakeFiles/edit_cache.dir
-D:/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/CMakeFiles/rebuild_cache.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/TextAdventureGame+GameData.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/CMakeFiles/edit_cache.dir
+F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug/Libs/CMakeFiles/rebuild_cache.dir

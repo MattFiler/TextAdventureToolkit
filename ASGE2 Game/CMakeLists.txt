@@ -34,7 +34,6 @@ set(ITCHIO_USER     "")
 add_executable(
         ${PROJECT_NAME}
         main.cpp
-        Source/ActionList.h
         Source/Animations.cpp
         Source/Animations.h
         Source/Game.cpp

@@ -154,6 +154,12 @@ void TextAdventureGame::update(const ASGE::GameTime& us)
 	}
 	else
 	{
+		//Game over (WIP)
+		if (progress.gameState == GameState::DID_WIN || progress.gameState == GameState::DID_LOSE)
+		{
+			signalExit();
+		}
+
 		//Handle text animations & blocking of user input
 		bool locationIntroAnim = zoneIntroAnim.animateText(us, screenText.locationIntro, screenText.locationIntroOnScreen);
 		bool responseTextAnim = outputTextAnim.animateText(us, screenText.inputResponse, screenText.inputResponseOnScreen);

@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\TextAdventure\ASGE2 Game"
+CMAKE_SOURCE_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\TextAdventure\ASGE2 Game\cmake-build-debug"
+CMAKE_BINARY_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TextAdventureGame.dir/depend.make
@@ -59,114 +59,114 @@ include CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TextAdventureGame.dir/main.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\main.cpp.obj -c "D:\TextAdventure\ASGE2 Game\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TextAdventureGame.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\main.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\main.cpp"
 
 CMakeFiles/TextAdventureGame.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/main.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\main.cpp" > CMakeFiles\TextAdventureGame.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\main.cpp" > CMakeFiles\TextAdventureGame.dir\main.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/main.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\main.cpp" -o CMakeFiles\TextAdventureGame.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\main.cpp" -o CMakeFiles\TextAdventureGame.dir\main.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Source/Animations.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\Animations.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Animations.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\Animations.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Animations.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\Animations.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Animations.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Animations.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Source/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\Game.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Game.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\Game.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Game.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\Game.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Game.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Game.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj: ../Source/GameLogic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\GameLogic.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameLogic.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\GameLogic.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameLogic.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/GameLogic.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\GameLogic.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameLogic.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameLogic.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj: ../Source/GameProgress.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\GameProgress.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameProgress.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\GameProgress.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameProgress.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/GameProgress.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\GameProgress.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameProgress.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameProgress.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj: ../Source/GameScreenText.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp" > CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/GameScreenText.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\GameScreenText.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\GameScreenText.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj: ../Source/Rect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\Rect.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Rect.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\Rect.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Rect.cpp" > CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\Rect.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\Rect.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\Rect.cpp.s
 
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: CMakeFiles/TextAdventureGame.dir/flags.make
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: CMakeFiles/TextAdventureGame.dir/includes_CXX.rsp
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Source/SpriteComponent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.obj -c "D:\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.obj -c "F:\Github Repos\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp"
 
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp" > CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "F:\Github Repos\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp" > CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.i
 
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "F:\Github Repos\TextAdventure\ASGE2 Game\Source\SpriteComponent.cpp" -o CMakeFiles\TextAdventureGame.dir\Source\SpriteComponent.cpp.s
 
 # Object files for target TextAdventureGame
 TextAdventureGame_OBJECTS = \
@@ -201,7 +201,7 @@ TextAdventureGame_EXTERNAL_OBJECTS =
 ../Builds/TextAdventureGame.exe: CMakeFiles/TextAdventureGame.dir/linklibs.rsp
 ../Builds/TextAdventureGame.exe: CMakeFiles/TextAdventureGame.dir/objects1.rsp
 ../Builds/TextAdventureGame.exe: CMakeFiles/TextAdventureGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ..\Builds\TextAdventureGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable ..\Builds\TextAdventureGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TextAdventureGame.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -214,6 +214,6 @@ CMakeFiles/TextAdventureGame.dir/clean:
 .PHONY : CMakeFiles/TextAdventureGame.dir/clean
 
 CMakeFiles/TextAdventureGame.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "D:\TextAdventure\ASGE2 Game" "D:\TextAdventure\ASGE2 Game" "D:\TextAdventure\ASGE2 Game\cmake-build-debug" "D:\TextAdventure\ASGE2 Game\cmake-build-debug" "D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles\TextAdventureGame.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "F:\Github Repos\TextAdventure\ASGE2 Game" "F:\Github Repos\TextAdventure\ASGE2 Game" "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug" "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles\TextAdventureGame.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/TextAdventureGame.dir/depend
 

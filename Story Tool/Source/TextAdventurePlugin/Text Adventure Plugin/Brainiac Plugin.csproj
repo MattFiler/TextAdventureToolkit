@@ -65,6 +65,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="Nodes\InputSubject.cs" />
     <Compile Include="Nodes\ModifyGameData.cs" />
+    <Compile Include="Nodes\GameOver.cs" />
     <Compile Include="Nodes\MoveTo.cs" />
     <Compile Include="Nodes\Response.cs" />
     <Compile Include="Nodes\ReferencedInput.cs" />

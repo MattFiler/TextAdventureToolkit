@@ -49,4 +49,10 @@ namespace TextAdventure
         ZONE,
         STATE
     }
+
+    public enum GameOverStates
+    {
+        WIN,
+        LOSE
+    }
 }

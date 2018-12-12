@@ -43,22 +43,30 @@ namespace TextAdventure
 			// register resource manager
 			AddResourceManager(Resources.ResourceManager);
 
-			NodeGroup TextAdventureGroup = new NodeGroup("Nodes", NodeIcon.Condition, null);
-			_nodeGroups.Add(TextAdventureGroup);
-            
-            TextAdventureGroup.Items.Add(typeof(Nodes.Game));
-            TextAdventureGroup.Items.Add(typeof(Nodes.GameInputResponses));
-            TextAdventureGroup.Items.Add(typeof(Nodes.GameLevel));
-            TextAdventureGroup.Items.Add(typeof(Nodes.LevelZone));
-            TextAdventureGroup.Items.Add(typeof(Nodes.ZoneState));
-            TextAdventureGroup.Items.Add(typeof(Nodes.ZoneIntro));
-            TextAdventureGroup.Items.Add(typeof(Nodes.InputAction));
-            TextAdventureGroup.Items.Add(typeof(Nodes.InputSubject));
-            TextAdventureGroup.Items.Add(typeof(Nodes.ReferencedInput));
-            TextAdventureGroup.Items.Add(typeof(Nodes.GameDataExists));
-            TextAdventureGroup.Items.Add(typeof(Nodes.Response));
-            TextAdventureGroup.Items.Add(typeof(Nodes.MoveTo));
-            TextAdventureGroup.Items.Add(typeof(Nodes.ModifyGameData));
+			NodeGroup TextAdventureGroup1 = new NodeGroup("1. Game", NodeIcon.Condition, null);
+            NodeGroup TextAdventureGroup2 = new NodeGroup("2. Zones", NodeIcon.Condition, null);
+            NodeGroup TextAdventureGroup3 = new NodeGroup("3. Inputs", NodeIcon.Condition, null);
+            NodeGroup TextAdventureGroup4 = new NodeGroup("4. Logic", NodeIcon.Condition, null);
+
+            _nodeGroups.Add(TextAdventureGroup1);
+            _nodeGroups.Add(TextAdventureGroup2);
+            _nodeGroups.Add(TextAdventureGroup3);
+            _nodeGroups.Add(TextAdventureGroup4);
+
+            TextAdventureGroup1.Items.Add(typeof(Nodes.Game));
+            TextAdventureGroup1.Items.Add(typeof(Nodes.GameInputResponses));
+            TextAdventureGroup1.Items.Add(typeof(Nodes.GameLevel));
+            TextAdventureGroup2.Items.Add(typeof(Nodes.LevelZone));
+            TextAdventureGroup2.Items.Add(typeof(Nodes.ZoneState));
+            TextAdventureGroup2.Items.Add(typeof(Nodes.ZoneIntro));
+            TextAdventureGroup3.Items.Add(typeof(Nodes.InputAction));
+            TextAdventureGroup3.Items.Add(typeof(Nodes.InputSubject));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.ReferencedInput));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.GameDataExists));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.Response));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.MoveTo));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.ModifyGameData));
+            TextAdventureGroup4.Items.Add(typeof(Nodes.GameOver));
 
             // register all the file managers
             _fileManagers.Add( new FileManagerInfo(typeof(Brainiac.Design.FileManagers.FileManagerXML), "Behaviour XML (*.xml)|*.xml", ".xml") );

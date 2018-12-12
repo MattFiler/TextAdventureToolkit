@@ -49,19 +49,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "D:\TextAdventure\ASGE2 Game"
+CMAKE_SOURCE_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "D:\TextAdventure\ASGE2 Game\cmake-build-debug"
+CMAKE_BINARY_DIR = "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug"
 
 #=============================================================================
 # Target rules for target CMakeFiles/TextAdventureGame.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = "D:\TextAdventure\ASGE2 Game\cmake-build-debug"
 CMakeFiles/TextAdventureGame.dir/all:
 	$(MAKE) -f CMakeFiles\TextAdventureGame.dir\build.make CMakeFiles/TextAdventureGame.dir/depend
 	$(MAKE) -f CMakeFiles\TextAdventureGame.dir\build.make CMakeFiles/TextAdventureGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target TextAdventureGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target TextAdventureGame"
 .PHONY : CMakeFiles/TextAdventureGame.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/TextAdventureGame.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TextAdventureGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 9
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 9
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/TextAdventureGame.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/TextAdventureGame.dir/rule
 
 # Convenience name for target.
@@ -107,7 +107,7 @@ clean: CMakeFiles/TextAdventureGame.dir/clean
 CMakeFiles/TextAdventureGame+GameData.dir/all: CMakeFiles/TextAdventureGame.dir/all
 	$(MAKE) -f CMakeFiles\TextAdventureGame+GameData.dir\build.make CMakeFiles/TextAdventureGame+GameData.dir/depend
 	$(MAKE) -f CMakeFiles\TextAdventureGame+GameData.dir\build.make CMakeFiles/TextAdventureGame+GameData.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=10 "Built target TextAdventureGame+GameData"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" --progress-num=10 "Built target TextAdventureGame+GameData"
 .PHONY : CMakeFiles/TextAdventureGame+GameData.dir/all
 
 # Include target in all.
@@ -117,9 +117,9 @@ all: CMakeFiles/TextAdventureGame+GameData.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TextAdventureGame+GameData.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 10
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 10
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/TextAdventureGame+GameData.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "D:\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "F:\Github Repos\TextAdventure\ASGE2 Game\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/TextAdventureGame+GameData.dir/rule
 
 # Convenience name for target.

@@ -60,15 +60,31 @@ namespace StoryEditor
             }
         }
 
+        /* Get Selected Game */
+        private string GetSelectedOutputFolder()
+        {
+            string gameFolder = "";
+            switch (ExportVersionSelector.SelectedIndex)
+            {
+                case 0:
+                    gameFolder = "2d_asge";
+                    break;
+                case 1:
+                    gameFolder = "2d_unity";
+                    break;
+                case 2:
+                    gameFolder = "3d_unreal";
+                    break;
+            }
+            return gameFolder;
+        }
+
         /* Open Game */
         private void OpenTextAdventure_Click(object sender, EventArgs e)
         {
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "elements/TextAdventureGame.exe"))
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "elements/games/"+ GetSelectedOutputFolder() + "/TextAdventureGame.exe"))
             {
-                ProcessStartInfo process = new ProcessStartInfo();
-                process.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory + "elements";
-                process.FileName = "TextAdventureGame.exe";
-                Process myProcess = Process.Start(process);
+                Process myProcess = Process.Start(AppDomain.CurrentDomain.BaseDirectory + "elements/games/" + GetSelectedOutputFolder() + "/TextAdventureGame.exe");
             }
             else
             {
@@ -172,6 +188,7 @@ namespace StoryEditor
                 ExistingGames.Items.Insert(index, workspace.Attribute("name").Value);
                 index++;
             }
+            ExportVersionSelector.SelectedIndex = 0;
             if (index != 0)
             {
                 ExistingGames.SelectedIndex = index - 1;
@@ -191,6 +208,7 @@ namespace StoryEditor
             OpenGenerator.Enabled = enabled;
             OpenTextAdventure.Enabled = enabled;
             SaveGameToShare.Enabled = enabled;
+            ExportVersionSelector.Enabled = enabled;
         }
 
         /* Make game directory name */
@@ -346,6 +364,12 @@ namespace StoryEditor
                                                                 }
                                                                 finalOutput += inputScriptNode.Attribute("MoveToLocationName").Value + "\", ";
                                                             }
+                                                            if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.GameOver")
+                                                            {
+                                                                //Game over!
+                                                                string winState = inputScriptNode.Attribute("EndCondition").Value;
+                                                                finalOutput += "\"game_over\": \"" + winState.Substring(0, winState.Length - 2) + "\", ";
+                                                            }
                                                         }
                                                     }
                                                     if (finalOutput.Substring(finalOutput.Length - 2) == ", ")
@@ -418,8 +442,9 @@ namespace StoryEditor
                 gameCoreXML.Element("Connector").Element("Node").Attribute("DisabledInput").Value + "\", \"prefixes\": [\"" + prefixesString + "\"]}}";
 
             //Write out to file for use in game
-            Directory.CreateDirectory("elements/data/");
-            File.WriteAllText("elements/data/story.json", finalOutput);
+            Directory.CreateDirectory("elements/games/2d_asge/data/");
+            File.WriteAllText("elements/games/2d_asge/data/story.json", finalOutput);
+            File.WriteAllText("elements/games/3d_unreal/TextAdventureGame/story.json", finalOutput);
 
             //Success
             MessageBox.Show("Successfully compiled selected game!\nPlay it to try out the logic.", "Operation completed.", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -441,37 +466,67 @@ namespace StoryEditor
         /* Copy final product to output directory */
         private void SaveGameToShare_Click(object sender, EventArgs e)
         {
-            if (File.Exists("elements/data/story.json"))
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "elements/games/" + GetSelectedOutputFolder() + "/TextAdventureGame.exe"))
             {
-                //Create directories
+                //Create/clear share directory
+                if (Directory.Exists("share"))
+                    Directory.Delete("share", true);
                 Directory.CreateDirectory("share");
-                Directory.CreateDirectory("share/data");
-
-                //Remove existing
-                if (File.Exists("share/data/story.json"))
-                {
-                    File.Delete("share/data/story.json");
-                    File.Delete("share/game.dat");
-                    File.Delete("share/TextAdventureGame.exe");
-                }
 
                 //Copy in data
-                File.Copy("elements/data/story.json", "share/data/story.json");
-                File.Copy("elements/game.dat", "share/game.dat");
-                File.Copy("elements/TextAdventureGame.exe", "share/TextAdventureGame.exe");
+                DirectoryCopy(AppDomain.CurrentDomain.BaseDirectory + "elements/games/" + GetSelectedOutputFolder() + "/", "share", true);
 
                 //Open directory
                 Process.Start("share");
             }
             else
             {
-                MessageBox.Show("Please compile your game before saving.", "Cannot save uncompiled game.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cannot find game! Please check your install.", "Fatal error occured.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /* Taken from: https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-copy-directories */
+        private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
+        {
+            // Get the subdirectories for the specified directory.
+            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
+
+            if (!dir.Exists)
+            {
+                throw new DirectoryNotFoundException(
+                    "Source directory does not exist or could not be found: "
+                    + sourceDirName);
+            }
+
+            DirectoryInfo[] dirs = dir.GetDirectories();
+            // If the destination directory doesn't exist, create it.
+            if (!Directory.Exists(destDirName))
+            {
+                Directory.CreateDirectory(destDirName);
+            }
+
+            // Get the files in the directory and copy them to the new location.
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                string temppath = Path.Combine(destDirName, file.Name);
+                file.CopyTo(temppath, false);
+            }
+
+            // If copying subdirectories, copy them and their contents to new location.
+            if (copySubDirs)
+            {
+                foreach (DirectoryInfo subdir in dirs)
+                {
+                    string temppath = Path.Combine(destDirName, subdir.Name);
+                    DirectoryCopy(subdir.FullName, temppath, copySubDirs);
+                }
             }
         }
 
         private void EditSelectedGame_Click(object sender, EventArgs e)
         {
             /* DEPRECIATED */
-        }
     }
+}
 }

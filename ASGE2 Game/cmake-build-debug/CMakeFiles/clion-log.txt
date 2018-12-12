@@ -1,27 +1,12 @@
-"C:\Program Files (x86)\JetBrains\CLion 2018.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\TextAdventure\ASGE2 Game"
--- The C compiler identification is GNU 8.1.0
--- The CXX compiler identification is GNU 8.1.0
--- Check for working C compiler: C:/MinGW/bin/gcc.exe
--- Check for working C compiler: C:/MinGW/bin/gcc.exe -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: C:/MinGW/bin/g++.exe
--- Check for working CXX compiler: C:/MinGW/bin/g++.exe -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenGL: opengl32   
+"D:\Program Files\CLion 2018.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "F:\Github Repos\TextAdventure\ASGE2 Game"
 libOpenGL:     opengl32glu32
-libGLEW:       D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libglew32d.a
-libGLFW:       D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libglfw3d.a
-libFreetype:   D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libfreetyped.a
-libPhysFS:     D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libphysfsd.a
-libPhysFS++:   D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libphysfscppd.a
-libGameEngine: D:/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libGameEngined.a
+libGLEW:       F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libglew32d.a
+libGLFW:       F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libglfw3d.a
+libFreetype:   F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libfreetyped.a
+libPhysFS:     F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libphysfsd.a
+libPhysFS++:   F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libphysfscppd.a
+libGameEngine: F:/Github Repos/TextAdventure/ASGE2 Game/Libs/ASGE/lib/win/libGameEngined.a
 No itch.io user has been specified: disabling itch build targets
 -- Configuring done
 -- Generating done
--- Build files have been written to: D:/TextAdventure/ASGE2 Game/cmake-build-debug
+-- Build files have been written to: F:/Github Repos/TextAdventure/ASGE2 Game/cmake-build-debug

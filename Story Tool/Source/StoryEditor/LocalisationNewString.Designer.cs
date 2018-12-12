@@ -50,6 +50,7 @@
             this.LocalisedString.Name = "LocalisedString";
             this.LocalisedString.Size = new System.Drawing.Size(673, 248);
             this.LocalisedString.TabIndex = 0;
+            this.LocalisedString.WordWrap = false;
             // 
             // groupBox2
             // 
