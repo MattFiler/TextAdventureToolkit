@@ -282,7 +282,12 @@ namespace StoryEditor
                                                 if (inputSubjectNode.FirstAttribute.Value == "TextAdventure.Nodes.InputSubject") //Input subject for current action
                                                 {
                                                     //Here our logic is handled...
-                                                    finalOutput += "\"" + inputSubjectNode.Attribute("Subject").Value + "\":{";
+                                                    string thisSubject = inputSubjectNode.Attribute("Subject").Value;
+                                                    if (thisSubject == "")
+                                                    {
+                                                        thisSubject = "*"; //Can't have blank object names in Unity
+                                                    }
+                                                    finalOutput += "\"" + thisSubject + "\":{";
                                                     List<string> gameDataToAdd = new List<string>();
                                                     List<string> gameDataToRemove = new List<string>();
                                                     foreach (var inputScriptNode in inputSubjectNode.Element("Connector").Elements())

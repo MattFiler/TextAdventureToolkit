@@ -170,19 +170,16 @@ string TextAdventureLogic::getInvalidInputResponse()
 {
 	return logic["game_core"]["invalid_input"];
 }
-
 /* Get the text to respond to an invalid input with */
 string TextAdventureLogic::getErrorResponse()
 {
 	return logic["game_core"]["fatal_error"];
 }
-
 /* Get the number of prefixes available in the game */
 int TextAdventureLogic::getNumberOfActionTypes()
 {
 	return logic["game_core"]["prefixes"].size();
 }
-
 /* Get the input text for an action */
 string TextAdventureLogic::getActionText(int index)
 {
@@ -205,7 +202,7 @@ bool TextAdventureLogic::isCurrentActionValid()
 /* Verify if a subject is permitted for this action */
 bool TextAdventureLogic::isCurrentSubjectValid()
 {
-	if (logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][currentAction][currentSubject].size() > 1) 
+	if (logic[to_string(progress.level)][to_string(progress.zone)][to_string(progress.state)][currentAction][currentSubject].size() > 1)
 	{
 		return true;
 	}
@@ -251,7 +248,7 @@ string TextAdventureLogic::interpretSubject(string input, string tempAction)
 	}
 	if (tempAction == "") 
 	{
-		return "";
+		return "*";
 	}
 	try {
 		for (int i = 0; i < getNumberOfActionTypes(); i++)
@@ -263,9 +260,9 @@ string TextAdventureLogic::interpretSubject(string input, string tempAction)
 		}
 	}
 	catch (...) {
-		return ""; //No subject specified, might not be a big deal... we'll check that next.
+		return "*"; //No subject specified, might not be a big deal... we'll check that next.
 	}
-	return "";
+	return "*";
 }
 
 /* Add items to game memory when requested */
@@ -355,7 +352,6 @@ void TextAdventureLogic::moveToState(string name)
 	progress.state = findStateByName(name);
 	screenText.locationIntro = getZoneIntro();
 }
-
 /* Find zone by name and move to it */
 void TextAdventureLogic::moveToZone(string name)
 {
@@ -363,7 +359,6 @@ void TextAdventureLogic::moveToZone(string name)
 	progress.state = 0;
 	screenText.locationIntro = getZoneIntro();
 }
-
 /* Find zone by name and move to it */
 void TextAdventureLogic::moveToLevel(string name)
 {
@@ -397,7 +392,6 @@ int TextAdventureLogic::findStateByName(string name) {
 	}
 	return 99;
 }
-
 /* Find zone ID by name in current level */
 int TextAdventureLogic::findZoneByName(string name) {
 	for (int i = 0; i < zonesInThisLevel(progress.level); i++)
@@ -409,7 +403,6 @@ int TextAdventureLogic::findZoneByName(string name) {
 	}
     return 99;
 }
-
 /* Find level ID by name */
 int TextAdventureLogic::findLevelByName(string name) {
 	for (int i = 0; i < levelsInThisGame(); i++)
