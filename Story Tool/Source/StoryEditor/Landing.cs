@@ -301,7 +301,7 @@ namespace StoryEditor
                                                         {
                                                             if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.GameDataExists")
                                                             {
-                                                                //Optional/Required GameData Condition
+                                                                //Optional/Required GameData Condition(s)
                                                                 if (inputScriptNode.Attribute("GameDataCondition").Value == "OPTIONAL:0")
                                                                 {
                                                                     finalOutput += "\"optional_gamedata\": ";
@@ -310,7 +310,20 @@ namespace StoryEditor
                                                                 {
                                                                     finalOutput += "\"required_gamedata\": ";
                                                                 }
-                                                                finalOutput += "[\"" + inputScriptNode.Attribute("GameData").Value + "\"], ";
+                                                                string[] conditionalGameData = inputScriptNode.Attribute("GameData").Value.Split(',');
+                                                                finalOutput += "[\"";
+                                                                foreach (string gameData in conditionalGameData)
+                                                                {
+                                                                    if (gameData.Substring(0, 1) == " ")
+                                                                    {
+                                                                        finalOutput += gameData.Substring(1) + "\", \"";
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        finalOutput += gameData + "\", \"";
+                                                                    }
+                                                                }
+                                                                finalOutput = finalOutput.Substring(0,finalOutput.Length - 3) + "], ";
 
                                                                 //Response of condition for true/false outcomes.
                                                                 //OPTIONAL and REQUIRED use these outcomes, however REQUIRED will ignore all following logic if false.

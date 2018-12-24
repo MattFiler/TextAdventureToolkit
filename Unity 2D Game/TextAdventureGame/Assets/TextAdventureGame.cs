@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using SimpleJSON;
+using UnityEngine.EventSystems;
 
 public class TextAdventureGame : MonoBehaviour
 {
@@ -55,6 +56,7 @@ public class TextAdventureGame : MonoBehaviour
         var logic = JSON.Parse(jsonString);
 
         User_Input.onEndEdit.AddListener(delegate { handleUserInput(); });
+        EventSystem.current.SetSelectedGameObject(GameObject.Find("User_Input"));
 
         Game_Title.text = getGameTitle();
         Game_Developer.text = getGameDeveloper();
@@ -103,6 +105,7 @@ public class TextAdventureGame : MonoBehaviour
     private void handleUserInput()
     {
         parseInput();
+        GameObject.Find("User_Input").GetComponent<InputField>().ActivateInputField();
     }
 
     /* Handle response of action */
