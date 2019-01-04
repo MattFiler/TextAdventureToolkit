@@ -19,7 +19,7 @@ bool Animations::animateText(const ASGE::GameTime &time, string originalText, st
 {
 	float currentGameTime = getCurrentGameTime(time);
 	float currentDeltaTime = getCurrentDeltaTime(time);
-	if (originalText != outputText && currentGameTime - timePreviouslyAnimated > (int)GameConstants::GAME_TYPING_SPEED * currentDeltaTime)
+	if (originalText != outputText && timePreviouslyAnimated + 0.01 < currentGameTime)
 	{
 		//Should animate
 		int newTextLength = 0;

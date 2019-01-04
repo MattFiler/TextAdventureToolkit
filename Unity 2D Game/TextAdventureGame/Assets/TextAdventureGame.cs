@@ -23,9 +23,6 @@ public class TextAdventureGame : MonoBehaviour
     //
     public InputField User_Input;
 
-    // Game Constants
-    public int Max_GameData_Space = 250;
-
     /*
     -------
     PRIVATE
@@ -37,9 +34,17 @@ public class TextAdventureGame : MonoBehaviour
     string Game_Response_Text_Queued = "";
 
     // Game Progress Logs
-    int current_level = 0;
-    int current_zone = 0;
-    int current_state = 0;
+    int currentLevel = 0;
+    int currentZone = 0;
+    int currentState = 0;
+
+    // Animation Instances
+    ANIMATION ZoneIntroAnim = new ANIMATION();
+    ANIMATION GameResponseAnim = new ANIMATION();
+
+    // GameData
+    List<string> gameData = new List<string>();
+    enum gameDataType { REQUIRED_DATA, OPTIONAL_DATA, DATA_DOES_NOT_EXIST, DATA_EXISTS, DATA_IS_NOT_SPECIFIED }
 
     // JSON Data
     string jsonString = "";
@@ -60,7 +65,7 @@ public class TextAdventureGame : MonoBehaviour
 
         Game_Title.text = getGameTitle();
         Game_Developer.text = getGameDeveloper();
-        Zone_Intro_Text.text = getZoneIntro();
+        Zone_Intro_Text_Queued = getZoneIntro();
     }
 
     /* Return the number of levels */
@@ -104,12 +109,49 @@ public class TextAdventureGame : MonoBehaviour
     /* Handle response of action */
     private void handleUserInput()
     {
-        parseInput();
-        GameObject.Find("User_Input").GetComponent<InputField>().ActivateInputField();
+        var logic = JSON.Parse(jsonString);
+
+        var logicBranch = parseInput();
+        if (inputIsValid)
+        {
+            gameDataType requiredData = gameDataExistsForCurrentAction("required");
+            gameDataType optionalData = gameDataExistsForCurrentAction("optional");
+
+            if (requiredData != gameDataType.DATA_DOES_NOT_EXIST && optionalData != gameDataType.DATA_DOES_NOT_EXIST)
+            {
+                if (logicBranch["system_reply_ok"].IsString)
+                {
+                    Game_Response_Text_Queued = logicBranch["system_reply_ok"];
+                }
+                else
+                {
+                    Game_Response_Text_Queued = getErrorResponse();
+                }
+            }
+            else
+            {
+                if (logicBranch["system_reply_issue"].IsString)
+                {
+                    Game_Response_Text_Queued = logicBranch["system_reply_issue"];
+                }
+                else
+                {
+                    Game_Response_Text_Queued = getErrorResponse();
+                }
+            }
+
+            if (requiredData != gameDataType.DATA_DOES_NOT_EXIST)
+            {
+                performCurrentAction();
+                handleGameData();
+            }
+        }
+
+        User_Input.ActivateInputField();
     }
 
     /* Handle response of action */
-    private void parseInput()
+    private JSONNode parseInput()
     {
         var logic = JSON.Parse(jsonString);
 
@@ -142,11 +184,11 @@ public class TextAdventureGame : MonoBehaviour
         }
 
         // Check for validity
-        var logicBranch = logic[current_level.ToString()][current_zone.ToString()][current_state.ToString()][inputAction][inputSubject];
+        inputIsValid = false;
+        var logicBranch = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject];
         if (logicBranch.AsObject.Count == 0)
         {
-            Game_Response_Text.text = getInvalidInputResponse();
-            inputIsValid = false;
+            Game_Response_Text_Queued = getInvalidInputResponse();
         }
         else
         {
@@ -157,27 +199,24 @@ public class TextAdventureGame : MonoBehaviour
                 inputAction = referenced[0];
                 inputSubject = referenced[1];
             }
-            logicBranch = logic[current_level.ToString()][current_zone.ToString()][current_state.ToString()][inputAction][inputSubject];
+            logicBranch = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject];
 
             //If valid input action, act on it
-            if (logicBranch.AsObject.Count == 0)
-            {
-                inputIsValid = false;
-            }
-            else
+            if (logicBranch.AsObject.Count != 0)
             {
                 inputIsValid = true;
-                Game_Response_Text.text = logicBranch["system_reply_ok"]; //TEMP ONLY
-                performCurrentAction();
             }
         }
+        Debug.Log(inputAction);
+        Debug.Log(inputSubject);
+        return logicBranch;
     }
 
     /* Show the game intro text */
     private string getZoneIntro()
     {
         var logic = JSON.Parse(jsonString);
-        return logic[current_level.ToString()][current_zone.ToString()][current_state.ToString()]["zone_intro"];
+        return logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()]["zone_intro"];
     }
 
     /* Get the text to respond to an invalid input with */
@@ -209,7 +248,7 @@ public class TextAdventureGame : MonoBehaviour
     private void performCurrentAction()
     {
         var logic = JSON.Parse(jsonString);
-        var actionLogic = logic[current_level.ToString()][current_zone.ToString()][current_state.ToString()][inputAction][inputSubject];
+        var actionLogic = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject];
 
         if (actionLogic["new_state"].IsString)
         {
@@ -229,30 +268,100 @@ public class TextAdventureGame : MonoBehaviour
         }
     }
 
+    /* Add/remove items to game memory when requested */
+    private void handleGameData()
+    {
+        var logic = JSON.Parse(jsonString);
 
-    /* GAMEDATA HERE */
+        var currentGameDataAdd = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject]["add_gamedata"];
+        var currentGameDataRemove = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject]["remove_gamedata"];
 
+        if (currentGameDataAdd.IsArray)
+        {
+            gameDataAction(currentGameDataAdd, true);
+        }
+        if (currentGameDataRemove.IsArray)
+        {
+            gameDataAction(currentGameDataRemove, false);
+        }
+    }
+    private void gameDataAction(JSONNode currentGameData, bool shouldAdd)
+    {
+        foreach (var thisData in currentGameData)
+        {
+            if (isItemInGameData(thisData.ToString()))
+            {
+                if (!shouldAdd)
+                {
+                    gameData.Remove(thisData.ToString());
+                }
+            }
+            else
+            {
+                if (shouldAdd)
+                {
+                    gameData.Add(thisData.ToString());
+                }
+            }
+        }
+    }
+
+    /* Check if an item is in the game memory */
+    private bool isItemInGameData(string item)
+    {
+        foreach (string data in gameData)
+        {
+            if (data == item)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /* Check required/optional items for action are in memory */
+    private gameDataType gameDataExistsForCurrentAction(string gameDataType)
+    {
+        var logic = JSON.Parse(jsonString);
+        var requestedGameData = logic[currentLevel.ToString()][currentZone.ToString()][currentState.ToString()][inputAction][inputSubject][gameDataType + "_gamedata"];
+
+        if (requestedGameData.IsArray)
+        {
+            foreach (var reqData in requestedGameData)
+            {
+                if (isItemInGameData(reqData.ToString()))
+                {
+                    return TextAdventureGame.gameDataType.DATA_EXISTS;
+                }
+            }
+        }
+        else
+        {
+            return TextAdventureGame.gameDataType.DATA_IS_NOT_SPECIFIED;
+        }
+        return TextAdventureGame.gameDataType.DATA_DOES_NOT_EXIST;
+    }
 
     /* Find zone by name and move to it */
     private void moveToState(string name)
     {
-        current_state = findStateByName(name);
-        Zone_Intro_Text.text = getZoneIntro();
+        currentState = findStateByName(name);
+        Zone_Intro_Text_Queued = getZoneIntro();
     }
     /* Find zone by name and move to it */
     private void moveToZone(string name)
     {
-        current_zone = findZoneByName(name);
-        current_state = 0;
-        Zone_Intro_Text.text = getZoneIntro();
+        currentZone = findZoneByName(name);
+        currentState = 0;
+        Zone_Intro_Text_Queued = getZoneIntro();
     }
     /* Find zone by name and move to it */
     private void moveToLevel(string name)
     {
-        current_level = findLevelByName(name);
-        current_zone = 0;
-        current_state = 0;
-        Zone_Intro_Text.text = getZoneIntro();
+        currentLevel = findLevelByName(name);
+        currentZone = 0;
+        currentState = 0;
+        Zone_Intro_Text_Queued = getZoneIntro();
     }
     
     /* Game over (won/lost?) */
@@ -272,9 +381,9 @@ public class TextAdventureGame : MonoBehaviour
     private int findStateByName(string name)
     {
         var logic = JSON.Parse(jsonString);
-        for (int i = 0; i < statesInThisZone(current_level, current_zone); i++)
+        for (int i = 0; i < statesInThisZone(currentLevel, currentZone); i++)
         {
-            if (logic[current_level.ToString()][current_zone.ToString()][i.ToString()]["level_name"]["state_name"] == name)
+            if (logic[currentLevel.ToString()][currentZone.ToString()][i.ToString()]["level_name"]["state_name"] == name)
             {
                 return i;
             }
@@ -285,9 +394,9 @@ public class TextAdventureGame : MonoBehaviour
     private int findZoneByName(string name)
     {
         var logic = JSON.Parse(jsonString);
-        for (int i = 0; i < zonesInThisLevel(current_level); i++)
+        for (int i = 0; i < zonesInThisLevel(currentLevel); i++)
         {
-            if (logic[current_level.ToString()][i.ToString()]["zone_name"] == name)
+            if (logic[currentLevel.ToString()][i.ToString()]["zone_name"] == name)
             {
                 return i;
             }
@@ -306,5 +415,46 @@ public class TextAdventureGame : MonoBehaviour
             }
         }
         return 99;
+    }
+
+    /* Animate Text */
+    void Update()
+    {
+        Zone_Intro_Text.text = ZoneIntroAnim.animateText(Zone_Intro_Text_Queued, Zone_Intro_Text.text, true);
+        Game_Response_Text.text = GameResponseAnim.animateText(Game_Response_Text_Queued, Game_Response_Text.text);
+    }
+}
+
+class ANIMATION
+{
+    float timePreviouslyAnimated = 0.0f;
+    bool didFinish = false;
+
+    public string animateText(string originalText, string outputText, bool shouldLog=false)
+    {
+        if (timePreviouslyAnimated + 0.01 < Time.time)
+        {
+            if (originalText != outputText)
+            {
+                if (didFinish)
+                {
+                    outputText = "";
+                    didFinish = false;
+                }
+                else
+                {
+                    if (originalText.Substring(0, outputText.Length) == outputText)
+                    {
+                        outputText = originalText.Substring(0, outputText.Length + 1);
+                        timePreviouslyAnimated = Time.time;
+                    }
+                }
+            }
+            else
+            {
+                didFinish = true;
+            }
+        }
+        return outputText;
     }
 }

@@ -5,28 +5,62 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 980 Ti (ID=0x17c8)
     Vendor:   NVIDIA
     VRAM:     6097 MB
-    Driver:   24.21.13.9924
+    Driver:   25.21.14.1735
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: F:\Github Repos\TextAdventure\Unity 2D Game\Build\TextAdventureGame_Data\Managed\System.dll (this message is harmless)
-desktop: 2560x1440 59Hz; virtual: 5120x1440 at 0,0
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.016 seconds
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\Github Repos\TextAdventure\Story Tool\Tools\elements\games\2d_unity\TextAdventureGame_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
+desktop: 2560x1440 59Hz; virtual: 5120x1440 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.229768 ms
+UnloadTime: 1.046110 ms
+LOOK AROUND
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+*
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+*
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+*
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 8260 -> priority: 1 
-  Thread -> id: 4e78 -> priority: 1 
-  Thread -> id: 1658 -> priority: 1 
-  Thread -> id: 3e60 -> priority: 1 
+  Thread -> id: 6ebc -> priority: 1 
+  Thread -> id: 808 -> priority: 1 
+  Thread -> id: 72f8 -> priority: 1 
+  Thread -> id: 6780 -> priority: 1 
+
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+*
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+

@@ -17,8 +17,6 @@
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
                             <Connector Identifier="GenericChildren">
                               <Node Class="TextAdventure.Nodes.Response" SystemResponse="AIRLOCK_LOOKAROUND" />
-                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="TEST3333" />
-                              <Node Class="TextAdventure.Nodes.ModifyGameData" Action="ADD:0" ModifyGameDataLocationName="AIRLOCK_PRIMED" />
                             </Connector>
                           </Node>
                         </Connector>
@@ -36,7 +34,7 @@
                         <Connector Identifier="GenericChildren">
                           <Node Class="TextAdventure.Nodes.InputSubject" Subject="OUTSIDE">
                             <Connector Identifier="GenericChildren">
-                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="AIRLOCK_PRIMED, TEST" GameDataCondition="REQUIRED:1">
+                              <Node Class="TextAdventure.Nodes.GameDataExists" GameData="AIRLOCK_PRIMED" GameDataCondition="REQUIRED:1">
                                 <Connector Identifier="ConditionTrue">
                                   <Node Class="TextAdventure.Nodes.Response" SystemResponse="EXIT_AIRLOCK" />
                                 </Connector>
@@ -124,6 +122,15 @@
                   <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
                     <Connector Identifier="GenericChildren">
                       <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="OUTER_AIRLOCK_INTRO" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="OUTER_AIRLOCK_LOOKAROUND" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
                     </Connector>
                   </Node>
                 </Connector>

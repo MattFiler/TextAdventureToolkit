@@ -462,6 +462,7 @@ namespace StoryEditor
             //Write out to file for use in game
             Directory.CreateDirectory("elements/games/2d_asge/data/");
             File.WriteAllText("elements/games/2d_asge/data/story.json", finalOutput);
+            File.WriteAllText("elements/games/2d_unity/TextAdventureGame_Data/StreamingAssets/story.json", finalOutput);
             File.WriteAllText("elements/games/3d_unreal/TextAdventureGame/story.json", finalOutput);
 
             //Success
