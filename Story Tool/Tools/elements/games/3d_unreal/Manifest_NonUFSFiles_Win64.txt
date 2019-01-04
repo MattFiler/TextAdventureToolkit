@@ -1,4 +1,4 @@
-TextAdventureGame/Binaries/Win64/TextAdventureGame-Win64-Shipping.exe	2018-12-20T18:26:10.071Z
+TextAdventureGame/Binaries/Win64/TextAdventureGame-Win64-Shipping.exe	2019-01-04T19:32:34.861Z
 Engine/Extras/Redist/en-us/UE4PrereqSetup_x64.exe	2018-11-09T18:36:37.858Z
 Engine/Binaries/ThirdParty/Oculus/OVRPlugin/OVRPlugin/Win64/OVRPlugin.dll	2018-11-09T18:32:55.699Z
 Engine/Binaries/ThirdParty/PhysX3/Win64/VS2015/PxFoundation_x64.dll	2018-11-09T18:33:08.222Z
@@ -16,4 +16,4 @@ Engine/Binaries/ThirdParty/OpenVR/OpenVRv1_0_11/Win64/openvr_api.dll	2018-11-09T
 Engine/Binaries/ThirdParty/Ogg/Win64/VS2015/libogg_64.dll	2018-11-09T18:32:55.716Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbis_64.dll	2018-11-09T18:33:09.581Z
 Engine/Binaries/ThirdParty/Vorbis/Win64/VS2015/libvorbisfile_64.dll	2018-11-09T18:33:09.582Z
-TextAdventureGame.exe	2018-12-20T18:26:47.320Z
+TextAdventureGame.exe	2019-01-04T19:33:26.063Z

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<language>
+  <string id="INSIDE_CAR_INTRO" text="Vous vous garez dans l'allee de la maison de vacances &#xD;&#xA;familiale et garez la voiture. &#xD;&#xA;&#xD;&#xA;Il fait nuit, mais c'est aussi idyllique que vous vous &#xD;&#xA;en souvenez. Vous vous souvenez qu'on vous ait dit de &#xD;&#xA;regarder dans la boite a gants avant d'entrer. &#xD;&#xA;&#xD;&#xA;C'est bon d'etre de retour."></string>
+  <string id="LOOK_AROUND_CAR" text="C'est une belle voiture propre.&#xD;&#xA;&#xD;&#xA;Pas grand chose a voir, mais il y a une boite a gants."></string>
+  <string id="GLOVEBOX_OPEN" text="La boite a gants est ouverte et vous en avez pris le &#xD;&#xA;contenu."></string>
+  <string id="GLOVEBOX_CLOSED" text="La boite a gants est fermee mais semble etre &#xD;&#xA;deverrouillee."></string>
+  <string id="GLOVEBOX_INSIDE_EMPTY" text="L'interieur de la boite a gants est vide.&#xD;&#xA;&#xD;&#xA;Vous avez pris son contenu."></string>
+  <string id="GLOVEBOX_INSIDE_FULL" text="A l'interieur se trouvent une cle et une note manuscrite de papa.&#xD;&#xA;&#xD;&#xA;Vous prenez les deux."></string>
+  <string id="EXIT_CAR" text="Vous ouvrez la porte de la voiture et sortez ..."></string>
+  <string id="OUTSIDE_CAR_INTRO" text="La maison est grande, parfaitement assis parmi les &#xD;&#xA;arbres. &#xD;&#xA;&#xD;&#xA;En face de vous se trouve la porte d'entrée et la cour &#xD;&#xA;s'étend à l'arrière de la maison."></string>
+  <string id="LOOK_AROUND_OUT_CAR" text="Les arbres s'etendent jusqu'au ciel nocturne.&#xD;&#xA;&#xD;&#xA;Il y a la maison et la cour."></string>
+  <string id="GO_INSIDE_HOUSE" text="Vous entrez dans la porte d'entree ..."></string>
+  <string id="GO_INSIDE_HOUSE_LOCKED" text="La porte semble etre verrouillee.&#xD;&#xA;&#xD;&#xA;Vous devrez utiliser une cle."></string>
+  <string id="UNLOCK_HOUSE" text="Vous inserez la cle et tournez.&#xD;&#xA;&#xD;&#xA;La serrure de la porte s'ouvre."></string>
+  <string id="NO_KEY" text="Vous n'avez pas de cle."></string>
+  <string id="RETURN_TO_CAR" text="Vous revenez a la voiture."></string>
+  <string id="APPROACH_HOUSE" text="Vous approchez de la maison.&#xD;&#xA;&#xD;&#xA;En face de vous se trouve une porte non verrouillee."></string>
+  <string id="APPROACH_HOUSE_LOCKED" text="Vous approchez de la maison.&#xD;&#xA;&#xD;&#xA;La porte est fermee et vous ne pouvez pas entrer."></string>
+  <string id="WALK_TO_YARD" text="Vous vous promenez dans la cour."></string>
+  <string id="YARD_INTRO" text="Vous traversez la cour. &#xD;&#xA;&#xD;&#xA;Vous avez passe beaucoup de temps avec votre famille en &#xD;&#xA;vacances.&#xD;&#xA;&#xD;&#xA;Bon souvenir"></string>
+  <string id="HOUSE_HALL_INTRO" text="Vous entrez dans la maison dans le couloir.&#xD;&#xA;&#xD;&#xA;Il fait noir et vous ne pouvez rien voir.&#xD;&#xA;&#xD;&#xA;Vous sentez cependant un interrupteur pres de la porte."></string>
+</language>

@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<language>
-  <string id="DEMO_INTRO" text="You load the demo text adventure and everything is quiet.&#xD;&#xA;&#xD;&#xA;No story...&#xD;&#xA;&#xD;&#xA;No text...&#xD;&#xA;&#xD;&#xA;No adventure.&#xD;&#xA;&#xD;&#xA;Add some levels and zones to create your game!"></string>
-  <string id="DEMO_RESPONSE" text="It's an empty space. The demo has nothing in it!"></string>
-</language>

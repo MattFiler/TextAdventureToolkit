@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<workspaces selected="LV426 Explorer">
-  <workspace name="The House Abandon" folder="54686520486F757365204162616E646F6E" export="54686520486F757365204162616E646F6E">
+<workspaces selected="Text Adventure Game Test">
+  <workspace name="The House Abandon" folder="projects/54686520486F757365204162616E646F6E" export="projects/54686520486F757365204162616E646F6E">
     <plugin>TextAdventure.dll</plugin>
   </workspace>
-  <workspace name="Text Adventure Game" folder="5465787420416476656E747572652047616D65" export="5465787420416476656E747572652047616D65">
+  <workspace name="Text Adventure Game" folder="projects/5465787420416476656E747572652047616D65" export="projects/5465787420416476656E747572652047616D65">
     <plugin>TextAdventure.dll</plugin>
   </workspace>
-  <workspace name="LV426 Explorer" folder="4C56343236204578706C6F726572" export="4C56343236204578706C6F726572">
+  <workspace name="LV426 Explorer" folder="projects/4C56343236204578706C6F726572" export="projects/4C56343236204578706C6F726572">
     <plugin>TextAdventure.dll</plugin>
   </workspace>
 </workspaces>

@@ -375,6 +375,7 @@ public class TextAdventureGame : MonoBehaviour
         {
             //WIP
         }
+        Application.Quit();
     }
 
     /* Find state ID by name in current zone */
@@ -420,8 +421,22 @@ public class TextAdventureGame : MonoBehaviour
     /* Animate Text */
     void Update()
     {
-        Zone_Intro_Text.text = ZoneIntroAnim.animateText(Zone_Intro_Text_Queued, Zone_Intro_Text.text, true);
+        Zone_Intro_Text.text = ZoneIntroAnim.animateText(Zone_Intro_Text_Queued, Zone_Intro_Text.text);
         Game_Response_Text.text = GameResponseAnim.animateText(Game_Response_Text_Queued, Game_Response_Text.text);
+
+        if (!ZoneIntroAnim.didFinishAnimation() || !GameResponseAnim.didFinishAnimation())
+        {
+            User_Input.text = getInputDisabledText();
+            User_Input.enabled = false;
+        }
+        else
+        {
+            User_Input.enabled = true;
+            if (User_Input.text == getInputDisabledText())
+            {
+                User_Input.text = "";
+            }
+        }
     }
 }
 
@@ -430,7 +445,7 @@ class ANIMATION
     float timePreviouslyAnimated = 0.0f;
     bool didFinish = false;
 
-    public string animateText(string originalText, string outputText, bool shouldLog=false)
+    public string animateText(string originalText, string outputText)
     {
         if (timePreviouslyAnimated + 0.01 < Time.time)
         {
@@ -456,5 +471,10 @@ class ANIMATION
             }
         }
         return outputText;
+    }
+
+    public bool didFinishAnimation()
+    {
+        return didFinish;
     }
 }

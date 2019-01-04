@@ -15,9 +15,9 @@ else()
 endif()
 
 ## hide console unless debug build ##
-if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug" AND WIN32)
+#if (NOT CMAKE_BUILD_TYPE STREQUAL "Debug" AND WIN32)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mwindows")
-endif()
+#endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Builds")

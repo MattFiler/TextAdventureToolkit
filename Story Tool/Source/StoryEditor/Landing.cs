@@ -18,7 +18,7 @@ namespace StoryEditor
     {
         //Load workspaces xml
         private string workspaceFilename = "elements/workspaces.xml";
-        private XDocument doc = XDocument.Load("elements/workspaces.xml");
+        private XDocument workspaceDoc = XDocument.Load("elements/workspaces.xml");
         private string[] supportedLanguages = { "english", "spanish", "french", "german" };
 
         public TextAdventureMaker()
@@ -32,14 +32,14 @@ namespace StoryEditor
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "elements/Brainiac.exe"))
             {
                 //Set current game as selected workspace
-                doc.Element("workspaces").Attribute("selected").Value = ExistingGames.SelectedItem.ToString();
-                doc.Save(workspaceFilename);
+                workspaceDoc.Element("workspaces").Attribute("selected").Value = ExistingGames.SelectedItem.ToString();
+                workspaceDoc.Save(workspaceFilename);
 
                 //Start Brainiac
-                ProcessStartInfo process = new ProcessStartInfo();
-                process.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory + "elements";
-                process.FileName = "Brainiac.exe";
-                Process myProcess = Process.Start(process);
+                ProcessStartInfo brainiacProcess = new ProcessStartInfo();
+                brainiacProcess.WorkingDirectory = AppDomain.CurrentDomain.BaseDirectory + "elements";
+                brainiacProcess.FileName = "Brainiac.exe";
+                Process myProcess = Process.Start(brainiacProcess);
             }
             else
             {
@@ -52,7 +52,7 @@ namespace StoryEditor
         {
             try
             {
-                convertStoryToJSON();
+                ConvertStoryToJSON();
             }
             catch
             {
@@ -95,7 +95,7 @@ namespace StoryEditor
         /* Open String Editor */
         private void OpenLocalisationEditor_Click(object sender, EventArgs e)
         {
-            LocalisationEditor stringEd = new LocalisationEditor(getCurrentWorkspace().Attribute("folder").Value, getCurrentWorkspace().Attribute("name").Value);
+            LocalisationEditor stringEd = new LocalisationEditor(GetCurrentWorkspace().Attribute("folder").Value, GetCurrentWorkspace().Attribute("name").Value);
             stringEd.Show();
         }
 
@@ -114,7 +114,7 @@ namespace StoryEditor
             }
             else
             {
-                string folderName = makeDirectoryName(newGameTitle);
+                string folderName = "projects/" + MakeDirectoryName(newGameTitle);
                 if (Directory.Exists("elements/" + folderName))
                 {
                     MessageBox.Show("A game with this name already exists!\nPlease try again.", "Game name taken.", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -124,7 +124,7 @@ namespace StoryEditor
                     //Update workspaces list
                     XElement newWorkspace = XElement.Parse("<workspace name=\"" + newGameTitle + "\" folder=\"" + folderName + "\" export=\"" + folderName + "\"></workspace>");
                     newWorkspace.Add(XElement.Parse("<plugin>TextAdventure.dll</plugin>"));
-                    doc.Element("workspaces").Add(newWorkspace);
+                    workspaceDoc.Element("workspaces").Add(newWorkspace);
 
                     //Create working directory and insert the starting template
                     Directory.CreateDirectory("elements/" + folderName);
@@ -146,7 +146,7 @@ namespace StoryEditor
                     }
 
                     //Reload
-                    reloadWorkspaceList();
+                    ReloadWorkspaceList();
                 }
             }
         }
@@ -158,16 +158,16 @@ namespace StoryEditor
             if (confirmation == DialogResult.Yes)
             {
                 //Delete data folder and from workspaces list
-                Directory.Delete("elements/" + getCurrentWorkspace().Attribute("folder").Value, true);
-                getCurrentWorkspace().Remove();
-                reloadWorkspaceList();
+                Directory.Delete("elements/" + GetCurrentWorkspace().Attribute("folder").Value, true);
+                GetCurrentWorkspace().Remove();
+                ReloadWorkspaceList();
             }
         }
 
         /* Form Load */
         private void TextAdventureMaker_Load(object sender, EventArgs e)
         {
-            reloadWorkspaceList();
+            ReloadWorkspaceList();
 
             //Update language list
             for (int i = 0; i < supportedLanguages.Count(); i++)
@@ -178,12 +178,12 @@ namespace StoryEditor
         }
 
         /* Save and reload workspace list */
-        private void reloadWorkspaceList()
+        private void ReloadWorkspaceList()
         {
-            doc.Save(workspaceFilename);
+            workspaceDoc.Save(workspaceFilename);
             ExistingGames.Items.Clear();
             int index = 0;
-            foreach (var workspace in doc.Element("workspaces").Elements())
+            foreach (var workspace in workspaceDoc.Element("workspaces").Elements())
             {
                 ExistingGames.Items.Insert(index, workspace.Attribute("name").Value);
                 index++;
@@ -192,16 +192,16 @@ namespace StoryEditor
             if (index != 0)
             {
                 ExistingGames.SelectedIndex = index - 1;
-                formInteractionEnabled(true);
+                FormInteractionEnabled(true);
             }
             else
             {
-                formInteractionEnabled(false);
+                FormInteractionEnabled(false);
             }
         }
 
         /* Enable/Disable Interaction */
-        private void formInteractionEnabled(bool enabled)
+        private void FormInteractionEnabled(bool enabled)
         {
             DeleteSelectedGame.Enabled = enabled;
             OpenEditor.Enabled = enabled;
@@ -212,15 +212,15 @@ namespace StoryEditor
         }
 
         /* Make game directory name */
-        private string makeDirectoryName(string input)
+        private string MakeDirectoryName(string input)
         {
             return BitConverter.ToString(Encoding.Default.GetBytes(input)).Replace("-", "");
         }
 
         /* Find and return current workspace element */
-        private XElement getCurrentWorkspace()
+        private XElement GetCurrentWorkspace()
         {
-            foreach (var workspace in doc.Element("workspaces").Elements())
+            foreach (var workspace in workspaceDoc.Element("workspaces").Elements())
             {
                 var workspaceName = workspace.Attribute("name").Value;
                 if (workspaceName == ExistingGames.SelectedItem.ToString())
@@ -232,16 +232,16 @@ namespace StoryEditor
         }
 
         /* Convert Brainiac XML to JSON */
-        private void convertStoryToJSON()
+        private void ConvertStoryToJSON()
         {
             //Load XML from brainiac and setup our variables
-            var gameDoc = XDocument.Load("elements/" + getCurrentWorkspace().Attribute("folder").Value + "/main.xml");
+            var gameDoc = XDocument.Load("elements/" + GetCurrentWorkspace().Attribute("folder").Value + "/main.xml");
             XElement gameCoreXML = gameDoc.Element("Behavior").Element("Node").Element("Connector").Element("Node");
             string finalOutput = "{";
             List<string> prefixes = new List<string>();
 
             //Load language XML
-            XDocument languageDoc = XDocument.Load("elements/" + getCurrentWorkspace().Attribute("folder").Value + "/" + CompileLanguage.SelectedItem + ".xml");
+            XDocument languageDoc = XDocument.Load("elements/" + GetCurrentWorkspace().Attribute("folder").Value + "/" + CompileLanguage.SelectedItem + ".xml");
             XElement languageData = languageDoc.Element("language");
 
             //Start traversing XML...
@@ -267,7 +267,7 @@ namespace StoryEditor
                                     {
                                         if (inputActionNode.FirstAttribute.Value == "TextAdventure.Nodes.ZoneIntro") //Zone intro text for state
                                         {
-                                            finalOutput += "\"zone_intro\":\"" + localisedString(inputActionNode.Attribute("IntroText").Value, languageData) + "\", ";
+                                            finalOutput += "\"zone_intro\":\"" + GetLocalisedString(inputActionNode.Attribute("IntroText").Value, languageData) + "\", ";
                                         }
                                         if (inputActionNode.FirstAttribute.Value == "TextAdventure.Nodes.InputAction") //Input action in current zone
                                         {
@@ -333,14 +333,14 @@ namespace StoryEditor
                                                                     {
                                                                         if (dataConditionResult.Element("Node").LastAttribute.Name == "SystemResponse")
                                                                         {
-                                                                            finalOutput += "\"system_reply_ok\": \"" + localisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
+                                                                            finalOutput += "\"system_reply_ok\": \"" + GetLocalisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
                                                                         }
                                                                     }
                                                                     else if (dataConditionResult.Attribute("Identifier").Value == "ConditionFalse")
                                                                     {
                                                                         if (dataConditionResult.Element("Node").LastAttribute.Name == "SystemResponse")
                                                                         {
-                                                                            finalOutput += "\"system_reply_issue\": \"" + localisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
+                                                                            finalOutput += "\"system_reply_issue\": \"" + GetLocalisedString(dataConditionResult.Element("Node").LastAttribute.Value, languageData) + "\", ";
                                                                         }
                                                                     }
                                                                 }
@@ -360,7 +360,7 @@ namespace StoryEditor
                                                             if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.Response")
                                                             {
                                                                 //Basic response not in a context of condition
-                                                                finalOutput += "\"system_reply_ok\": \"" + localisedString(inputScriptNode.Attribute("SystemResponse").Value, languageData) + "\", ";
+                                                                finalOutput += "\"system_reply_ok\": \"" + GetLocalisedString(inputScriptNode.Attribute("SystemResponse").Value, languageData) + "\", ";
                                                             }
                                                             if (inputScriptNode.FirstAttribute.Value == "TextAdventure.Nodes.MoveTo")
                                                             {
@@ -470,7 +470,7 @@ namespace StoryEditor
         }
 
         /* Get the localised string */
-        private string localisedString(string ID, XElement languageData)
+        private string GetLocalisedString(string ID, XElement languageData)
         {
             foreach (var languageString in languageData.Elements())
             {
@@ -504,7 +504,7 @@ namespace StoryEditor
             }
         }
 
-        /* Taken from: https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-copy-directories */
+        /* Reference: https://docs.microsoft.com/en-us/dotnet/standard/io/how-to-copy-directories */
         private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
         {
             // Get the subdirectories for the specified directory.
@@ -546,6 +546,6 @@ namespace StoryEditor
         private void EditSelectedGame_Click(object sender, EventArgs e)
         {
             /* DEPRECIATED */
+        }
     }
-}
 }
