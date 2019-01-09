@@ -148,38 +148,38 @@ namespace ASGE {
 		constexpr float PALEVIOLETRED[] = { 0.859F, 0.439F, 0.576F };        /**< PALEVIOLETRED[] = { 0.859F, 0.439F, 0.576F }        */
 		constexpr float PAPAYAWHIP[] = { 1.000F, 0.937F, 0.835F };           /**< PAPAYAWHIP[] = { 1.000F, 0.937F, 0.835F }           */
 		constexpr float PEACHPUFF[] = { 1.000F, 0.855F, 0.725F };            /**< PEACHPUFF[] = { 1.000F, 0.855F, 0.725F }            */
-		constexpr float PERU[] = { 0.804F, 0.522F, 0.247F };
-		constexpr float PINK[] = { 1.000F, 0.753F, 0.796F };
-		constexpr float PLUM[] = { 0.867F, 0.627F, 0.867F };
-		constexpr float POWDERBLUE[] = { 0.690F, 0.878F, 0.902F };
-		constexpr float PURPLE[] = { 0.502F, 0.000F, 0.502F };
-		constexpr float RED[] = { 1.000F, 0.000F, 0.000F };
-		constexpr float ROSYBROWN[] = { 0.737F, 0.561F, 0.561F };
-		constexpr float ROYALBLUE[] = { 0.255F, 0.412F, 0.882F };
-		constexpr float SADDLEBROWN[] = { 0.545F, 0.271F, 0.075F };
-		constexpr float SALMON[] = { 0.980F, 0.502F, 0.447F };
-		constexpr float SANDYBROWN[] = { 0.957F, 0.643F, 0.376F };
-		constexpr float SEAGREEN[] = { 0.180F, 0.545F, 0.341F };
-		constexpr float SEASHELL[] = { 1.000F, 0.961F, 0.933F };
-		constexpr float SIENNA[] = { 0.627F, 0.322F, 0.176F };
-		constexpr float SILVER[] = { 0.753F, 0.753F, 0.753F };
-		constexpr float SKYBLUE[] = { 0.529F, 0.808F, 0.922F };
-		constexpr float SLATEBLUE[] = { 0.416F, 0.353F, 0.804F };
-		constexpr float SLATEGRAY[] = { 0.439F, 0.502F, 0.565F };
-		constexpr float SLATEGREY[] = { 0.439F, 0.502F, 0.565F };
-		constexpr float SNOW[] = { 1.000F, 0.980F, 0.980F };
-		constexpr float SPRINGGREEN[] = { 0.000F, 1.000F, 0.498F };
-		constexpr float STEELBLUE[] = { 0.275F, 0.510F, 0.706F };
-		constexpr float TAN[] = { 0.824F, 0.706F, 0.549F };
-		constexpr float TEAL[] = { 0.000F, 0.502F, 0.502F };
-		constexpr float THISTLE[] = { 0.847F, 0.749F, 0.847F };
-		constexpr float TOMATO[] = { 1.000F, 0.388F, 0.278F };
-		constexpr float TURQUOISE[] = { 0.251F, 0.878F, 0.816F };
-		constexpr float VIOLET[] = { 0.933F, 0.510F, 0.933F };
-		constexpr float WHEAT[] = { 0.961F, 0.871F, 0.702F };
-		constexpr float WHITE[] = { 1.000F, 1.000F, 1.000F };
-		constexpr float WHITESMOKE[] = { 0.961F, 0.961F, 0.961F };
-		constexpr float YELLOW[] = { 1.000F, 1.000F, 0.000F };
-		constexpr float YELLOWGREEN[] = { 0.604F, 0.804F, 0.196F };
+		constexpr float PERU[] = { 0.804F, 0.522F, 0.247F };                 /**< PERU[] = { 0.804F, 0.522F, 0.247F }                 */
+		constexpr float PINK[] = { 1.000F, 0.753F, 0.796F };                 /**< PINK[] = { 1.000F, 0.753F, 0.796F }                 */
+		constexpr float PLUM[] = { 0.867F, 0.627F, 0.867F };                 /**< PLUM[] = { 0.867F, 0.627F, 0.867F }                 */
+		constexpr float POWDERBLUE[] = { 0.690F, 0.878F, 0.902F };           /**< POWDERBLUE[] = { 0.690F, 0.878F, 0.902F }           */
+		constexpr float PURPLE[] = { 0.502F, 0.000F, 0.502F };               /**< PURPLE[] = { 0.502F, 0.000F, 0.502F }               */
+		constexpr float RED[] = { 1.000F, 0.000F, 0.000F };                  /**< RED[] = { 1.000F, 0.000F, 0.000F }                  */
+		constexpr float ROSYBROWN[] = { 0.737F, 0.561F, 0.561F };            /**< ROSYBROWN[] = { 0.737F, 0.561F, 0.561F }             */
+		constexpr float ROYALBLUE[] = { 0.255F, 0.412F, 0.882F };            /**< ROYALBLUE[] = { 0.255F, 0.412F, 0.882F }            */
+		constexpr float SADDLEBROWN[] = { 0.545F, 0.271F, 0.075F };          /**< SADDLEBROWN[] = { 0.545F, 0.271F, 0.075F }          */
+		constexpr float SALMON[] = { 0.980F, 0.502F, 0.447F };               /**< SALMON[] = { 0.980F, 0.502F, 0.447F }               */
+		constexpr float SANDYBROWN[] = { 0.957F, 0.643F, 0.376F };           /**< SANDYBROWN[] = { 0.957F, 0.643F, 0.376F }           */
+		constexpr float SEAGREEN[] = { 0.180F, 0.545F, 0.341F };             /**< SEAGREEN[] = { 0.180F, 0.545F, 0.341F }             */
+		constexpr float SEASHELL[] = { 1.000F, 0.961F, 0.933F };             /**< SEASHELL[] = { 1.000F, 0.961F, 0.933F }             */
+		constexpr float SIENNA[] = { 0.627F, 0.322F, 0.176F };               /**< SIENNA[] = { 0.627F, 0.322F, 0.176F }               */
+		constexpr float SILVER[] = { 0.753F, 0.753F, 0.753F };               /**< SILVER[] = { 0.753F, 0.753F, 0.753F }               */
+		constexpr float SKYBLUE[] = { 0.529F, 0.808F, 0.922F };              /**< SKYBLUE[] = { 0.529F, 0.808F, 0.922F }             */
+		constexpr float SLATEBLUE[] = { 0.416F, 0.353F, 0.804F };            /**< SLATEBLUE[] = { 0.416F, 0.353F, 0.804F }            */
+		constexpr float SLATEGRAY[] = { 0.439F, 0.502F, 0.565F };            /**< SLATEGRAY[] = { 0.439F, 0.502F, 0.565F }            */
+		constexpr float SLATEGREY[] = { 0.439F, 0.502F, 0.565F };            /**< SLATEGREY[] = { 0.439F, 0.502F, 0.565F }            */
+		constexpr float SNOW[] = { 1.000F, 0.980F, 0.980F };                 /**< SNOW[] = { 1.000F, 0.980F, 0.980F }                 */
+		constexpr float SPRINGGREEN[] = { 0.000F, 1.000F, 0.498F };          /**< SPRINGGREEN[] = { 0.000F, 1.000F, 0.498F }          */
+		constexpr float STEELBLUE[] = { 0.275F, 0.510F, 0.706F };            /**< STEELBLUE[] = { 0.275F, 0.510F, 0.706F }            */
+		constexpr float TAN[] = { 0.824F, 0.706F, 0.549F };                  /**< TAN[] = { 0.824F, 0.706F, 0.549F }                 */
+		constexpr float TEAL[] = { 0.000F, 0.502F, 0.502F };                 /**< TEAL[] = { 0.000F, 0.502F, 0.502F }                 */
+		constexpr float THISTLE[] = { 0.847F, 0.749F, 0.847F };              /**< THISTLE[] = { 0.847F, 0.749F, 0.847F }              */
+		constexpr float TOMATO[] = { 1.000F, 0.388F, 0.278F };               /**< TOMATO[] = { 1.000F, 0.388F, 0.278F }               */
+		constexpr float TURQUOISE[] = { 0.251F, 0.878F, 0.816F };            /**< TURQUOISE[] = { 0.251F, 0.878F, 0.816F }             */
+		constexpr float VIOLET[] = { 0.933F, 0.510F, 0.933F };               /**< VIOLET[] = { 0.933F, 0.510F, 0.933F }               */
+		constexpr float WHEAT[] = { 0.961F, 0.871F, 0.702F };                /**< WHEAT[] = { 0.961F, 0.871F, 0.702F }                */
+		constexpr float WHITE[] = { 1.000F, 1.000F, 1.000F };                /**< WHITE[] = { 1.000F, 1.000F, 1.000F }                */
+		constexpr float WHITESMOKE[] = { 0.961F, 0.961F, 0.961F };           /**< WHITESMOKE[] = { 0.961F, 0.961F, 0.961F }          */
+		constexpr float YELLOW[] = { 1.000F, 1.000F, 0.000F };               /**< YELLOW[] = { 1.000F, 1.000F, 0.000F }               */
+		constexpr float YELLOWGREEN[] = { 0.604F, 0.804F, 0.196F };          /**< YELLOWGREEN[] = { 0.604F, 0.804F, 0.196F }          */
 	}
 }

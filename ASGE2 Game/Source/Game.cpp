@@ -45,7 +45,8 @@ bool TextAdventureGame::init()
 	}
 
 	//Core game settings
-	renderer->setWindowTitle("Text Adventure Game");
+	game_name = "Text Adventure Game";
+	//renderer->setWindowTitle("Text Adventure Game");
 	renderer->setWindowedMode(ASGE::Renderer::WindowMode::WINDOWED);
 	renderer->setClearColour(ASGE::COLOURS::BLACK);
 

@@ -131,10 +131,127 @@
                           </Node>
                         </Connector>
                       </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO TO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="DERELICT">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="MOVE_TO_DERELICT" />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTSIDE_DERELICT" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="ALIEN SHIP">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="DERELICT" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="SHIP">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="DERELICT" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="BACK_TO_AIRLOCK" />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="NOSTROMO_AIRLOCK" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="INSIDE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO" InputSubject="BACK" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
                     </Connector>
                   </Node>
                 </Connector>
               </Node>
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="OUTSIDE_DERELICT">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="BY_DERELICT_INTRO_B" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="LOOK_AROUND_DERELICT_EXT_B" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="USE">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="EXPLOSIVES">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="USE_EXPLOSIVES" />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="MOVED_BOULDER" MoveToLocationType="STATE:2" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="BACK">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="GO_BACK_TO_SHIP" />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTER_AIRLOCK" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="MOVED_BOULDER">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="BY_DERELICT_INTRO" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="LOOK AROUND">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="LOOK_AROUND_DERELICT_EXT" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO TO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="ENTRANCE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="APPROACH_DERELICT" />
+                              <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="INSIDE_DERELICT_ENTRANCE" MoveToLocationType="ZONE:1" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="OPENING">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="ENTRANCE" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="GO">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="INSIDE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="ENTRANCE" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="FORWARD">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO TO" InputSubject="ENTRANCE" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="INSIDE_DERELICT_ENTRANCE" />
             </Connector>
           </Node>
         </Connector>

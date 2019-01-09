@@ -11,7 +11,12 @@
 #include "Engine/Texture.h"
 
 namespace ASGE {
-	
+
+	namespace SHADER_LIB
+	{
+		class  Shader;
+	}
+
 	struct Font;
 	class  Input;
 	class  Sprite;
@@ -190,6 +195,16 @@ namespace ASGE {
 		virtual void setDefaultTextColour(const Colour& colour) = 0;
 
 		/**
+		*  Locates a shader using its ID.
+		*  Shaders are stored/cached so to prevent dangling pointers
+		*  handle's can be used to retrieve the shader. It is recommended
+		*  not to store the returned shader as it's memory location could
+	    *  change over time.
+		*  @param shader_handle The shader to find.
+		*/
+		virtual SHADER_LIB::Shader* findShader(int shader_handle) = 0;
+
+		/**
 		*  Returns the currently active font. 
 		*  When rendering text, if a colour is not specificed
 		*  the default one will be used instead. This can be set
@@ -275,7 +290,11 @@ namespace ASGE {
 		*  @return A dynamically allocated sprite.
 		*/
 		virtual Sprite*	createRawSprite() = 0;			
-		
+
+		int initPixelShaderFromFile(std::string filename);
+		virtual int  initPixelShader(std::string shader) = 0;
+		virtual void setActiveShader(ASGE::SHADER_LIB::Shader*) = 0;
+
 	protected:
 		WindowMode window_mode = WindowMode::WINDOWED; /**< The window mode being used. */
 		RenderLib lib = RenderLib::INVALID; /**< The renderer being used. */

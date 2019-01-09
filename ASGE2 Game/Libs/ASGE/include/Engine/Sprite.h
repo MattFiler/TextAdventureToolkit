@@ -7,6 +7,7 @@
 #include <memory>
 #include <string>
 #include <Engine/Colours.h>
+#include <Engine/SpriteBounds.h>
 
 namespace ASGE {
 	class Renderer;
@@ -244,6 +245,25 @@ namespace ASGE {
 		* This is useful when the texture is a sprite sheet.
 		* @return The rectangle (as a constant) used for the UV source. */
 		const float* srcRect() const noexcept;
+
+        /**
+        * Retrieves the sprite's 4 points in local space.
+        * Simply returns the sprite's original and unmodified dimensions.
+        * No transforms will be applied, meaning rotation and scaling
+        * are absent and the points can be considered as local or
+        * model space. These points can be used as the starting basis of
+        * an AABB or for additional collision detection.
+        * @return The four vertex bounds of the sprite. */
+		SpriteBounds getLocalBounds()  const noexcept;
+
+        /**
+        * Retrieves the sprite's 4 points in world space.
+        * Returns the 4 vertices that delimit the sprite's position in
+        * world space. Any transforms (scaling and rotation) have already
+        * been applied. This is useful for when you need to know the
+        * projected location i.e. calculating a bounding volume.
+        * @return The four vertex bounds of the sprite in world space. */
+        SpriteBounds getGlobalBounds() const noexcept;
 		
 	protected:
 		float dims[2]{ 0,0 };          /**< Sprite Dimensions. The dimensions of the sprite. */

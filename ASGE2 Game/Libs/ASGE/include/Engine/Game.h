@@ -39,7 +39,7 @@ namespace ASGE {
 		/**
 		*  Default destructor.
 		*/
-		~Game();
+		virtual ~Game();
 
 		/**
 		*  Pure virtual function for setup and intialisation
@@ -130,13 +130,6 @@ namespace ASGE {
 	protected:
 
 		/**
-		* Prints files stored in a given directory using
-		* the ASGE file IO subsystem.
-		* @param dir The directory to list.
-		*/
-		void printFiles(const std::string& dir);
-
-		/**
 		*  Toggles the FPS on-screen.
 		*  Will cause the game to draw and update the FPS
 		*  on the screen every tick.
@@ -167,6 +160,7 @@ namespace ASGE {
 		int  game_height = 480;             /**< Game design resolution. The intended height of the game in pixels. */
 		std::atomic<bool> show_fps {false}; /**< FPS counter. Shows the FPS on screen if set to true. */
 		std::atomic<bool> exit {false};     /**< Exit boolean. If true the game loop will exit. */
+		std::string game_name = "my game";  /**< Game Name. Used for window title and default storage location. */
 
 	private:
 		static std::chrono::milliseconds getGameTime() noexcept;

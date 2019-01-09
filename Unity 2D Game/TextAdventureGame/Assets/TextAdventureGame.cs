@@ -23,6 +23,18 @@ public class TextAdventureGame : MonoBehaviour
     //
     public InputField User_Input;
 
+    // Audio
+    public AudioClip key0;
+    public AudioClip key1;
+    public AudioClip key2;
+    public AudioClip key3;
+    public AudioClip key4;
+    public AudioClip key5;
+    public AudioClip key6;
+    public AudioClip key7;
+    public AudioClip key8;
+    public AudioClip key9;
+
     /*
     -------
     PRIVATE
@@ -46,6 +58,9 @@ public class TextAdventureGame : MonoBehaviour
     List<string> gameData = new List<string>();
     enum gameDataType { REQUIRED_DATA, OPTIONAL_DATA, DATA_DOES_NOT_EXIST, DATA_EXISTS, DATA_IS_NOT_SPECIFIED }
 
+    // Audio
+    AudioSource audioSource;
+
     // JSON Data
     string jsonString = "";
 
@@ -66,6 +81,8 @@ public class TextAdventureGame : MonoBehaviour
         Game_Title.text = getGameTitle();
         Game_Developer.text = getGameDeveloper();
         Zone_Intro_Text_Queued = getZoneIntro();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     /* Return the number of levels */
@@ -418,9 +435,10 @@ public class TextAdventureGame : MonoBehaviour
         return 99;
     }
 
-    /* Animate Text */
+    /* Per-frame Update */
     void Update()
     {
+        /* Animate Text */
         Zone_Intro_Text.text = ZoneIntroAnim.animateText(Zone_Intro_Text_Queued, Zone_Intro_Text.text);
         Game_Response_Text.text = GameResponseAnim.animateText(Game_Response_Text_Queued, Game_Response_Text.text);
 
@@ -435,6 +453,45 @@ public class TextAdventureGame : MonoBehaviour
             if (User_Input.text == getInputDisabledText())
             {
                 User_Input.text = "";
+            }
+        }
+
+        /* Key SFX */
+        if (Input.anyKeyDown)
+        {
+            int randomKeySound = Random.Range(0, 9);
+            switch (randomKeySound)
+            {
+                case 0:
+                    audioSource.PlayOneShot(key0);
+                    break;
+                case 1:
+                    audioSource.PlayOneShot(key1);
+                    break;
+                case 2:
+                    audioSource.PlayOneShot(key2);
+                    break;
+                case 3:
+                    audioSource.PlayOneShot(key3);
+                    break;
+                case 4:
+                    audioSource.PlayOneShot(key4);
+                    break;
+                case 5:
+                    audioSource.PlayOneShot(key5);
+                    break;
+                case 6:
+                    audioSource.PlayOneShot(key6);
+                    break;
+                case 7:
+                    audioSource.PlayOneShot(key7);
+                    break;
+                case 8:
+                    audioSource.PlayOneShot(key8);
+                    break;
+                default:
+                    audioSource.PlayOneShot(key9);
+                    break;
             }
         }
     }

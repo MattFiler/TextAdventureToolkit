@@ -11,8 +11,10 @@ CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/Mouse.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/NonCopyable.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/OGLGame.h
+CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/Point2D.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/Renderer.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/Sprite.h
+CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/SpriteBounds.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Libs/ASGE/include/Engine/Texture.h
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Source/Animations.cpp
 CMakeFiles/TextAdventureGame.dir/Source/Animations.cpp.obj: ../Source/Animations.h
@@ -31,8 +33,10 @@ CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engin
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/Mouse.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/NonCopyable.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/OGLGame.h
+CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/Point2D.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/Renderer.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/Sprite.h
+CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/SpriteBounds.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/ASGE/include/Engine/Texture.h
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Libs/nlohmann/json.hpp
 CMakeFiles/TextAdventureGame.dir/Source/Game.cpp.obj: ../Source/Animations.h
@@ -70,8 +74,10 @@ CMakeFiles/TextAdventureGame.dir/Source/Rect.cpp.obj: ../Source/Rect.h
 
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/Colours.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/NonCopyable.h
+CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/Point2D.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/Renderer.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/Sprite.h
+CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/SpriteBounds.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Libs/ASGE/include/Engine/Texture.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Source/Rect.h
 CMakeFiles/TextAdventureGame.dir/Source/SpriteComponent.cpp.obj: ../Source/SpriteComponent.cpp
@@ -88,8 +94,10 @@ CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Keys.
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Mouse.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/NonCopyable.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/OGLGame.h
+CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Point2D.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Renderer.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Sprite.h
+CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/SpriteBounds.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/ASGE/include/Engine/Texture.h
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Libs/nlohmann/json.hpp
 CMakeFiles/TextAdventureGame.dir/main.cpp.obj: ../Source/Animations.h

@@ -20,7 +20,7 @@ namespace ASGE {
 	{
 	public:
 		
-		virtual ~OGLGame() = default;
+		~OGLGame() override = default;
 
 		/**
 		* Initialises the OpenGL subsystem.

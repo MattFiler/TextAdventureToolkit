@@ -1,2 +1,2 @@
 # AwesomeSauceGameEngine
-Simple OpenGL Engine v0.2.1
+Simple OpenGL Engine v0.3.1
