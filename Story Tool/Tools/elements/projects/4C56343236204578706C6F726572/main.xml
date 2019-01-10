@@ -202,6 +202,16 @@
                               <Node Class="TextAdventure.Nodes.MoveTo" MoveToLocationName="OUTER_AIRLOCK" MoveToLocationType="ZONE:1" />
                             </Connector>
                           </Node>
+                          <Node Class="TextAdventure.Nodes.InputAction" Action="INSIDE">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.Response" SystemResponse="GO_INSIDE_DENIED" />
+                            </Connector>
+                          </Node>
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="IN">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.ReferencedInput" InputAction="GO" InputSubject="INSIDE" />
+                            </Connector>
+                          </Node>
                         </Connector>
                       </Node>
                     </Connector>
@@ -251,7 +261,24 @@
                   </Node>
                 </Connector>
               </Node>
-              <Node Class="TextAdventure.Nodes.LevelZone" Name="INSIDE_DERELICT_ENTRANCE" />
+              <Node Class="TextAdventure.Nodes.LevelZone" Name="INSIDE_DERELICT_ENTRANCE">
+                <Connector Identifier="GenericChildren">
+                  <Node Class="TextAdventure.Nodes.ZoneState" Name="INITIAL">
+                    <Connector Identifier="GenericChildren">
+                      <Node Class="TextAdventure.Nodes.ZoneIntro" IntroText="INSIDE_DERELICT_INTRO" />
+                      <Node Class="TextAdventure.Nodes.InputAction" Action="QUIT">
+                        <Connector Identifier="GenericChildren">
+                          <Node Class="TextAdventure.Nodes.InputSubject" Subject="">
+                            <Connector Identifier="GenericChildren">
+                              <Node Class="TextAdventure.Nodes.GameOver" EndCondition="WIN:0" />
+                            </Connector>
+                          </Node>
+                        </Connector>
+                      </Node>
+                    </Connector>
+                  </Node>
+                </Connector>
+              </Node>
             </Connector>
           </Node>
         </Connector>

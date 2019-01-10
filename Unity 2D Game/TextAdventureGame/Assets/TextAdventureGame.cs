@@ -359,7 +359,7 @@ public class TextAdventureGame : MonoBehaviour
         return TextAdventureGame.gameDataType.DATA_DOES_NOT_EXIST;
     }
 
-    /* Find zone by name and move to it */
+    /* Find state by name and move to it */
     private void moveToState(string name)
     {
         currentState = findStateByName(name);
@@ -372,7 +372,7 @@ public class TextAdventureGame : MonoBehaviour
         currentState = 0;
         Zone_Intro_Text_Queued = getZoneIntro();
     }
-    /* Find zone by name and move to it */
+    /* Find level by name and move to it */
     private void moveToLevel(string name)
     {
         currentLevel = findLevelByName(name);
@@ -401,7 +401,7 @@ public class TextAdventureGame : MonoBehaviour
         var logic = JSON.Parse(jsonString);
         for (int i = 0; i < statesInThisZone(currentLevel, currentZone); i++)
         {
-            if (logic[currentLevel.ToString()][currentZone.ToString()][i.ToString()]["level_name"]["state_name"] == name)
+            if (logic[currentLevel.ToString()][currentZone.ToString()][i.ToString()]["state_name"] == name)
             {
                 return i;
             }
