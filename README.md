@@ -1,10 +1,79 @@
 # Text Adventure Creation Tool
-The aim of this project was to produce an engine agnostic designer focused tool for producing text adventures. 
 
-The tool itself can be found with the "Story Tool" directory along with its source code.
+### This project allows for the creation of text adventures through a simple flowchart interface.
 
-The tool's output can be read in to one of three implementations across Unity, Unreal, and OpenGL (ASGE).
+You can output to...
 
-All implementations are complete with their source code, so feel free to expand this project to your requirements!
+* **Unreal Engine 4** - a 3D scene.
+* **Unity** - a 2D scene.
+* **OpenGL** - a 2D scene with the framework "ASGE".
 
-Documentation for the tool can be found within "Story Tool > Tools > docs" to get started.
+... with no programming at all! Text adventures are created through a drag and drop flowchart system.
+
+## Getting started
+
+It's easy to get going...
+
+1. Copy the folder "Tools" (found with the folder "Story Tool") to a memorable location. Within the "Tools" folder is the tool itself, documentation, and all required assets.
+2. Launch "Text Adventure Creator.exe".
+
+You will see a number of default projects in the first dropdown to try out.
+
+## Creating a new adventure
+
+To create a new adventure, open the tools and...
+
+1. Press "New".
+2. Enter the name of your game, E.G. "My Awesome Adventure". This must be unique.
+3. Enter your developer name, E.G. "Matt Filer".
+4. Enter the game's response for an invalid input, E.G. "I don't understand this command!".
+5. Enter the 'thinking' response to display while responding, E.G. "<< WAIT >>".
+
+You now have your first project!
+
+## Scripting your story
+
+No code is needed for this, everything is scripted through a flowchart interface...
+
+<img align="right" src="https://i.imgur.com/TC1bAcO.png" width="50%">
+
+1. With your project selected in the dropdown, press "Edit Logic".
+2. In the new window that opens, select "main" in the top left.
+3. Create your story by dragging and dropping nodes from the top left groups into the editor window.
+
+To learn what each node does in the flowchart editor, follow the documentation located in the "docs" folder.
+
+## Localising your game
+
+These tools are created with localisation in mind, so all responses you script in the flowchart editor must correspond to premade strings in the localisation tool (read the documentation in the "docs" folder for more information on this).
+
+To create a new localised string...
+
+1. Select your project in the main tool window dropdown, and press "Edit Localisation".
+2. Press "Add New String".
+3. Enter a unique ID for your new string.
+4. Type out the string in the window that appears. You can switch languages here and enter language-specific responses. Alternatively, press "Apply Current To All" to apply the current language entry to all language definitions.
+5. When done, press "Save and Close".
+
+To edit an existing string, select one in the main localisation window and press "Edit Selected String". Similarly, to remove a string, select it in the editor and press "Remove Selected String".
+
+The unique ID you give your string is what you will reference in the flowchart editor.
+
+## Going further
+
+Although this tool requires no coding knowledge, all project files for the Unity, Unreal 4, and OpenGL implementation are included. Also included are all project files for the tool itself and the flowchart editor / plugin.
+
+This is included so that if you intend to expand the toolkit for your own projects, you are free to do so!
+
+A few ideas for expansion...
+
+* Custom splashscreens
+* Custom audio imports
+* Linking between localisation tool and flowchart editor
+
+...the list goes on!
+
+## Final mentions
+
+* [Brainiac Designer](https://archive.codeplex.com/?p=brainiac) was originally created by Daniel Kollmann. 
+* ASGE is used for the OpenGL implementation, created by [James Huxtable](https://github.com/HuxyUK).
