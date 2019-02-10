@@ -14,7 +14,7 @@ You can output to...
 
 It's easy to get going...
 
-1. Copy the folder "Tools" (found with the folder "Story Tool") to a memorable location. Within the "Tools" folder is the tool itself, documentation, and all required assets.
+1. [Download the latest release](https://github.com/MattFiler/TextAdventureToolkit/releases/download/v1.0/Text.Adventure.Creator.zip). This includes the tool itself, documentation, and all required assets.
 2. Launch "Text Adventure Creator.exe".
 
 You will see a number of default projects in the first dropdown to try out.
