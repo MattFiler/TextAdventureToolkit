@@ -2,7 +2,7 @@
 
 ### This project allows for the creation of text adventures through a simple flowchart interface.
 
-<img align="right" src="https://i.imgur.com/py2qBDt.png" width="50%">
+<img align="right" src="https://i.imgur.com/py2qBDt.png" width="30%">
 
 You can output to...
 
