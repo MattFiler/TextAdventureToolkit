@@ -2,6 +2,8 @@
 
 ### This project allows for the creation of text adventures through a simple flowchart interface.
 
+<img align="right" src="https://i.imgur.com/py2qBDt.png" width="50%">
+
 You can output to...
 
 * **Unreal Engine 4** - a 3D scene.
@@ -61,6 +63,8 @@ The unique ID you give your string is what you will reference in the flowchart e
 
 ## Going further
 
+<img align="right" src="https://i.imgur.com/MQa1UEL.png" width="50%">
+
 Although this tool requires no coding knowledge, all project files for the Unity, Unreal 4, and OpenGL implementation are included. Also included are all project files for the tool itself and the flowchart editor / plugin.
 
 This is included so that if you intend to expand the toolkit for your own projects, you are free to do so!
@@ -77,3 +81,4 @@ A few ideas for expansion...
 
 * [Brainiac Designer](https://archive.codeplex.com/?p=brainiac) was originally created by Daniel Kollmann. 
 * ASGE is used for the OpenGL implementation, created by [James Huxtable](https://github.com/HuxyUK).
+* Thanks to [Jon McKellan](https://twitter.com/jon_NoCode) and [Andy Bray](https://www.linkedin.com/in/andy-bray-4121226/) for answering some questions for my report!
