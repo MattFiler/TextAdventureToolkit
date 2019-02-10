@@ -10,7 +10,9 @@ You can output to...
 * **Unity** - a 2D scene.
 * **OpenGL** - a 2D scene with the framework "ASGE".
 
-... with no programming at all! Text adventures are created through a drag and drop flowchart system.
+... with no programming at all! 
+
+Text adventures are created through a drag and drop flowchart system.
 
 ## Getting started
 
